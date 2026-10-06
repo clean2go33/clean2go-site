@@ -49,7 +49,7 @@ Un état du véhicule est constaté avant l’intervention. Certaines salissures
 
 ## 11. Responsabilité
 
-Clean2Go est tenue d’exécuter les prestations avec soin. Elle ne répond pas des dommages préexistants, des défauts cachés ni de l’usure normale. [[À CONFIRMER : assurance responsabilité civile professionnelle, plafonds, exclusions]] Les limites de responsabilité ne s’appliquent pas là où la loi l’interdit.
+Clean2Go est tenue d’exécuter les prestations avec soin. Elle ne répond pas des dommages préexistants, des défauts cachés ni de l’usure normale. NEW WAVE a souscrit une assurance responsabilité civile professionnelle auprès d’Abeilles Assurances. [[À CONFIRMER : numéro de contrat, garanties et plafonds à mentionner le cas échéant]] Les limites de responsabilité ne s’appliquent pas là où la loi l’interdit.
 
 ## 12. Garanties légales
 
