@@ -37,7 +37,7 @@ const uid = `${variant}-${id}`;
         <div class="field"><label for={`${uid}-nb`}>Nombre de véhicules (approximatif)</label><input id={`${uid}-nb`} name="nb_vehicules" type="text" placeholder="Ex. : 8 véhicules" /></div>
       ) : (
         <div class="field"><label for={`${uid}-pre`}>Prestation souhaitée</label>
-          <select id={`${uid}-pre`} name="prestation"><option value="">Je ne sais pas encore</option>{services.map((s) => <option value={s.data.formValue} selected={s.data.formValue === prestation}>{s.data.name}</option>)}</select></div>
+          <select id={`${uid}-pre`} name="prestation"><option value="">À définir</option>{services.map((s) => <option value={s.data.formValue} selected={s.data.formValue === prestation}>{s.data.name}</option>)}</select></div>
       )}
     </div>
     {pro ? (
