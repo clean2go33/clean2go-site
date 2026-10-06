@@ -37,7 +37,13 @@ Le paiement intervient à l’issue de la prestation, une fois le résultat cons
 
 ## 8. Annulation et report
 
-[[À CONFIRMER : délai d’annulation gratuite, frais en cas d’annulation tardive ou d’absence, politique en cas de mauvais temps]]
+**Clients consommateurs.** Le client peut annuler sa commande sans frais dans le délai légal de rétractation de 14 jours (article 9), et au plus tard avant le début de l’intervention. Si, à sa demande expresse, l’intervention a commencé avant la fin de ce délai, il règle un montant proportionnel à ce qui a été réalisé jusqu’à sa décision de se rétracter (article L.221-25 du Code de la consommation).
+
+**Report.** Le client qui ne peut pas être présent à la date convenue prévient Clean2Go le plus tôt possible, par téléphone ou par e-mail, afin de fixer un nouveau créneau. Les prestations étant réalisées toute l’année, le mauvais temps n’est pas en soi un motif d’annulation.
+
+**Force majeure.** Aucune des parties n’est responsable d’un retard ou d’une inexécution causés par un cas de force majeure au sens de l’article 1218 du Code civil ; la prestation est alors reportée sans frais.
+
+**Clients professionnels.** Les conditions d’annulation sont celles du devis accepté. Le droit de rétractation prévu par le Code de la consommation ne leur est pas applicable, sauf exceptions légales.
 
 ## 9. Droit de rétractation des consommateurs
 

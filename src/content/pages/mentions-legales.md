@@ -22,7 +22,7 @@ Les présentes mentions légales sont établies conformément à la loi n° 2004
 - **Activité :** lavage manuel de véhicules, vente de produits de nettoyage, lavage manuel de bateaux
 - **Numéro de TVA intracommunautaire :** FR90 894 894 963
 - **Assurance responsabilité civile professionnelle :** Abeilles Assurances
-- **Numéro d’inscription au répertoire des métiers (le cas échéant) :** [[À CONFIRMER : numéro RM ou mention CMA si applicable (le Kbis mentionne une validation CMA du 2 juillet 2026)]]
+- **Numéro d’inscription au répertoire des métiers (le cas échéant) :** 894 894 963
 
 Le siège social est une adresse de domiciliation : Clean2Go est un service mobile et ne reçoit pas de public à cette adresse.
 
