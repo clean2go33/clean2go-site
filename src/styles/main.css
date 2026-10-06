@@ -374,3 +374,13 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .nav__mob a.btn{padding:14px 20px;border-radius:12px;justify-content:center}
 .nav__mob a.btn--red{background:var(--red);color:#fff}
 .nav__mob a.btn--dark{background:var(--ink);color:#fff}
+
+/* Logo image (remplace le logotype texte) */
+.logo img{display:block;height:46px;width:auto}
+.ftr .logo img{height:60px}
+@media (max-width:720px){.logo img{height:40px}}
+.logo img{height:54px}
+.ftr .logo img{height:72px}
+.nav a,.nav button.nav__btn{white-space:nowrap}
+@media (min-width:1021px) and (max-width:1280px){.nav a,.nav button.nav__btn{padding:12px 8px;font-size:.9rem}.hdr__cta .btn--sm{padding-inline:16px}}
+@media (max-width:720px){.logo img{height:44px}}

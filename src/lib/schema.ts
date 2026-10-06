@@ -12,6 +12,8 @@ export function localBusiness() {
     name: SITE.name,
     legalName: LEGAL.legalName,
     url: `${SITE.url}/`,
+    logo: `${SITE.url}/logo.png`,
+    image: `${SITE.url}/og-default.png`,
     telephone: SITE.phoneTel,
     email: SITE.email,
     description: SITE.pitch,
