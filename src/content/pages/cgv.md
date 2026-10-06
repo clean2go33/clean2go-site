@@ -67,7 +67,7 @@ Les données collectées servent à traiter les demandes. Voir la [politique de 
 
 ## 14. Médiation de la consommation
 
-Conformément au Code de la consommation, le consommateur peut recourir gratuitement à un médiateur. [[À CONFIRMER : nom, adresse et site du médiateur de la consommation choisi par NEW WAVE]]
+Conformément au Code de la consommation, le consommateur peut recourir gratuitement à un médiateur. Médiateur de la consommation : **CM2C** (Centre de la Médiation de la Consommation de Conciliateurs de Justice), 49 rue de Ponthieu, 75008 Paris, [www.cm2c.net](https://www.cm2c.net). Le consommateur peut le saisir en ligne sur [cm2c.net/declarer-un-litige.php](https://www.cm2c.net/declarer-un-litige.php), après avoir d’abord tenté de résoudre le litige directement auprès de Clean2Go par une réclamation écrite. La médiation est gratuite pour le consommateur.
 
 ## 15. Droit applicable et litiges
 
