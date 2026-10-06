@@ -18,11 +18,11 @@ faq:
   - q: Quelles communes du Bassin d’Arcachon desservez-vous ?
     a: "Au sud : [Arcachon](/nettoyage-auto-arcachon/), [La Teste-de-Buch](/nettoyage-auto-la-teste-de-buch/), [Gujan-Mestras](/nettoyage-auto-gujan-mestras/) et [Le Teich](/nettoyage-auto-le-teich/). Au nord et à l’est : [Biganos](/nettoyage-auto-biganos/), [Audenge](/nettoyage-auto-audenge/), [Lanton](/nettoyage-auto-lanton/), [Andernos-les-Bains](/nettoyage-auto-andernos-les-bains/), [Arès](/nettoyage-auto-ares/) et [Lège-Cap-Ferret](/nettoyage-auto-lege-cap-ferret/). Une autre commune ? Précisez-la dans le [formulaire](/contact/?commune=Autre#devis)."
   - q: Intervenez-vous sur la presqu’île du Cap Ferret ?
-    a: "Oui, nous étudions les demandes à Lège-Cap-Ferret, y compris les villages de la presqu’île. Comme les distances sont plus longues, le créneau se fixe un peu en amont : voir la page [Lège-Cap-Ferret](/nettoyage-auto-lege-cap-ferret/). [[À CONFIRMER : conditions particulières pour la presqu’île (frais, délai, jours dédiés)]]"
+    a: "Oui, nous étudions les demandes à Lège-Cap-Ferret, y compris les villages de la presqu’île. Comme les distances sont plus longues, le créneau se fixe un peu en amont : voir la page [Lège-Cap-Ferret](/nettoyage-auto-lege-cap-ferret/). Les frais de déplacement sont inclus dans le devis."
   - q: Intervenez-vous toute l’année, ou seulement l’été ?
-    a: "[[À CONFIRMER : le service est-il proposé toute l’année sur le Bassin, avec éventuels jours dédiés selon la saison ?]]"
+    a: "Oui, nous intervenons toute l’année sur le Bassin d’Arcachon."
   - q: Pouvez-vous intervenir sur une résidence secondaire en mon absence ?
-    a: "[[À CONFIRMER : accès au véhicule sans le propriétaire (clés confiées, code de parking), conditions et responsabilités]] Dans tous les cas, nous convenons à l’avance de la manière d’accéder au véhicule."
+    a: "Vous êtes présent à l’arrivée pour l’état des lieux et la remise des clés, puis à la fin pour constater la prestation et régler ; entre les deux, vous n’avez pas besoin de rester. Dans tous les cas, nous convenons à l’avance de la manière d’accéder au véhicule."
 ---
 ## Pourquoi une voiture se salit différemment sur le Bassin
 

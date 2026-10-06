@@ -16,7 +16,7 @@ services: [nettoyage-vapeur-complet, nettoyage-exterieur-voiture, nettoyage-inte
 blog: [entretenir-voiture-bassin-arcachon-sel-sable-resine, pollen-pins-voiture-printemps-gironde]
 faq:
   - q: "Ma voiture reste sur le parking de ma résidence secondaire à Arcachon : pouvez-vous la traiter en mon absence ?"
-    a: "[[À CONFIRMER : intervention en l’absence du propriétaire (clés confiées, parking sécurisé), conditions et responsabilités]] Dans tous les cas, nous convenons à l’avance de la manière d’accéder au véhicule."
+    a: "Vous êtes présent à l’arrivée pour l’état des lieux et la remise des clés, puis à la fin pour constater la prestation et régler ; entre les deux, vous n’avez pas besoin de rester. Dans tous les cas, nous convenons à l’avance de la manière d’accéder au véhicule."
   - q: Comment gérer le stationnement en été à Arcachon ?
     a: "L’été, les places sont rares : c’est pourquoi le plus simple est une intervention sur votre parking de résidence ou dans votre allée. Pour un véhicule garé en rue, indiquez-nous la rue : nous voyons avec vous le créneau. Hors saison, c’est plus souple."
   - q: Le sel marin abîme-t-il vraiment une voiture ?

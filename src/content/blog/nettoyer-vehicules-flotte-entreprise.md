@@ -12,7 +12,7 @@ service: nettoyage-vapeur-complet
 cities: []
 faq:
   - q: Peut-on nettoyer plusieurs véhicules le même jour sur site ?
-    a: "[[À CONFIRMER : nombre de véhicules par intervention et organisation]] Indiquez le nombre de véhicules dans votre demande."
+    a: "Précisez le nombre de véhicules dans votre demande. Indiquez le nombre de véhicules dans votre demande."
 ---
 ## Pourquoi nettoyer une flotte
 
@@ -28,7 +28,7 @@ Un véhicule d’entreprise est vu par vos clients, vos partenaires, vos collabo
 
 ## Organisation pratique
 
-Nous nous déplaçons : vos véhicules n’ont pas à quitter le site. Préparez la liste des véhicules, leur emplacement et les contraintes d’accès. [[À CONFIRMER : conditions de contrat récurrent et facturation]]
+Nous nous déplaçons : vos véhicules n’ont pas à quitter le site. Préparez la liste des véhicules, leur emplacement et les contraintes d’accès. Les modalités se précisent dans le devis.
 
 ## Restitution et revente
 

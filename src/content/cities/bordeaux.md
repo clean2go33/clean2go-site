@@ -16,7 +16,7 @@ services: [nettoyage-interieur-voiture, nettoyage-vapeur-complet, nettoyage-exte
 blog: [nettoyer-voiture-avant-restitution-loa-lld, preparer-voiture-avant-vente]
 faq:
   - q: Intervenez-vous dans la rue à Bordeaux, ou faut-il un parking privé ?
-    a: "Le plus simple est un parking de résidence, une cour ou un parking d’entreprise, où l’on peut travailler tranquillement autour du véhicule. En rue, cela dépend de l’endroit et des règles de stationnement. [[À CONFIRMER : conditions d’intervention en voirie publique à Bordeaux (zones de stationnement réglementé, autorisation)]] Dites-nous où se trouve votre voiture au moment du devis."
+    a: "Le plus simple est un parking de résidence, une cour ou un parking d’entreprise, où l’on peut travailler tranquillement autour du véhicule. En rue, cela dépend de l’endroit et des règles de stationnement. Précisez le lieu dans votre demande : nous voyons avec vous comment organiser l’intervention. Dites-nous où se trouve votre voiture au moment du devis."
   - q: Intervenez-vous dans tous les quartiers de Bordeaux ?
     a: "Oui, de Caudéran à la Bastide en passant par les Chartrons, Saint-Michel, Bacalan et Bordeaux Lac. Précisez simplement l’adresse ou le quartier dans votre demande."
   - q: "Je rends ma voiture en LOA ou LLD à Bordeaux : pouvez-vous intervenir juste avant ?"

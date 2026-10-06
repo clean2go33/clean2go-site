@@ -20,7 +20,7 @@ faq:
   - q: Intervenez-vous au Pyla et à Cazaux, pas seulement dans le centre ?
     a: "Oui. La commune est très étendue : centre de La Teste, Pyla-sur-Mer, Cazaux. Précisez le secteur dans votre demande pour que nous prévoyions le créneau."
   - q: "Je séjourne en camping : pouvez-vous intervenir sur mon emplacement ?"
-    a: "[[À CONFIRMER : intervention possible dans les campings (accord du gestionnaire, accès), et conditions]]"
+    a: "Oui, sur demande, avec l’accord du gestionnaire du camping. Précisez le lieu dans votre demande."
   - q: "Mon chien monte à l’arrière après la plage : que faire ?"
     a: "Le sable et les poils s’accumulent. Un traitement dédié existe, voir les [options pour poils et odeurs](/prestations/options-et-cas-particuliers/)."
 ---

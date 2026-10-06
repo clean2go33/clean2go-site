@@ -16,9 +16,9 @@ services: [nettoyage-interieur-voiture, nettoyage-vapeur-complet, options-et-cas
 blog: [humidite-voiture-hiver-moisissures-buee, nettoyer-sieges-tissu-voiture]
 faq:
   - q: "Ma voiture sent l’humidité : pouvez-vous traiter cela ?"
-    a: "Nous traitons les odeurs liées à l’humidité dans le cadre des [options](/prestations/options-et-cas-particuliers/). [[À CONFIRMER : efficacité garantie ou non selon la cause de l’humidité]] Si l’humidité vient d’une infiltration, elle doit d’abord être réparée."
+    a: "Nous traitons les odeurs liées à l’humidité dans le cadre des [options](/prestations/options-et-cas-particuliers/). Le résultat dépend de la cause et de l’ancienneté de l’humidité. Si l’humidité vient d’une infiltration, elle doit d’abord être réparée."
   - q: Intervenez-vous le week-end ?
-    a: "[[À CONFIRMER : disponibilités du week-end]] Indiquez votre créneau souhaité dans la demande."
+    a: "Envoyez-nous votre demande avec le jour souhaité : nous vous répondons selon nos disponibilités. Indiquez votre créneau souhaité dans la demande."
   - q: Pouvez-vous venir sur mon lieu de travail au Teich ?
     a: "Oui, voir la page [Professionnels](/professionnels/)."
 ---

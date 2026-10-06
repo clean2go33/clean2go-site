@@ -16,7 +16,7 @@ services: [nettoyage-interieur-voiture, nettoyage-exterieur-voiture, nettoyage-v
 blog: [entretenir-voiture-bassin-arcachon-sel-sable-resine, nettoyer-sieges-tissu-voiture]
 faq:
   - q: Travaillez-vous avec les résidents à l’année ?
-    a: "Oui, comme avec les vacanciers et les propriétaires de résidences secondaires. [[À CONFIRMER : formule d’entretien régulier]]"
+    a: "Oui, comme avec les vacanciers et les propriétaires de résidences secondaires."
   - q: Pouvez-vous nettoyer le coffre après des sorties à la plage ou à vélo ?
     a: "Oui, le coffre fait partie du [nettoyage intérieur](/prestations/nettoyage-interieur-voiture/)."
   - q: Intervenez-vous sur un parking d’entreprise à Arès ?

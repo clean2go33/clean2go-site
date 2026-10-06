@@ -18,7 +18,7 @@ faq:
   - q: Peut-on intervenir dans une rue en pente ?
     a: "Oui, à condition que la voiture soit stable et que l’on puisse travailler autour en sécurité. Précisez la configuration de la rue ou du parking dans votre demande."
   - q: "Nous sommes plusieurs voisins : peut-on grouper les interventions ?"
-    a: "[[À CONFIRMER : possibilité de grouper plusieurs véhicules d’une même résidence (créneau commun, éventuelle remise)]]"
+    a: "Oui, précisez le nombre de véhicules dans votre demande : nous établissons un devis adapté."
   - q: Intervenez-vous aussi à Floirac ou Lormont ?
     a: "Ces communes voisines ne sont pas détaillées ici, mais nous étudions toute demande sur la rive droite. Précisez la vôtre dans le [formulaire](/contact/?commune=Autre#devis)."
 ---

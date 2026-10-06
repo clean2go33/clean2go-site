@@ -16,10 +16,10 @@ inclus:
   - "**Aviation légère** : cabines et habitacles, sur demande"
   - "**Environnements industriels** : véhicules et équipements, selon le site"
   - "**Étude préalable** : nous vous disons si, et comment, nous pouvons intervenir"
-  - "[[À CONFIRMER : liste des supports réellement pris en charge, avec leurs limites (taille, accès, ports ou aérodromes desservis)]]"
+  - "Tout type de véhicule est possible : voiture, SUV, utilitaire, camping-car, moto, bateau. Envoyez-nous votre demande."
 faq:
   - q: Nettoyez-vous les bateaux ?
-    a: "Oui, sur demande. Le nettoyage de bateaux fait partie de notre activité déclarée. Chaque bateau est différent (taille, matériaux, accès au ponton ou au chantier), c’est pourquoi nous étudions chaque demande avant de vous répondre. [[À CONFIRMER : types de bateaux et lieux possibles (ports, chantiers, zones de mouillage)]]"
+    a: "Oui, sur demande. Le nettoyage de bateaux fait partie de notre activité déclarée. Chaque bateau est différent (taille, matériaux, accès au ponton ou au chantier), c’est pourquoi nous étudions chaque demande avant de vous répondre. Envoyez-nous votre demande avec le type de bateau et son emplacement."
   - q: Comment demander un devis pour un support hors automobile ?
     a: "Utilisez le formulaire en choisissant « Autre véhicule ou support », et décrivez le support, son lieu et ce que vous souhaitez : nous revenons vers vous. Quelques photos facilitent beaucoup l’étude."
   - q: Les tarifs sont-ils ceux de l’automobile ?

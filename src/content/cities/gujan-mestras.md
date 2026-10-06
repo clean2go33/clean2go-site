@@ -18,7 +18,7 @@ faq:
   - q: "Mon véhicule sent le poisson ou les coquillages : peut-on traiter l’odeur ?"
     a: "Oui, si l’odeur est dans les matières (tapis, moquettes, tissus, bacs de coffre). La vapeur les traite en profondeur plutôt que de masquer l’odeur. Pour une odeur très installée, il faut parfois un traitement plus poussé, que nous vous précisons avant l’intervention. Voir [mauvaises odeurs](/prestations/options-et-cas-particuliers/#odeurs)."
   - q: Intervenez-vous sur les véhicules utilitaires de professionnels des ports ou du commerce ?
-    a: "Oui, sur demande : [[À CONFIRMER : types de véhicules utilitaires pris en charge (fourgons, pick-up, camionnettes) et leurs limites]] Voir [Professionnels](/professionnels/) pour l’organisation des passages."
+    a: "Oui, sur demande : nous acceptons tout type de véhicule, utilitaires compris. Précisez le modèle dans votre demande. Voir [Professionnels](/professionnels/) pour l’organisation des passages."
   - q: Intervenez-vous aussi sur les bateaux dans les ports de Gujan-Mestras ?
     a: "Nous étudions le nettoyage de bateaux sur demande, selon le support et les conditions d’accès au ponton ou au chantier. Voir [autres véhicules et supports](/prestations/autres-vehicules/)."
 ---

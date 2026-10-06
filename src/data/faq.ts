@@ -23,15 +23,15 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: 'Que comprend le nettoyage intérieur ?',
-        a: `Le [nettoyage intérieur](/prestations/nettoyage-interieur-voiture/) traite les sièges, les tapis, les moquettes, les plastiques et les zones difficiles d’accès de l’habitacle. La vapeur décolle les saletés incrustées et traite les bactéries et les mauvaises odeurs à la source. [[À CONFIRMER : liste exacte des points traités (contre-portes, vitres intérieures, coffre, ciel de toit, rails de sièges…)]]`,
+        a: `Le [nettoyage intérieur](/prestations/nettoyage-interieur-voiture/) traite les sièges, les tapis, les moquettes, les plastiques et les zones difficiles d’accès de l’habitacle. La vapeur décolle les saletés incrustées et traite les bactéries et les mauvaises odeurs à la source.`,
       },
       {
         q: 'Que comprend le nettoyage extérieur ?',
-        a: `Le [nettoyage extérieur](/prestations/nettoyage-exterieur-voiture/) concerne la carrosserie, les jantes et les finitions. La vapeur décolle les saletés avec précision et limite la consommation d’eau. [[À CONFIRMER : liste exacte des points traités (vitres extérieures, joints, seuils de portes, passages de roues, plastiques extérieurs…)]]`,
+        a: `Le [nettoyage extérieur](/prestations/nettoyage-exterieur-voiture/) concerne la carrosserie, les jantes et les finitions. La vapeur décolle les saletés avec précision et limite la consommation d’eau.`,
       },
       {
         q: 'Utilisez-vous des produits chimiques ?',
-        a: `Notre nettoyage repose sur la vapeur. [[À CONFIRMER : produits complémentaires éventuellement utilisés (détachant, protection…) et lesquels]]`,
+        a: `Notre nettoyage repose sur la vapeur. Si un cas particulier demande autre chose, nous vous l’indiquons dans le devis.`,
       },
     ],
   },
@@ -41,31 +41,31 @@ export const FAQ_GROUPS: FaqGroup[] = [
     items: [
       {
         q: 'Faut-il fournir de l’eau ?',
-        a: `[[À CONFIRMER : le matériel Clean2Go est-il autonome en eau, ou faut-il un point d’eau ? Quantité nécessaire]] La technique vapeur utilise très peu d’eau, ce qui limite de toute façon les contraintes sur place.`,
+        a: `Nous préférons disposer d’un point d’eau, mais nous pouvons nous débrouiller sans. La technique vapeur utilise très peu d’eau, ce qui limite de toute façon les contraintes sur place.`,
       },
       {
         q: 'Faut-il fournir de l’électricité ?',
-        a: `[[À CONFIRMER : le matériel Clean2Go est-il autonome en énergie, ou faut-il une prise 230 V à proximité ? Puissance nécessaire]]`,
+        a: `Oui, une prise électrique à proximité du véhicule est nécessaire.`,
       },
       {
         q: 'Combien de temps dure un nettoyage ?',
-        a: `La durée dépend de la prestation, de la taille du véhicule et de son état. [[À CONFIRMER : durées indicatives par prestation (intérieur, extérieur, complet) et par taille de véhicule]] Le devis vous indique le temps prévu, et nous le fixons avec vous pour que le créneau convienne à votre journée.`,
+        a: `La durée dépend de la prestation, de la taille du véhicule et de son état. Le devis vous indique le temps prévu, et nous le fixons avec vous pour que le créneau convienne à votre journée.`,
       },
       {
         q: 'Puis-je laisser mon véhicule et partir ?',
-        a: `[[À CONFIRMER : le client doit-il être présent, ou peut-il laisser les clés ? Conditions éventuelles]] Dans tous les cas, nous convenons à l’avance de l’endroit où se trouve le véhicule et de la manière d’y accéder.`,
+        a: `Vous êtes présent à l’arrivée pour l’état des lieux et la remise des clés, puis à la fin pour constater la prestation et régler ; entre les deux, vous n’avez pas besoin de rester. Dans tous les cas, nous convenons à l’avance de l’endroit où se trouve le véhicule et de la manière d’y accéder.`,
       },
       {
         q: 'Où se fait l’intervention ? Faut-il un garage ?',
-        a: `L’intervention a lieu là où se trouve votre véhicule : devant chez vous, dans un parking de résidence, sur le parking de votre entreprise. Il faut pouvoir ouvrir les portières en grand et travailler autour du véhicule. [[À CONFIRMER : conditions de lieu (abri ou non, stationnement sur voie publique, accord de la copropriété ou du gestionnaire de parking)]]`,
+        a: `L’intervention a lieu là où se trouve votre véhicule : devant chez vous, dans un parking de résidence, sur le parking de votre entreprise. Il faut pouvoir ouvrir les portières en grand et travailler autour du véhicule.`,
       },
       {
         q: 'Que se passe-t-il s’il pleut ?',
-        a: `[[À CONFIRMER : politique météo pour l’extérieur et l’intérieur (intervention maintenue, reportée, abri nécessaire)]]`,
+        a: `Oui, nous intervenons toute l’année.`,
       },
       {
         q: 'Quels véhicules prenez-vous en charge ?',
-        a: `Nous nettoyons les voitures de particuliers et de professionnels. [[À CONFIRMER : types de véhicules acceptés (citadines, berlines, SUV, monospaces, utilitaires, camping-cars, motos)]] D’autres supports (nautisme, aviation légère, environnements industriels) sont étudiés [sur demande](/prestations/autres-vehicules/).`,
+        a: `Nous nettoyons les voitures de particuliers et de professionnels. Nous acceptons tout type de véhicule : citadines, SUV, utilitaires, camping-cars, motos, bateaux. D’autres supports (nautisme, aviation légère, environnements industriels) sont étudiés [sur demande](/prestations/autres-vehicules/).`,
       },
     ],
   },
@@ -75,15 +75,15 @@ export const FAQ_GROUPS: FaqGroup[] = [
     items: [
       {
         q: 'Comment se passe la réservation ?',
-        a: `Vous remplissez le formulaire de la page [Contact et réservation](/contact/#reservation) ou vous nous appelez au [06 03 94 87 78](tel:+33603948778). Nous revenons vers vous avec un devis, puis nous fixons le lieu et le créneau. [[À CONFIRMER : délai de réponse habituel (24 h, 48 h) et délai moyen pour obtenir un créneau]]`,
+        a: `Vous remplissez le formulaire de la page [Contact et réservation](/contact/#reservation) ou vous nous appelez au [06 03 94 87 78](tel:+33603948778). Nous revenons vers vous avec un devis, puis nous fixons le lieu et le créneau.`,
       },
       {
         q: 'Comment payer ?',
-        a: `[[À CONFIRMER : moyens de paiement acceptés (carte, espèces, virement, chèque), paiement avant ou après l’intervention, acompte éventuel]] Le montant est celui du devis accepté, majoré uniquement des éventuels suppléments annoncés. Les règles complètes figurent dans nos [conditions générales de vente](/cgv/).`,
+        a: `Nous acceptons le paiement par chèque, espèces ou virement. Il intervient à la fin de la prestation, une fois le résultat constaté ensemble. Le montant est celui du devis accepté, majoré uniquement des éventuels suppléments annoncés. Les règles complètes figurent dans nos [conditions générales de vente](/cgv/).`,
       },
       {
         q: 'Puis-je annuler ou reporter ?',
-        a: `[[À CONFIRMER : délai et conditions d’annulation ou de report, éventuels frais]] Si un imprévu survient, prévenez-nous le plus tôt possible par téléphone : nous cherchons un autre créneau. Les conditions détaillées sont dans les [CGV](/cgv/).`,
+        a: ` Si un imprévu survient, prévenez-nous le plus tôt possible par téléphone : nous cherchons un autre créneau. Les conditions détaillées sont dans les [CGV](/cgv/).`,
       },
       {
         q: 'Le devis est-il gratuit ?',
@@ -127,7 +127,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: 'Intervenez-vous sur le Bassin d’Arcachon ?',
-        a: `Oui : Arcachon, La Teste-de-Buch, Gujan-Mestras, Andernos-les-Bains, Biganos, Le Teich, Audenge, Lanton, Arès et Lège-Cap-Ferret ont chacune leur page. Pour les communes éloignées ou la presqu’île, le créneau se fixe un peu en amont. [[À CONFIRMER : conditions particulières sur le Bassin (frais de déplacement, jours dédiés, délai)]]`,
+        a: `Oui : Arcachon, La Teste-de-Buch, Gujan-Mestras, Andernos-les-Bains, Biganos, Le Teich, Audenge, Lanton, Arès et Lège-Cap-Ferret ont chacune leur page. Pour les communes éloignées ou la presqu’île, le créneau se fixe un peu en amont. Les frais de déplacement sont inclus dans le devis.`,
       },
       {
         q: 'Ma ville n’est pas listée : puis-je quand même faire une demande ?',
@@ -153,7 +153,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: 'Proposez-vous une facturation adaptée aux entreprises ?',
-        a: `[[À CONFIRMER : facturation mensuelle, paiement à 30 jours, bon de commande, devis cadre pour contrat régulier]]`,
+        a: `Pour un besoin régulier, nous établissons un devis adapté ; les modalités de facturation se précisent avec vous.`,
       },
     ],
   },

@@ -16,7 +16,7 @@ services: [nettoyage-interieur-voiture, nettoyage-vapeur-complet, options-et-cas
 blog: [zones-oubliees-nettoyage-interieur-voiture, preparer-voiture-avant-vente]
 faq:
   - q: "Je pars tôt et rentre tard pour mon travail : comment organiser l’intervention ?"
-    a: "[[À CONFIRMER : créneaux en soirée ou le week-end, intervention en l’absence du client avec clés confiées]] Précisez vos contraintes dans la demande : nous cherchons le créneau qui convient."
+    a: "Vous êtes présent à l’arrivée pour l’état des lieux et la remise des clés, puis à la fin pour constater la prestation et régler ; entre les deux, vous n’avez pas besoin de rester. Précisez vos contraintes dans la demande : nous cherchons le créneau qui convient."
   - q: Pouvez-vous intervenir sur le parking de mon entreprise à Biganos ?
     a: "Oui. Voir [Professionnels](/professionnels/) : nous intervenons sur votre site, ponctuellement ou régulièrement."
   - q: "Mes enfants et mon chien salissent la banquette : que proposez-vous ?"

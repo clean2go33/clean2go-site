@@ -16,9 +16,9 @@ services: [nettoyage-vapeur-complet, nettoyage-interieur-voiture, options-et-cas
 blog: [zones-oubliees-nettoyage-interieur-voiture, preparer-voiture-avant-vente]
 faq:
   - q: "Mon parking est en sous-sol : est-ce possible ?"
-    a: "Cela dépend de l’accès et de la ventilation. Précisez-le dans votre demande : nous voyons avec vous comment organiser l’intervention, sur place ou à proximité. [[À CONFIRMER : le matériel peut-il fonctionner en parking souterrain (alimentation, ventilation) ?]]"
+    a: "Cela dépend de l’accès et de la ventilation. Précisez-le dans votre demande : nous voyons avec vous comment organiser l’intervention, sur place ou à proximité. Une prise électrique à proximité est nécessaire."
   - q: "Je prends le train à Bordeaux chaque jour : pouvez-vous intervenir pendant ma journée ?"
-    a: "[[À CONFIRMER : possibilité d’intervenir en l’absence du client (clés confiées, parking sécurisé), et créneaux horaires]] Nous convenons toujours à l’avance de la façon d’accéder au véhicule."
+    a: "Vous êtes présent à l’arrivée pour l’état des lieux et la remise des clés, puis à la fin pour constater la prestation et régler ; entre les deux, vous n’avez pas besoin de rester. Nous convenons toujours à l’avance de la façon d’accéder au véhicule."
   - q: Faites-vous aussi les voitures de petits professionnels de Bègles ?
     a: "Oui. Artisans, commerçants et petites entreprises peuvent demander un devis, pour un ou plusieurs véhicules. Voir la page [Professionnels](/professionnels/)."
 ---

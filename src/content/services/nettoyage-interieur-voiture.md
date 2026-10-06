@@ -17,7 +17,7 @@ inclus:
   - "**Plastiques et habillages** : tableau de bord, console, contre-portes"
   - "**Zones difficiles d’accès** : rails de sièges, grilles d’aération, interstices"
   - "**Bactéries et mauvaises odeurs** traitées à la source"
-  - "[[À CONFIRMER : autres points inclus (vitres intérieures, coffre, ciel de toit, volant et commandes)]]"
+  - "Autres points sur demande : précisez ce que vous souhaitez dans votre demande de devis."
 faq:
   - q: Dois-je vider ma voiture avant votre venue ?
     a: "Nous vous recommandons de retirer vos effets personnels et les objets de valeur : cela nous laisse accéder à toutes les surfaces et évite tout risque d’égarement. Les sièges auto et rehausseurs peuvent rester ou être sortis, à votre convenance : dites-le-nous dans votre demande."
@@ -26,7 +26,7 @@ faq:
   - q: Les mauvaises odeurs disparaissent-elles vraiment ?
     a: "Quand l’odeur vient des matières (tissus, moquettes, mousse des sièges), oui : la vapeur la traite à la source au lieu de la couvrir. Si l’odeur vient d’ailleurs (filtre d’habitacle encrassé, moisissure dans la ventilation, fuite), un passage en garage peut être nécessaire en complément. Voir [options et cas particuliers](/prestations/options-et-cas-particuliers/#odeurs)."
   - q: Combien de temps dure le nettoyage intérieur ?
-    a: "[[À CONFIRMER : durée indicative du nettoyage intérieur selon la taille et l’état du véhicule]] Le devis indique le temps prévu, et nous fixons le créneau avec vous."
+    a: " Le devis indique le temps prévu, et nous fixons le créneau avec vous."
 related: [nettoyage-vapeur-complet, options-et-cas-particuliers]
 ---
 ## Ce que la vapeur change à l’intérieur d’une voiture

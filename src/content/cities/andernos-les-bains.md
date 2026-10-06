@@ -16,11 +16,11 @@ services: [nettoyage-vapeur-complet, nettoyage-interieur-voiture, nettoyage-exte
 blog: [entretenir-voiture-bassin-arcachon-sel-sable-resine, nettoyer-sieges-tissu-voiture]
 faq:
   - q: Dois-je être présent pendant l’intervention ?
-    a: "[[À CONFIRMER : présence du client obligatoire ou non, conditions si clés confiées]] Dans tous les cas, nous convenons à l’avance de l’accès et du créneau."
+    a: "Vous êtes présent à l’arrivée pour l’état des lieux et la remise des clés, puis à la fin pour constater la prestation et régler ; entre les deux, vous n’avez pas besoin de rester. Dans tous les cas, nous convenons à l’avance de l’accès et du créneau."
   - q: "Je n’ai pas de moyen de transport pour déposer ma voiture : est-ce un problème ?"
     a: "Non, c’est même l’intérêt du service : il n’y a rien à déposer, nous venons à votre adresse."
   - q: Intervenez-vous toute l’année à Andernos ?
-    a: "[[À CONFIRMER : disponibilité sur le Bassin nord toute l’année, jours et horaires]]"
+    a: "Oui, nous intervenons toute l’année."
 ---
 ## Un service pensé pour ne pas se déplacer
 

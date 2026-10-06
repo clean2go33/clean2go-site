@@ -16,7 +16,7 @@ services: [nettoyage-interieur-voiture, nettoyage-vapeur-complet, options-et-cas
 blog: [preparer-voiture-avant-vente, zones-oubliees-nettoyage-interieur-voiture]
 faq:
   - q: Mon parking de copropriété est-il compatible avec une intervention ?
-    a: "Dans la plupart des cas oui : l’intervention demande surtout de pouvoir ouvrir les portières en grand et de travailler autour de la voiture. [[À CONFIRMER : faut-il l’accord du syndic ou du gestionnaire de parking, et le matériel est-il compatible avec un parking souterrain (ventilation, alimentation) ?]]"
+    a: "Dans la plupart des cas oui : l’intervention demande surtout de pouvoir ouvrir les portières en grand et de travailler autour de la voiture. Une prise électrique à proximité est nécessaire ; en parking de copropriété, l’accord du gestionnaire peut être utile. Précisez le lieu dans votre demande : nous voyons avec vous comment organiser l’intervention."
   - q: "Je revends ma voiture à un particulier à Talence : le nettoyage vaut-il le coup ?"
     a: "Un habitacle net et sans odeur change la perception d’un véhicule et facilite la discussion sur le prix. Voir notre guide [préparer sa voiture avant une vente](/blog/preparer-voiture-avant-vente/)."
   - q: Les étudiants peuvent-ils faire une demande ?

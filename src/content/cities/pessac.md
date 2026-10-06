@@ -18,9 +18,9 @@ faq:
   - q: Les aiguilles de pin et la résine se nettoient-elles à la vapeur ?
     a: "Les aiguilles s’enlèvent, mais c’est la résine qui pose problème : elle colle sur la carrosserie et sur les vitres. La chaleur de la vapeur la ramollit et permet de la décoller sans frotter la peinture. Si elle a durci depuis longtemps, il faut parfois insister. Voir notre guide sur [le pollen et la résine](/blog/pollen-pins-voiture-printemps-gironde/)."
   - q: Intervenez-vous sur le campus ou dans les résidences étudiantes ?
-    a: "Oui, sur demande, selon l’accès et l’autorisation du gestionnaire du parking. [[À CONFIRMER : intervention possible dans les parkings du campus et résidences étudiantes ?]]"
+    a: "Oui, sur demande, selon l’accès et l’autorisation du gestionnaire du parking. Précisez le lieu dans votre demande."
   - q: Pouvez-vous intervenir en soirée ou le week-end pour les salariés ?
-    a: "[[À CONFIRMER : jours et horaires d’intervention (soirée, samedi, dimanche)]]"
+    a: "Envoyez-nous votre demande avec le jour et l’horaire souhaités : nous vous répondons selon nos disponibilités."
 ---
 ## Pessac, une commune où les arbres comptent
 

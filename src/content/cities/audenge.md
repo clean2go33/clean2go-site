@@ -16,7 +16,7 @@ services: [nettoyage-interieur-voiture, nettoyage-exterieur-voiture, nettoyage-v
 blog: [entretenir-voiture-bassin-arcachon-sel-sable-resine, humidite-voiture-hiver-moisissures-buee]
 faq:
   - q: Intervenez-vous chez les propriétaires de résidences secondaires ?
-    a: "Oui, sur rendez-vous. [[À CONFIRMER : possibilité d’intervenir en l’absence du propriétaire avec clés confiées]]"
+    a: "Oui, sur rendez-vous. Vous êtes présent à l’arrivée pour l’état des lieux et la remise des clés, puis à la fin pour constater la prestation et régler ; entre les deux, vous n’avez pas besoin de rester."
   - q: L’air salin abîme-t-il ma voiture ?
     a: "Le sel favorise le dépôt de salissures et peut ternir la carrosserie à la longue. Voir notre [guide d’entretien dans le Bassin](/blog/entretenir-voiture-bassin-arcachon-sel-sable-resine/)."
   - q: Quelle prestation choisir après un hiver humide ?

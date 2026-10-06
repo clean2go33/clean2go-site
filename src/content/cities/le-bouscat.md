@@ -16,7 +16,7 @@ services: [nettoyage-vapeur-complet, nettoyage-exterieur-voiture, nettoyage-inte
 blog: [preparer-voiture-avant-vente, nettoyer-sieges-tissu-voiture]
 faq:
   - q: Vos interventions sont-elles bruyantes pour le voisinage ?
-    a: "Le travail à la vapeur est relativement discret et ne projette pas d’eau sur la rue. [[À CONFIRMER : niveau sonore du générateur et du matériel en intervention]]"
+    a: "Le travail à la vapeur est relativement discret et ne projette pas d’eau sur la rue."
   - q: Intervenez-vous pour les petites entreprises et professions libérales du Bouscat ?
     a: "Oui. Un véhicule d’entreprise ou de profession libérale peut être traité sur son lieu de stationnement habituel. Voir [Professionnels](/professionnels/)."
   - q: Peut-on nettoyer un intérieur en cuir clair ?

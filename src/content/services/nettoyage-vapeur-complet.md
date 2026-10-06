@@ -16,16 +16,16 @@ inclus:
   - "**Tout le nettoyage extérieur** : carrosserie, jantes, finitions"
   - "**Une seule intervention**, un seul déplacement, un seul créneau"
   - "**Nettoyage et désinfection en profondeur** à la vapeur, avec très peu d’eau"
-  - "[[À CONFIRMER : éléments inclus dans la formule complète et éventuels avantages tarifaires par rapport à deux prestations séparées]]"
+  - "Le détail de la formule est précisé dans votre devis."
 faq:
   - q: Quelle différence entre le nettoyage vapeur et un lavage classique ?
     a: "Un lavage classique repose sur un volume d’eau et un produit lessiviel, souvent avec des brosses. Le nettoyage vapeur repose sur la chaleur : la vapeur ramollit et décolle les salissures, avec très peu d’eau. Il atteint les interstices, ne détrempe pas les tissus et se pratique sur place. Il ne remplace pas une réparation de carrosserie ou de sellerie, mais il nettoie en profondeur."
   - q: La vapeur désinfecte-t-elle vraiment ?
-    a: "La chaleur de la vapeur agit sur les bactéries et les salissures organiques présentes sur les surfaces traitées : c’est ce qu’on entend par nettoyage et désinfection en profondeur. Nous ne prétendons pas à une stérilisation et ne mettons en avant aucun taux de destruction : le résultat dépend de la surface, du temps de contact et de l’état initial. [[À CONFIRMER : le procédé fait-il l’objet d’une certification ou d’un test que l’on peut citer ? Sinon laisser tel quel.]]"
+    a: "La chaleur de la vapeur agit sur les bactéries et les salissures organiques présentes sur les surfaces traitées : c’est ce qu’on entend par nettoyage et désinfection en profondeur. Nous ne prétendons pas à une stérilisation et ne mettons en avant aucun taux de destruction : le résultat dépend de la surface, du temps de contact et de l’état initial."
   - q: Est-il plus avantageux de prendre la formule complète ?
     a: "Pour un véhicule qui a besoin d’être repris à l’intérieur et à l’extérieur, c’est plus simple : un seul déplacement, un seul créneau. Le tarif est communiqué sur devis : voir la page [Tarifs](/tarifs/)."
   - q: Combien de temps faut-il prévoir ?
-    a: "[[À CONFIRMER : durée indicative de la formule complète selon la taille et l’état du véhicule]] Le devis précise la durée prévue."
+    a: " Le devis précise la durée prévue."
 related: [nettoyage-interieur-voiture, nettoyage-exterieur-voiture]
 ---
 ## La remise en état complète, sans faire deux fois le déplacement

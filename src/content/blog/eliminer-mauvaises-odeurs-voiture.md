@@ -14,7 +14,7 @@ faq:
   - q: Un désodorisant suffit-il ?
     a: "Il masque l’odeur quelques jours. Pour la supprimer, il faut traiter sa source : textile imprégné, humidité, résidu alimentaire."
   - q: Pouvez-vous garantir la disparition d’une odeur de tabac ?
-    a: "[[À CONFIRMER : engagement de résultat ou non sur les odeurs de tabac]] Le résultat dépend de l’ancienneté et de l’imprégnation."
+    a: " Le résultat dépend de l’ancienneté et de l’imprégnation."
 ---
 ## Une odeur a toujours une source
 

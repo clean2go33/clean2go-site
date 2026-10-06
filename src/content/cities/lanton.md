@@ -16,7 +16,7 @@ services: [nettoyage-interieur-voiture, nettoyage-vapeur-complet, options-et-cas
 blog: [entretenir-voiture-bassin-arcachon-sel-sable-resine, eliminer-mauvaises-odeurs-voiture]
 faq:
   - q: "Je loue mon logement et ma voiture à des vacanciers : pouvez-vous la nettoyer entre deux séjours ?"
-    a: "[[À CONFIRMER : prestation entre deux locations, créneaux rapides]] Contactez-nous avec vos dates : nous verrons ce qui est possible."
+    a: "Oui, sur demande. Contactez-nous avec vos dates : nous verrons ce qui est possible."
   - q: Mon habitacle est plein de sable, que faire ?
     a: "Voir notre [guide d’entretien dans le Bassin](/blog/entretenir-voiture-bassin-arcachon-sel-sable-resine/) et le [nettoyage intérieur](/prestations/nettoyage-interieur-voiture/)."
   - q: Traitez-vous les odeurs de serviettes mouillées ou de crème solaire ?

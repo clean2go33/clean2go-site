@@ -18,7 +18,7 @@ faq:
   - q: Quelles communes de Bordeaux Métropole desservez-vous ?
     a: "Nous avons une page dédiée pour [Bordeaux](/nettoyage-auto-bordeaux/), [Mérignac](/nettoyage-auto-merignac/), [Pessac](/nettoyage-auto-pessac/), [Talence](/nettoyage-auto-talence/), [Villenave-d’Ornon](/nettoyage-auto-villenave-d-ornon/), [Saint-Médard-en-Jalles](/nettoyage-auto-saint-medard-en-jalles/), [Bègles](/nettoyage-auto-begles/), [Le Bouscat](/nettoyage-auto-le-bouscat/), [Gradignan](/nettoyage-auto-gradignan/) et [Cenon](/nettoyage-auto-cenon/). D’autres communes de la métropole sont possibles : indiquez la vôtre dans le [formulaire](/contact/?commune=Autre#devis)."
   - q: Faut-il avoir un garage ou un parking privé ?
-    a: "Non, mais il faut pouvoir travailler autour du véhicule et ouvrir les portières en grand. Un parking de résidence, une cour, un parking d’entreprise ou une place devant chez vous conviennent. [[À CONFIRMER : conditions d’intervention en voirie publique (autorisation, stationnement) et en copropriété]]"
+    a: "Non, mais il faut pouvoir travailler autour du véhicule et ouvrir les portières en grand. Un parking de résidence, une cour, un parking d’entreprise ou une place devant chez vous conviennent. En voirie ou en copropriété, précisez le lieu dans votre demande : nous voyons avec vous comment organiser l’intervention."
   - q: Le service est-il aussi proposé aux entreprises de la métropole ?
     a: "Oui. Nous intervenons sur les parkings d’entreprises, de concessions, de garages et de loueurs, pour un véhicule ou pour une flotte. Voir la page [Professionnels](/professionnels/)."
   - q: Les tarifs sont-ils les mêmes dans toutes les communes ?

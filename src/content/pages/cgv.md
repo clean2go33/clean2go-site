@@ -17,23 +17,23 @@ Les prestations sont décrites sur la page [Prestations](/prestations/) : nettoy
 
 ## 3. Zone d’intervention
 
-Clean2Go intervient dans les communes listées sur la page [Zones d’intervention](/zones-d-intervention/). Pour une commune non listée, une demande peut être adressée via la page [contact](/contact/). [[À CONFIRMER : conditions et frais éventuels de déplacement hors zone]]
+Clean2Go intervient dans les communes listées sur la page [Zones d’intervention](/zones-d-intervention/). Pour une commune non listée, une demande peut être adressée via la page [contact](/contact/). Les frais de déplacement sont inclus dans le devis.
 
 ## 4. Commande et rendez-vous
 
-La demande est effectuée via le formulaire, par téléphone ou par e-mail. Elle devient ferme après confirmation par Clean2Go de la date, de l’adresse et de la prestation. [[À CONFIRMER : délai de réponse, mode de confirmation, acompte éventuel]]
+La demande est effectuée via le formulaire, par téléphone ou par e-mail. Elle devient ferme après confirmation par Clean2Go de la date, de l’adresse et de la prestation.
 
 ## 5. Conditions matérielles d’intervention
 
-Le client met le véhicule à disposition à l’adresse convenue, dans un lieu accessible, dégagé et sûr. [[À CONFIRMER : besoin d’un accès à l’eau et à l’électricité, durée moyenne, présence obligatoire du client, remise des clés, conditions météo]] Le client signale à l’avance tout élément pertinent : fragilité d’un matériau, objets de valeur à retirer, dommages préexistants.
+Le client met le véhicule à disposition à l’adresse convenue, dans un lieu accessible, dégagé et sûr. Vous êtes présent à l’arrivée pour l’état des lieux et la remise des clés, puis à la fin pour constater la prestation et régler ; entre les deux, vous n’avez pas besoin de rester. Une prise électrique à proximité du véhicule est nécessaire ; un point d’eau est préférable, mais l’intervention reste possible sans. Les prestations sont réalisées toute l’année. Le client signale à l’avance tout élément pertinent : fragilité d’un matériau, objets de valeur à retirer, dommages préexistants.
 
 ## 6. Prix
 
-Les prix sont indiqués en euros. [[À CONFIRMER : mention TTC ou HT selon le régime de TVA de NEW WAVE]] Ils figurent sur la page [Tarifs](/tarifs/) ou dans le devis. Des suppléments peuvent s’appliquer pour des cas particuliers (poils d’animaux, salissures importantes, odeurs), annoncés avant l’intervention. [[À CONFIRMER : frais de déplacement]]
+Les prix sont indiqués en euros. NEW WAVE est assujettie à la TVA : le devis précise si les montants sont exprimés HT ou TTC. Ils figurent sur la page [Tarifs](/tarifs/) ou dans le devis. Des suppléments peuvent s’appliquer pour des cas particuliers (poils d’animaux, salissures importantes, odeurs), annoncés avant l’intervention. Les frais de déplacement sont inclus dans le devis.
 
 ## 7. Paiement
 
-Le paiement intervient [[À CONFIRMER : à l’issue de la prestation, moyens de paiement acceptés, facturation des professionnels, délais et pénalités de retard]]. Une facture est remise au client.
+Le paiement intervient à l’issue de la prestation, une fois le résultat constaté avec le client, par chèque, espèces ou virement. [[À CONFIRMER : facturation des professionnels, délais et pénalités de retard]]. Une facture est remise au client.
 
 ## 8. Annulation et report
 

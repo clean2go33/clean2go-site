@@ -12,7 +12,7 @@ service: nettoyage-vapeur-complet
 cities: []
 faq:
   - q: La vapeur abîme-t-elle les surfaces de l’habitacle ?
-    a: "Bien utilisée, elle convient à la plupart des surfaces d’un habitacle. Certains matériaux fragiles demandent des précautions : un professionnel adapte la distance, le temps et la température. [[À CONFIRMER : liste des matériaux exclus ou traités avec précaution par Clean2Go]]"
+    a: "Bien utilisée, elle convient à la plupart des surfaces d’un habitacle. Certains matériaux fragiles demandent des précautions : un professionnel adapte la distance, le temps et la température."
   - q: L’habitacle est-il mouillé après le passage ?
     a: "La vapeur utilisée est peu humide : les surfaces sont généralement sèches ou à peine humides à la fin. Le séchage complet dépend du textile et de la météo."
 ---

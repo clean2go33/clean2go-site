@@ -16,16 +16,16 @@ inclus:
   - "**Jantes** : poussière de freins et crasse incrustée"
   - "**Finitions** : plastiques extérieurs, joints, bas de caisse"
   - "**Un geste précis** plutôt qu’un jet d’eau massif"
-  - "[[À CONFIRMER : autres points inclus (vitres extérieures, seuils de portes, passages de roues, essuie-glaces, protection ou lustrage éventuels)]]"
+  - "Autres points sur demande : précisez ce que vous souhaitez dans votre demande de devis."
 faq:
   - q: Peut-on nettoyer l’extérieur d’une voiture sans point d’eau ?
-    a: "La vapeur consomme très peu d’eau, ce qui limite fortement la contrainte. [[À CONFIRMER : le matériel est-il autonome en eau pour l’extérieur, ou faut-il un point d’eau ?]]"
+    a: "La vapeur consomme très peu d’eau, ce qui limite fortement la contrainte. Nous préférons disposer d’un point d’eau, mais nous pouvons nous débrouiller sans."
   - q: La vapeur abîme-t-elle la peinture ?
     a: "Employée avec le bon geste et à la bonne distance, la vapeur nettoie sans agresser une peinture en bon état. Une peinture déjà écaillée ou un vernis fragilisé demandent de la prudence : signalez-le dans votre demande, nous adaptons l’intervention."
   - q: Faites-vous aussi du lustrage ou de la protection de carrosserie ?
-    a: "[[À CONFIRMER : le lustrage, la cire ou une protection céramique font-ils partie de l’offre ? Si non, retirer cette question.]]"
+    a: "Dites-nous ce que vous souhaitez dans votre demande : le devis précise ce que nous pouvons réaliser."
   - q: Que se passe-t-il s’il pleut le jour prévu ?
-    a: "[[À CONFIRMER : politique météo pour la prestation extérieure (report, abri nécessaire)]]"
+    a: "Nous intervenons toute l’année, quelle que soit la saison."
 related: [nettoyage-vapeur-complet, nettoyage-interieur-voiture]
 ---
 ## Un nettoyage extérieur qui ne repose pas sur le volume d’eau

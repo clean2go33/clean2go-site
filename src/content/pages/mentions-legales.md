@@ -20,7 +20,7 @@ Les présentes mentions légales sont établies conformément à la loi n° 2004
 - **Téléphone :** 06 03 94 87 78
 - **E-mail :** contact@clean2go.fr
 - **Activité :** lavage manuel de véhicules, vente de produits de nettoyage, lavage manuel de bateaux
-- **Numéro de TVA intracommunautaire :** [[À CONFIRMER : numéro de TVA intracommunautaire, ou mention « TVA non applicable » si la société n’y est pas assujettie]]
+- **Numéro de TVA intracommunautaire :** NEW WAVE est assujettie à la TVA. Numéro : [[À CONFIRMER : numéro de TVA intracommunautaire]]
 - **Numéro d’inscription au répertoire des métiers (le cas échéant) :** [[À CONFIRMER : numéro RM ou mention CMA si applicable (le Kbis mentionne une validation CMA du 2 juillet 2026)]]
 
 Le siège social est une adresse de domiciliation : Clean2Go est un service mobile et ne reçoit pas de public à cette adresse.
