@@ -28,7 +28,7 @@ Le siège social est une adresse de domiciliation : Clean2Go est un service mobi
 
 ## Hébergement
 
-Le site est hébergé par **Hostinger**. [[À CONFIRMER : dénomination sociale exacte, adresse et téléphone de l’hébergeur, à reprendre depuis les mentions légales de Hostinger]]
+Le site est hébergé par **HOSTINGER INTERNATIONAL LIMITED**, société de droit chypriote, 61 Lordou Vironos str., 6023 Larnaca, Chypre. Contact : compliance@hostinger.com.
 
 ## Propriété intellectuelle
 

@@ -9,7 +9,7 @@ updated: 2026-10-06
 
 ## 1. Objet et champ d’application
 
-Les présentes conditions générales de vente (CGV) régissent les prestations de nettoyage de véhicules réalisées à domicile ou sur site par **NEW WAVE**, exerçant sous le nom commercial **Clean2Go** (voir les [mentions légales](/mentions-legales/)), auprès de clients particuliers (consommateurs) et professionnels. Toute commande implique l’acceptation des CGV. [[À CONFIRMER : version applicable aux clients professionnels, clauses distinctes B2B]]
+Les présentes conditions générales de vente (CGV) régissent les prestations de nettoyage de véhicules réalisées à domicile ou sur site par **NEW WAVE**, exerçant sous le nom commercial **Clean2Go** (voir les [mentions légales](/mentions-legales/)), auprès de clients particuliers (consommateurs) et professionnels. Toute commande implique l’acceptation des CGV.
 
 ## 2. Prestations
 
@@ -33,7 +33,7 @@ Les prix sont indiqués en euros. NEW WAVE est assujettie à la TVA : le devis p
 
 ## 7. Paiement
 
-Le paiement intervient à l’issue de la prestation, une fois le résultat constaté avec le client, par chèque, espèces ou virement. [[À CONFIRMER : facturation des professionnels, délais et pénalités de retard]]. Une facture est remise au client.
+Le paiement intervient à l’issue de la prestation, une fois le résultat constaté avec le client, par chèque, espèces ou virement. Pour les clients professionnels, toute somme non payée à l’échéance entraîne de plein droit des pénalités de retard au taux de trois fois le taux d’intérêt légal, ainsi qu’une indemnité forfaitaire de 40 € pour frais de recouvrement (article L.441-10 du Code de commerce). Une facture est remise au client.
 
 ## 8. Annulation et report
 
@@ -41,19 +41,19 @@ Le paiement intervient à l’issue de la prestation, une fois le résultat cons
 
 ## 9. Droit de rétractation des consommateurs
 
-Le consommateur dispose en principe d’un délai de rétractation de 14 jours pour les contrats conclus à distance ou hors établissement. Pour un service pleinement exécuté avant la fin de ce délai à la demande expresse du consommateur, ce droit peut être perdu. [[À CONFIRMER : formulation exacte, formulaire de rétractation, recueil de la demande expresse du client — à faire valider par un juriste]]
+Le consommateur dispose en principe d’un délai de rétractation de 14 jours pour les contrats conclus à distance ou hors établissement (article L.221-18 du Code de la consommation). Lorsqu’il demande expressément que la prestation commence avant la fin de ce délai, il doit en faire la demande avant l’intervention ; s’il a ensuite renoncé à son droit de rétractation après exécution complète du service, il ne peut plus l’exercer (article L.221-25). Pour exercer ce droit avant l’intervention, il suffit d’écrire à contact@clean2go.fr.
 
 ## 10. Exécution de la prestation et réserves
 
-Un état du véhicule est constaté avant l’intervention. Certaines salissures anciennes, taches ou odeurs peuvent ne pas être entièrement supprimées ; Clean2Go informe le client des limites prévisibles. Toute réclamation doit être formulée dès la fin de la prestation, ou sous [[À CONFIRMER : délai de réclamation]] par e-mail à contact@clean2go.fr.
+Un état du véhicule est constaté avant l’intervention. Certaines salissures anciennes, taches ou odeurs peuvent ne pas être entièrement supprimées ; Clean2Go informe le client des limites prévisibles. Le client constate la prestation en fin d’intervention, en présence de l’opérateur, et formule alors ses éventuelles réserves. Toute réclamation ultérieure est adressée sans délai par e-mail à contact@clean2go.fr.
 
 ## 11. Responsabilité
 
-Clean2Go est tenue d’exécuter les prestations avec soin. Elle ne répond pas des dommages préexistants, des défauts cachés ni de l’usure normale. NEW WAVE a souscrit une assurance responsabilité civile professionnelle auprès d’Abeilles Assurances. [[À CONFIRMER : numéro de contrat, garanties et plafonds à mentionner le cas échéant]] Les limites de responsabilité ne s’appliquent pas là où la loi l’interdit.
+Clean2Go est tenue d’exécuter les prestations avec soin. Elle ne répond pas des dommages préexistants, des défauts cachés ni de l’usure normale. NEW WAVE a souscrit une assurance responsabilité civile professionnelle auprès d’Abeilles Assurances. Les limites de responsabilité ne s’appliquent pas là où la loi l’interdit.
 
 ## 12. Garanties légales
 
-Les consommateurs bénéficient des garanties légales prévues par le Code de la consommation. [[À CONFIRMER : rappel des garanties applicables aux prestations de services]]
+Les consommateurs bénéficient des garanties légales prévues par le Code de la consommation.
 
 ## 13. Données personnelles
 
@@ -65,7 +65,7 @@ Conformément au Code de la consommation, le consommateur peut recourir gratuite
 
 ## 15. Droit applicable et litiges
 
-Les CGV sont soumises au droit français. En cas de litige, une solution amiable est recherchée avant toute action. [[À CONFIRMER : tribunal compétent pour les clients professionnels]]
+Les CGV sont soumises au droit français. En cas de litige, une solution amiable est recherchée avant toute action. Pour les clients professionnels, tout litige relève du tribunal de commerce de Bordeaux, siège de NEW WAVE. Pour les consommateurs, les règles légales de compétence s’appliquent.
 
 ## 16. Contact
 

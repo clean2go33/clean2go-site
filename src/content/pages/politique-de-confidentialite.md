@@ -23,11 +23,13 @@ Lorsque vous remplissez le formulaire de contact, de réservation ou le formulai
 
 ## 4. Destinataires
 
-Les données sont destinées à l’équipe Clean2Go. [[À CONFIRMER : prestataires éventuels — hébergeur, service d’envoi de formulaires, outil de mesure — et transferts hors Union européenne]]
+Les données sont destinées à l’équipe Clean2Go. Le site est hébergé par HOSTINGER INTERNATIONAL LIMITED (Chypre, Union européenne), qui reçoit techniquement les données saisies dans les formulaires avant leur envoi par e-mail à Clean2Go. Aucun outil de mesure d’audience n’est activé actuellement et aucune donnée n’est transmise à des régies publicitaires.
 
 ## 5. Durée de conservation
 
-[[À CONFIRMER : durée de conservation des demandes sans suite, des données clients et de la facturation]]
+- **Demandes sans suite** : 3 ans à compter du dernier contact.
+- **Clients** : pendant la durée de la relation commerciale, puis 3 ans à compter du dernier contact.
+- **Factures et pièces comptables** : 10 ans (article L.123-22 du Code de commerce).
 
 ## 6. Vos droits
 

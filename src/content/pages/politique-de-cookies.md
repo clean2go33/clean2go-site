@@ -15,7 +15,7 @@ Le site peut enregistrer dans votre navigateur votre choix en matière de cookie
 
 ## Mesure d’audience
 
-[[À CONFIRMER : outil de mesure d’audience retenu (Google Analytics ou autre) et activation]] Lorsqu’un outil de mesure est activé, il n’est chargé qu’après votre accord, via la bannière de choix. Sans choix de votre part, ou si vous refusez, aucun cookie de mesure n’est déposé.
+À ce jour, aucun outil de mesure d’audience n’est activé sur le site : aucun cookie de mesure n’est déposé. Si un outil est activé à l’avenir, cette page sera mise à jour. Lorsqu’un outil de mesure est activé, il n’est chargé qu’après votre accord, via la bannière de choix. Sans choix de votre part, ou si vous refusez, aucun cookie de mesure n’est déposé.
 
 ## Gérer vos choix
 
