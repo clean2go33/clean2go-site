@@ -18,7 +18,7 @@ inclus:
   - "**Un devis qui précise tout** avant l’intervention"
 faq:
   - q: Comment est facturé un cas particulier ?
-    a: "Ces situations peuvent demander un supplément, annoncé dans le devis avant l’intervention. Le montant dépend de l’ampleur du problème. [[À CONFIRMER : grille ou règle de calcul des suppléments poils / très sale / odeurs]] Voir la page [Tarifs](/tarifs/)."
+    a: "Ces situations peuvent demander un supplément, annoncé dans le devis avant l’intervention. Le montant dépend de l’ampleur du problème. Tout est précisé dans le devis. Voir la page [Tarifs](/tarifs/)."
   - q: Puis-je envoyer des photos pour un devis plus précis ?
     a: "Oui, c’est même conseillé pour un véhicule très sale ou avec beaucoup de poils : décrivez la situation dans le formulaire, nous vous répondons ensuite et vous pouvez nous transmettre des photos par e-mail à contact@clean2go.fr."
   - q: Garantissez-vous la disparition totale des poils ou des odeurs ?

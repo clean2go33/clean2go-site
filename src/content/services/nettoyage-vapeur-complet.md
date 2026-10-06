@@ -23,7 +23,7 @@ faq:
   - q: La vapeur désinfecte-t-elle vraiment ?
     a: "La chaleur de la vapeur agit sur les bactéries et les salissures organiques présentes sur les surfaces traitées : c’est ce qu’on entend par nettoyage et désinfection en profondeur. Nous ne prétendons pas à une stérilisation et ne mettons en avant aucun taux de destruction : le résultat dépend de la surface, du temps de contact et de l’état initial. [[À CONFIRMER : le procédé fait-il l’objet d’une certification ou d’un test que l’on peut citer ? Sinon laisser tel quel.]]"
   - q: Est-il plus avantageux de prendre la formule complète ?
-    a: "Pour un véhicule qui a besoin d’être repris à l’intérieur et à l’extérieur, c’est plus simple : un seul déplacement, un seul créneau. [[À CONFIRMER : tarif de la formule complète comparé à deux prestations séparées]] Les prix figurent sur la page [Tarifs](/tarifs/)."
+    a: "Pour un véhicule qui a besoin d’être repris à l’intérieur et à l’extérieur, c’est plus simple : un seul déplacement, un seul créneau. Le tarif est communiqué sur devis : voir la page [Tarifs](/tarifs/)."
   - q: Combien de temps faut-il prévoir ?
     a: "[[À CONFIRMER : durée indicative de la formule complète selon la taille et l’état du véhicule]] Le devis précise la durée prévue."
 related: [nettoyage-interieur-voiture, nettoyage-exterieur-voiture]

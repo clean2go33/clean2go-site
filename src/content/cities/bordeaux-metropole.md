@@ -22,7 +22,7 @@ faq:
   - q: Le service est-il aussi proposé aux entreprises de la métropole ?
     a: "Oui. Nous intervenons sur les parkings d’entreprises, de concessions, de garages et de loueurs, pour un véhicule ou pour une flotte. Voir la page [Professionnels](/professionnels/)."
   - q: Les tarifs sont-ils les mêmes dans toutes les communes ?
-    a: "[[À CONFIRMER : tarif identique sur toute la métropole, ou frais de déplacement selon la commune]] Les formules sont détaillées sur la page [Tarifs](/tarifs/)."
+    a: "Chaque tarif est établi sur devis, selon la prestation, le véhicule et son état. Voir la page [Tarifs](/tarifs/)."
 ---
 ## Un service qui se déplace dans toute la métropole
 

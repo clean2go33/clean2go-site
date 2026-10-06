@@ -14,11 +14,11 @@ const faq = [
   { q: 'Qu’est-ce qui peut s’ajouter au tarif de base ?', a: 'Uniquement ce que l’état du véhicule justifie : poils d’animaux en grande quantité, salissures très importantes, traitement d’odeurs. Ces suppléments sont annoncés dans le devis, jamais ajoutés après coup.' },
   { q: 'Comment payer ?', a: '[[À CONFIRMER : moyens de paiement acceptés (carte, espèces, virement, chèque), moment du paiement (avant, après l’intervention), acompte éventuel]]' },
   { q: 'Les tarifs professionnels sont-ils différents ?', a: 'Pour plusieurs véhicules ou des passages réguliers, nous établissons une proposition adaptée à votre parc. Voir la page [Professionnels](/professionnels/).' },
-  { q: 'Le déplacement est-il compris ?', a: '[[À CONFIRMER : déplacement inclus dans le tarif, ou frais selon la zone]]' },
+  { q: 'Le déplacement est-il compris ?', a: 'Les éventuels frais de déplacement, selon votre adresse, sont indiqués dans le devis.' },
 ];
 ---
-<Base title="Tarifs du nettoyage auto à la vapeur | Clean2Go" description="Tarifs Clean2Go : nettoyage intérieur, extérieur ou complet à la vapeur, suppléments éventuels et fonctionnement du devis. Intervention à domicile ou sur site." schema={[breadcrumbs(crumbs, '/tarifs/'), faqPage(faq)]}>
-  <Hero eyebrow="Tarifs" h1="Des tarifs lisibles, un devis avant chaque intervention" lead="Vous savez ce que vous payez avant que nous intervenions. Voici les formules, les suppléments éventuels et la façon dont le prix est établi." crumbs={crumbs} cta={{ label: 'Obtenir mon devis', href: '/contact/#devis' }}>
+<Base title="Tarifs : devis nettoyage auto à la vapeur | Clean2Go" description="Tarifs Clean2Go sur devis : nettoyage intérieur, extérieur ou complet à la vapeur, suppléments éventuels et fonctionnement du devis. Réponse sur demande." schema={[breadcrumbs(crumbs, '/tarifs/'), faqPage(faq)]}>
+  <Hero eyebrow="Tarifs" h1="Un devis clair avant chaque intervention" lead="Nos tarifs sont communiqués sur devis, avant toute intervention. Voici les formules, les suppléments éventuels et la façon dont le prix est établi." crumbs={crumbs} cta={{ label: 'Obtenir mon devis', href: '/contact/#devis' }}>
     <PhotoSlot slot="media" seed={3} eager caption="Détail d’un habitacle propre et net après intervention (sièges, tapis, console), lumière douce, sans marque ni plaque visible" />
   </Hero>
   <Section eyebrow="Les formules" title="Trois formules, selon votre besoin"><PriceTable /></Section>

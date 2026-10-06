@@ -20,7 +20,7 @@ faq:
   - q: "Mes enfants laissent des taches partout sur la banquette : est-ce traitable ?"
     a: "Oui. La vapeur décolle les taches de boisson, de nourriture et de boue séchée sur les tissus. Pour des taches très anciennes, nous vous disons avant d’intervenir ce que l’on peut raisonnablement obtenir. Voir le [nettoyage intérieur](/prestations/nettoyage-interieur-voiture/)."
   - q: Puis-je faire nettoyer deux voitures du foyer le même jour ?
-    a: "[[À CONFIRMER : possibilité et conditions pour deux véhicules du même foyer (créneau, tarif)]]"
+    a: "Oui, précisez-le dans votre demande : nous établissons un devis adapté pour les deux véhicules."
 ---
 ## La voiture de famille, un habitacle qui travaille
 

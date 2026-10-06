@@ -87,7 +87,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: 'Le devis est-il gratuit ?',
-        a: `Le devis vous est transmis avant toute intervention : vous savez ce que vous payez avant de vous engager. [[À CONFIRMER : le devis est-il gratuit dans tous les cas ?]] Pour comprendre comment le prix est établi, voir la page [Tarifs](/tarifs/).`,
+        a: `Le devis vous est transmis avant toute intervention : vous savez ce que vous payez avant de vous engager. Tous nos tarifs sont communiqués sur devis. Pour comprendre comment le prix est établi, voir la page [Tarifs](/tarifs/).`,
       },
     ],
   },
@@ -145,7 +145,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: 'Intervenez-vous sur des flottes de véhicules ?',
-        a: `Oui, ponctuellement ou de façon régulière. Nous organisons les passages avec vous selon la taille de votre parc, vos contraintes d’accès et le rythme souhaité, puis nous établissons une proposition adaptée. [[À CONFIRMER : volumes maximum par intervention, éventuelles conditions tarifaires pour les flottes]]`,
+        a: `Oui, ponctuellement ou de façon régulière. Nous organisons les passages avec vous selon la taille de votre parc, vos contraintes d’accès et le rythme souhaité, puis nous établissons une proposition adaptée. Précisez le nombre de véhicules dans votre demande.`,
       },
       {
         q: 'Pouvez-vous intervenir dans nos locaux ou sur notre parking ?',
