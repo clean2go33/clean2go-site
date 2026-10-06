@@ -1,0 +1,80 @@
+---
+import { render, getEntry } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import PhotoSlot from '@/components/PhotoSlot.astro';
+import Faq from '@/components/Faq.astro';
+import Icon from '@/components/Icon.astro';
+import Button from '@/components/Button.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { getCities, getPillars, getServices, getPosts, cityPath, servicePath, postPath, zoneOf, BLOG_CATEGORIES } from '@/lib/content';
+import { service as serviceSchema, breadcrumbs, faqPage } from '@/lib/schema';
+import { ZONES } from '@/config/site';
+
+export async function getStaticPaths() {
+  const all = [...(await getPillars()), ...(await getCities())];
+  return all.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const isPillar = d.kind === 'pillar';
+const zone = zoneOf(d.zone);
+const { Content } = await render(entry);
+const cities = await getCities(d.zone);
+const services = (await getServices());
+const posts = (await getPosts()).filter((p) => d.blog.includes(p.id));
+const nearby = d.nearby.map((id) => cities.find((c) => c.id === id) ?? null).filter(Boolean) as typeof cities;
+const path = cityPath(entry.id);
+const crumbs = isPillar ? [{ label: 'Zones d’intervention', href: '/zones-d-intervention/' }, { label: zone.label }] : [{ label: 'Zones d’intervention', href: '/zones-d-intervention/' }, { label: zone.label, href: zone.href }, { label: d.name }];
+const chosenServices = (d.services.length ? d.services : services.map((s) => s.id)).map((id) => services.find((s) => s.id === id)!).filter(Boolean);
+const area = isPillar ? [zone.label] : [d.name, zone.label];
+---
+<Base title={d.title} description={d.description} schema={[breadcrumbs(crumbs, path), serviceSchema({ name: d.h1, type: 'Nettoyage automobile à la vapeur', description: d.description, path, area }), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
+  <Hero eyebrow={d.angle} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={{ label: isPillar ? 'Demander un devis' : `Devis à ${d.name}`, href: `/contact/?commune=${encodeURIComponent(isPillar ? '' : d.name)}#devis` }}>
+    <PhotoSlot slot="media" seed={d.photoSeed} eager caption={d.photo} />
+  </Hero>
+
+  {isPillar && (
+    <Section variant="white" eyebrow="Communes desservies" title={`Choisissez votre commune, ${zone.label}`}>
+      <ul class="citygrid">{cities.map((c) => <li><a href={cityPath(c.id)}>{c.data.name}<Icon name="arrow" /></a></li>)}</ul>
+      <p style="margin-top:22px">Votre commune n’apparaît pas ? <a class="textlink" href="/contact/?commune=Autre#devis">Contactez-nous</a> : nous étudions chaque demande.</p>
+    </Section>
+  )}
+
+  {!isPillar && d.highlight.length > 0 && (
+    <Section variant="white" eyebrow="Secteurs et repères" title={`Où nous intervenons à ${d.name}`}>
+      <ul class="chips">{d.highlight.map((h) => <li class="chip">{h}</li>)}</ul>
+    </Section>
+  )}
+
+  <section class="sec reveal"><div class="wrap layout">
+    <div class="prose"><Content /></div>
+    <aside class="aside" aria-label="Informations complémentaires">
+      <div class="box box--dark"><h3>{isPillar ? 'Un devis' : `Un devis à ${d.name}`}</h3><p>Décrivez votre véhicule, nous revenons vers vous avec une proposition adaptée.</p><div class="btns" style="margin-top:14px"><Button href={`/contact/?commune=${encodeURIComponent(isPillar ? '' : d.name)}#devis`}>Demander un devis</Button></div></div>
+      {!isPillar && nearby.length > 0 && <div class="box"><h3>Communes proches</h3><ul>{nearby.map((c) => <li><a href={cityPath(c.id)}>Nettoyage auto à {c.data.name}</a></li>)}</ul></div>}
+      <div class="box"><h3>Aller plus loin</h3><ul>{!isPillar && <li><a href={zone.href}>Nettoyage automobile, {zone.label}</a></li>}<li><a href="/prestations/">Nos prestations</a></li><li><a href="/tarifs/">Les tarifs</a></li><li><a href="/professionnels/">Offre professionnelle</a></li><li><a href="/faq/">Questions fréquentes</a></li></ul></div>
+    </aside>
+  </div></section>
+
+  <Section variant="mist" eyebrow="Prestations" title={isPillar ? 'Ce que nous faisons, partout dans la zone' : `Les prestations disponibles à ${d.name}`}>
+    <div class="grid grid--3">
+      {chosenServices.slice(0, 3).map((s) => <a class="card" href={servicePath(s.id)}><span class="card__ico"><Icon name={s.data.icon} /></span><h3>{s.data.name}</h3><p>{s.data.short}</p><span class="textlink">Voir la prestation <Icon name="arrow" /></span></a>)}
+    </div>
+    {chosenServices.length > 3 && <p style="margin-top:22px">{chosenServices.slice(3).map((s, i) => <><a class="textlink" href={servicePath(s.id)}>{s.data.name}</a>{i < chosenServices.length - 4 ? ' · ' : ''}</>)}</p>}
+  </Section>
+
+  {d.faq.length > 0 && (
+    <Section eyebrow="Questions fréquentes" title={isPillar ? `Questions sur le nettoyage auto, ${zone.label}` : `Nettoyage auto à ${d.name} : vos questions`}>
+      <Faq items={d.faq} />
+    </Section>
+  )}
+
+  {posts.length > 0 && (
+    <Section variant="white" eyebrow="Conseils" title="À lire avant d’intervenir">
+      <div class="grid grid--3">{posts.map((p) => <a class="card" href={postPath(p.id)}><span class="tag">{BLOG_CATEGORIES[p.data.category].label}</span><h3>{p.data.h1}</h3><p>{p.data.excerpt}</p><span class="textlink">Lire <Icon name="arrow" /></span></a>)}</div>
+    </Section>
+  )}
+
+  <CtaBand title={isPillar ? 'Une demande dans cette zone ?' : `Votre véhicule à ${d.name} ?`} href={`/contact/?commune=${encodeURIComponent(isPillar ? '' : d.name)}#devis`} />
+</Base>

@@ -1,0 +1,36 @@
+---
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import QuoteForm from '@/components/QuoteForm.astro';
+import Icon from '@/components/Icon.astro';
+import Faq from '@/components/Faq.astro';
+import { SITE } from '@/config/site';
+import { breadcrumbs } from '@/lib/schema';
+const crumbs = [{ label: 'Contact et réservation' }];
+const faq = [
+  { q: 'Combien de temps avant d’avoir une réponse ?', a: '[[À CONFIRMER : délai de réponse habituel aux demandes (24 h, 48 h) et jours/horaires de réponse]]' },
+  { q: 'Est-ce une réservation ferme ?', a: 'Non : votre demande déclenche l’envoi d’un devis. L’intervention est réservée lorsque vous acceptez le devis et que nous convenons ensemble du lieu et du créneau.' },
+  { q: 'Je suis un professionnel : où m’adresser ?', a: 'Utilisez le formulaire dédié de la page [Professionnels](/professionnels/#demande-pro), qui permet de préciser votre parc et le rythme souhaité.' },
+];
+---
+<Base title="Contact et réservation | Clean2Go" description="Demandez un devis ou réservez un nettoyage vapeur de votre véhicule à Bordeaux Métropole et sur le Bassin d’Arcachon : formulaire, téléphone, e-mail." schema={[breadcrumbs(crumbs, '/contact/')]}>
+  <Hero eyebrow="Contact et réservation" h1="Réserver votre nettoyage vapeur" lead="Décrivez votre véhicule et votre commune : nous revenons vers vous avec un devis, puis nous fixons le créneau ensemble." crumbs={crumbs} cta={null} />
+  <Section variant="white" id="reservation">
+    <div class="split split--top">
+      <div>
+        <span class="eyebrow">Une demande de devis</span>
+        <h2>Dites-nous tout en deux minutes</h2>
+        <p class="lead" style="color:var(--muted)">Plus votre demande est précise (véhicule, état, commune, lieu de stationnement), plus notre devis l’est aussi.</p>
+        <ul class="checks" style="margin-top:26px">
+          <li><Icon name="phone" /><span><b>Par téléphone</b><br /><a href={`tel:${SITE.phoneTel}`}>{SITE.phone}</a><br /><span class="form__note">[[À CONFIRMER : jours et horaires de réponse téléphonique]]</span></span></li>
+          <li><Icon name="mail" /><span><b>Par e-mail</b><br /><a href={`mailto:${SITE.email}`}>{SITE.email}</a></span></li>
+          <li><Icon name="pin" /><span><b>Zones d’intervention</b><br />Bordeaux Métropole, Bassin d’Arcachon, Gironde. <a href="/zones-d-intervention/">Voir les communes</a></span></li>
+          <li><Icon name="brief" /><span><b>Vous êtes professionnel ?</b><br /><a href="/professionnels/#demande-pro">Accédez au formulaire dédié</a></span></li>
+        </ul>
+      </div>
+      <QuoteForm id="devis" />
+    </div>
+  </Section>
+  <Section variant="mist" eyebrow="Avant d’envoyer" title="Les questions que l’on nous pose"><Faq items={faq} /></Section>
+</Base>

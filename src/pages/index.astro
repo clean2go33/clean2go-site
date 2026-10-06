@@ -1,0 +1,124 @@
+---
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import Icon from '@/components/Icon.astro';
+import Button from '@/components/Button.astro';
+import PhotoSlot from '@/components/PhotoSlot.astro';
+import Steps from '@/components/Steps.astro';
+import ZonesSelector from '@/components/ZonesSelector.astro';
+import Faq from '@/components/Faq.astro';
+import QuoteForm from '@/components/QuoteForm.astro';
+import { getServices, getPosts, servicePath, postPath, BLOG_CATEGORIES } from '@/lib/content';
+import { faqPage } from '@/lib/schema';
+import { SITE } from '@/config/site';
+
+const services = await getServices();
+const posts = (await getPosts()).slice(0, 3);
+const faq = [
+  { q: 'Qu’est-ce que le nettoyage vapeur ?', a: 'C’est un nettoyage réalisé avec de l’eau chauffée à haute température et projetée sous forme de vapeur. La chaleur ramollit et décolle les saletés, les graisses et les résidus, et agit sur les bactéries et les odeurs. Comme la quantité d’eau est très faible, les surfaces ne sont pas détrempées.\n\nLe détail est dans notre page sur le [nettoyage vapeur intérieur et extérieur](/prestations/nettoyage-vapeur-complet/).' },
+  { q: 'Intervenez-vous à domicile ou sur mon lieu de travail ?', a: 'Oui. Nous nous déplaçons là où se trouve votre véhicule : domicile, parking de résidence, entreprise, site professionnel. Le lieu et le créneau sont fixés ensemble au moment du devis.' },
+  { q: 'Dans quelles zones intervenez-vous ?', a: 'À Bordeaux Métropole (Bordeaux, Mérignac, Pessac, Talence, Villenave-d’Ornon, Saint-Médard-en-Jalles, Bègles, Le Bouscat, Gradignan, Cenon) et sur le Bassin d’Arcachon (Arcachon, La Teste-de-Buch, Gujan-Mestras, Andernos-les-Bains, Biganos, Le Teich, Audenge, Lanton, Arès, Lège-Cap-Ferret). Votre commune n’est pas listée ? [Demandez-nous](/contact/?commune=Autre#devis).' },
+  { q: 'Comment réserver ou obtenir un devis ?', a: 'Remplissez le formulaire de la page [Contact](/contact/#reservation) ou appelez-nous au [06 03 94 87 78](tel:+33603948778). Indiquez votre commune, votre véhicule et ce que vous souhaitez : nous revenons vers vous avec une proposition adaptée. [[À CONFIRMER : délai de réponse habituel aux demandes (24 h ? 48 h ?)]]' },
+];
+---
+<Base
+  title="Nettoyage auto à la vapeur à Bordeaux et Arcachon | Clean2Go"
+  description="Clean2Go nettoie l’intérieur et l’extérieur de votre voiture à la vapeur, à domicile ou sur site, à Bordeaux Métropole et sur le Bassin d’Arcachon."
+  schema={[faqPage(faq)]}
+>
+  <Hero variant="home" eyebrow="Nettoyage automobile à la vapeur" h1="Votre véhicule, remis à neuf à la <em>vapeur</em>." lead="Nous nettoyons et assainissons l’intérieur et l’extérieur de votre voiture avec une vapeur haute température et très peu d’eau. Chez vous ou sur votre lieu de travail, à Bordeaux Métropole et sur le Bassin d’Arcachon." cta={{ label: 'Réserver', href: '/contact/#reservation' }} secondary={{ label: 'Voir les tarifs', href: '/tarifs/' }} trust={[{ icon: 'pin', label: 'À domicile et sur site' }, { icon: 'droplet', label: 'Très peu d’eau' }, { icon: 'shield', label: 'Particuliers et professionnels' }]}>
+    <PhotoSlot slot="media" ratio="tall" seed={4} eager caption="Plan rapproché d’un siège de SUV traité à la vapeur : jet de vapeur visible, mains gantées de l’opérateur, lumière naturelle de fin de journée, cadrage vertical" />
+  </Hero>
+
+  <Section eyebrow="Notre proposition" title="Trois façons de remettre votre véhicule en état" lead="Chaque intervention est préparée selon votre véhicule et ce que vous en attendez. Vous choisissez une prestation, nous nous occupons du reste.">
+    <div class="grid grid--3">
+      {services.filter((s) => ['nettoyage-interieur-voiture', 'nettoyage-exterieur-voiture', 'nettoyage-vapeur-complet'].includes(s.id)).map((s) => (
+        <a class="card" href={servicePath(s.id)}><span class="card__ico"><Icon name={s.data.icon} /></span><h3>{s.data.name}</h3><p>{s.data.short}. {s.data.lead.split('. ')[0]}.</p><span class="textlink">En savoir plus <Icon name="arrow" /></span></a>
+      ))}
+    </div>
+    <p style="margin-top:26px">Un cas particulier ? Poils d’animaux, mauvaises odeurs, véhicule très sale : <a href="/prestations/options-et-cas-particuliers/" class="textlink">voyez nos options</a>. D’autres supports (nautisme, aviation légère, environnements industriels) sont traités <a href="/prestations/autres-vehicules/" class="textlink">sur demande</a>.</p>
+  </Section>
+
+  <Section variant="dark" eyebrow="Pourquoi la vapeur" title="Ce que le chiffon ne va pas chercher">
+    <div class="split">
+      <div>
+        <p class="lead" style="margin-bottom:26px">La vapeur haute température décolle les saletés incrustées, atteint les recoins qu’un chiffon ne rejoint pas et traite les surfaces en profondeur, avec très peu d’eau. Les matières sont préservées.</p>
+        <ul class="checks">
+          <li><Icon name="check" /><span><b>Nettoyage et désinfection en profondeur.</b> La chaleur traite les saletés, les bactéries et les mauvaises odeurs à la source.</span></li>
+          <li><Icon name="check" /><span><b>Très peu d’eau.</b> Les surfaces ne sont pas détrempées, l’habitacle n’est pas saturé d’humidité.</span></li>
+          <li><Icon name="check" /><span><b>Matières préservées.</b> Tissus, cuirs, plastiques : un soin adapté à chaque surface.</span></li>
+          <li><Icon name="check" /><span><b>Zones difficiles d’accès.</b> Rails de sièges, grilles d’aération, joints, interstices : la vapeur y pénètre.</span></li>
+        </ul>
+        <div class="btns"><Button href="/prestations/nettoyage-vapeur-complet/">Comprendre le nettoyage vapeur</Button></div>
+      </div>
+      <PhotoSlot ratio="wide" seed={6} caption="Gros plan de la buse vapeur sur une grille d’aération ou un rail de siège, éclairage latéral, vapeur nette, fond sombre" />
+    </div>
+  </Section>
+
+  <Section eyebrow="Comment ça se passe" title="Quatre étapes, sans complication">
+    <Steps items={[
+      { title: 'Vous décrivez votre besoin', text: 'Par le formulaire ou par téléphone : votre véhicule, votre commune, ce que vous attendez.' },
+      { title: 'Nous vous répondons avec un devis', text: 'Une proposition claire, adaptée à votre véhicule et à la prestation souhaitée.' },
+      { title: 'Nous convenons du lieu et du créneau', text: 'À domicile ou sur site : nous fixons ensemble le moment et l’endroit de l’intervention.' },
+      { title: 'Nous intervenons chez vous', text: 'Le nettoyage à la vapeur est réalisé sur place, avec un matériel adapté.' },
+    ]} />
+    <div class="btns"><Button href="/contact/#reservation">Réserver</Button><Button href="/tarifs/" variant="line" arrow={false}>Voir les tarifs</Button></div>
+  </Section>
+
+  <Section variant="mist" eyebrow="Zones d’intervention" title="Nous venons à vous, autour de Bordeaux et du Bassin" lead="Choisissez votre zone pour retrouver votre commune et la page qui lui est consacrée.">
+    <ZonesSelector />
+  </Section>
+
+  <Section eyebrow="Situations fréquentes" title="Ce qu’on nous demande le plus souvent">
+    <div class="grid grid--3">
+      <a class="card" href="/prestations/options-et-cas-particuliers/#poils"><span class="card__ico"><Icon name="paw" /></span><h3>Poils d’animaux</h3><p>Les poils s’incrustent dans les tissus et les moquettes. Un travail méthodique, associé à la vapeur, permet de les décoller.</p><span class="textlink">Voir le traitement <Icon name="arrow" /></span></a>
+      <a class="card" href="/prestations/options-et-cas-particuliers/#odeurs"><span class="card__ico"><Icon name="wind" /></span><h3>Mauvaises odeurs</h3><p>Fumée, humidité, nourriture, animal : traiter l’odeur à la source plutôt que la masquer.</p><span class="textlink">Voir le traitement <Icon name="arrow" /></span></a>
+      <a class="card" href="/blog/nettoyer-voiture-avant-restitution-loa-lld/"><span class="card__ico"><Icon name="key" /></span><h3>Restitution ou revente</h3><p>Rendre un véhicule en état, ou le présenter dans de bonnes conditions à un acheteur.</p><span class="textlink">Lire le guide <Icon name="arrow" /></span></a>
+    </div>
+  </Section>
+
+  <Section variant="dark" eyebrow="Professionnels" title="Flottes, concessions, loueurs : une propreté régulière, sur site">
+    <div class="split">
+      <div>
+        <p class="lead">Nous intervenons sur votre parking ou dans vos locaux, pour un véhicule ou pour plusieurs, ponctuellement ou de façon régulière. Vos véhicules restent disponibles, nous organisons les passages avec vous.</p>
+        <div class="btns"><Button href="/professionnels/">Parler de votre besoin professionnel</Button></div>
+      </div>
+      <ul class="checks">
+        <li><Icon name="check" /><span><b>Sur site.</b> Pas de déplacement de vos équipes ni de vos véhicules.</span></li>
+        <li><Icon name="check" /><span><b>Organisation sur mesure.</b> Passages planifiés selon vos besoins et votre rythme.</span></li>
+        <li><Icon name="check" /><span><b>Régularité.</b> Un niveau de propreté constant, d’une intervention à l’autre.</span></li>
+        <li><Icon name="check" /><span><b>Devis pour volumes.</b> Une proposition adaptée à la taille de votre parc.</span></li>
+      </ul>
+    </div>
+  </Section>
+
+  {posts.length > 0 && (
+    <Section eyebrow="Conseils" title="Entretien et hygiène du véhicule, expliqués simplement">
+      <div class="grid grid--3">
+        {posts.map((p) => (
+          <a class="post" href={postPath(p.id)}><PhotoSlot ratio="wide" seed={p.data.photoSeed} caption={p.data.photo} /><div class="post__b"><span class="tag">{BLOG_CATEGORIES[p.data.category].label}</span><h3>{p.data.h1}</h3><p>{p.data.excerpt}</p></div></a>
+        ))}
+      </div>
+      <p style="margin-top:26px"><a class="textlink" href="/blog/">Voir tous les conseils <Icon name="arrow" /></a></p>
+    </Section>
+  )}
+
+  <Section variant="mist" eyebrow="Questions fréquentes" title="Avant de nous appeler">
+    <div class="split split--top">
+      <div><p class="lead">Eau, électricité, durée, matières, paiement, zones : les réponses aux questions qu’on nous pose le plus souvent.</p><div class="btns"><Button href="/faq/" variant="dark">Toutes les questions</Button></div></div>
+      <Faq items={faq} />
+    </div>
+  </Section>
+
+  <Section variant="dark" id="reservation" eyebrow="Réservation et devis" title="Parlons de votre véhicule">
+    <div class="split split--top">
+      <div>
+        <p class="lead">Dites-nous où il se trouve, de quel type il s’agit et ce que vous attendez. Nous revenons vers vous avec une proposition claire.</p>
+        <ul class="checks" style="margin-top:24px"><li><Icon name="check" /><span>Réponse par téléphone ou par e-mail</span></li><li><Icon name="check" /><span>Intervention à domicile ou sur site</span></li><li><Icon name="check" /><span>Particuliers et professionnels</span></li></ul>
+        <p>Vous préférez parler à quelqu’un ? Appelez-nous au <a href={`tel:${SITE.phoneTel}`} style="color:#fff;font-weight:600">{SITE.phone}</a>.</p>
+      </div>
+      <QuoteForm id="devis" />
+    </div>
+  </Section>
+</Base>

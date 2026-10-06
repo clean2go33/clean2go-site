@@ -1,0 +1,27 @@
+---
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import PhotoSlot from '@/components/PhotoSlot.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { getPosts, postPath, BLOG_CATEGORIES } from '@/lib/content';
+import { breadcrumbs } from '@/lib/schema';
+const posts = await getPosts();
+const crumbs = [{ label: 'Conseils' }];
+const used = Object.entries(BLOG_CATEGORIES).filter(([k]) => posts.some((p) => p.data.category === k));
+---
+<Base title="Conseils d’entretien et nettoyage auto | Clean2Go" description="Sièges, poils d’animaux, odeurs, vapeur, restitution LOA : les conseils pratiques de Clean2Go pour garder un véhicule sain, à Bordeaux et sur le Bassin." schema={[breadcrumbs(crumbs, '/blog/')]}>
+  <Hero eyebrow="Conseils" h1="Entretenir un véhicule sain, concrètement" lead="Des guides pratiques pour nettoyer l’intérieur, comprendre la vapeur, préparer une restitution ou une revente. Sans jargon." crumbs={crumbs} cta={null} />
+  <Section>
+    <ul class="chips" style="margin-bottom:34px">
+      <li><span class="chip chip--on">Tous les articles</span></li>
+      {used.map(([k, c]) => <li><a class="chip" href={`/blog/categorie/${k}/`}>{c.label}</a></li>)}
+    </ul>
+    <div class="grid grid--3">
+      {posts.map((p) => (
+        <a class="post" href={postPath(p.id)}><PhotoSlot ratio="wide" seed={p.data.photoSeed} caption={p.data.photo} /><div class="post__b"><span class="tag">{BLOG_CATEGORIES[p.data.category].label}</span><h3>{p.data.h1}</h3><p>{p.data.excerpt}</p></div></a>
+      ))}
+    </div>
+  </Section>
+  <CtaBand />
+</Base>

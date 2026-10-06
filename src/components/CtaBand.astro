@@ -1,0 +1,12 @@
+---
+import Button from './Button.astro';
+import { SITE } from '@/config/site';
+interface Props { title?: string; text?: string; label?: string; href?: string; secondary?: boolean }
+const { title = 'Prêt à retrouver un véhicule sain ?', text = 'Décrivez-nous votre véhicule et votre commune : nous vous répondons avec une proposition claire, sans engagement.', label = 'Demander un devis', href = '/contact/#devis', secondary = true } = Astro.props;
+---
+<section class="sec sec--tight reveal"><div class="wrap">
+  <div class="band">
+    <div><h2>{title}</h2><p>{text}</p></div>
+    <div class="btns"><Button href={href}>{label}</Button>{secondary && <Button href={`tel:${SITE.phoneTel}`} variant="light" arrow={false} icon="phone">{SITE.phone}</Button>}</div>
+  </div>
+</div></section>

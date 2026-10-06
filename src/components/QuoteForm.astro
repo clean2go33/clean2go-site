@@ -1,0 +1,57 @@
+---
+import Icon from './Icon.astro';
+import { SITE, ZONES } from '@/config/site';
+import { getServices, getCities } from '@/lib/content';
+interface Props { variant?: 'particulier' | 'pro'; commune?: string; prestation?: string; id?: string; title?: string; intro?: string }
+const { variant = 'particulier', commune = '', prestation = '', id = 'devis', title, intro } = Astro.props;
+const services = await getServices();
+const groups = await Promise.all(ZONES.map(async (z) => ({ label: z.label, cities: await getCities(z.key) })));
+const pro = variant === 'pro';
+const uid = `${variant}-${id}`;
+---
+<div class="formcard" id={id}>
+  {title && <h2 style="font-size:1.5rem">{title}</h2>}
+  {intro && <p class="lead" style="margin-bottom:22px">{intro}</p>}
+  <form class="form" data-form action={SITE.formEndpoint} method="post" novalidate>
+    <input type="hidden" name="formulaire" value={variant} />
+    {pro && (
+      <div class="form__row">
+        <div class="field"><label for={`${uid}-soc`}>Entreprise ou organisation <i>*</i></label><input id={`${uid}-soc`} name="societe" type="text" autocomplete="organization" data-req aria-required="true" /><span class="err" role="alert"></span></div>
+        <div class="field"><label for={`${uid}-act`}>Type d’activité</label>
+          <select id={`${uid}-act`} name="activite"><option value="">Choisir…</option><option>Concession / marchand automobile</option><option>Garage / atelier</option><option>Loueur de véhicules</option><option>Entreprise avec flotte</option><option>Collectivité / association</option><option>Autre</option></select></div>
+      </div>
+    )}
+    <div class="form__row">
+      <div class="field"><label for={`${uid}-nom`}>Nom et prénom <i>*</i></label><input id={`${uid}-nom`} name="nom" type="text" autocomplete="name" data-req aria-required="true" /><span class="err" role="alert"></span></div>
+      <div class="field"><label for={`${uid}-tel`}>Téléphone <i>*</i></label><input id={`${uid}-tel`} name="telephone" type="tel" autocomplete="tel" inputmode="tel" data-req aria-required="true" /><span class="err" role="alert"></span></div>
+    </div>
+    <div class="field"><label for={`${uid}-mail`}>Adresse e-mail <i>*</i></label><input id={`${uid}-mail`} name="email" type="email" autocomplete="email" data-req aria-required="true" /><span class="err" role="alert"></span></div>
+    <div class="form__row">
+      <div class="field"><label for={`${uid}-com`}>{pro ? 'Commune du site' : 'Commune d’intervention'} <i>*</i></label>
+        <select id={`${uid}-com`} name="commune" data-req aria-required="true">
+          <option value="">Choisir…</option>
+          {groups.map((g) => <optgroup label={g.label}>{g.cities.map((c) => <option value={c.data.name} selected={c.data.name === commune}>{c.data.name}</option>)}</optgroup>)}
+          <option value="Autre" selected={commune === 'Autre'}>Autre commune</option>
+        </select><span class="err" role="alert"></span></div>
+      {pro ? (
+        <div class="field"><label for={`${uid}-nb`}>Nombre de véhicules (approximatif)</label><input id={`${uid}-nb`} name="nb_vehicules" type="text" placeholder="Ex. : 8 véhicules" /></div>
+      ) : (
+        <div class="field"><label for={`${uid}-pre`}>Prestation souhaitée</label>
+          <select id={`${uid}-pre`} name="prestation"><option value="">Je ne sais pas encore</option>{services.map((s) => <option value={s.data.formValue} selected={s.data.formValue === prestation}>{s.data.name}</option>)}</select></div>
+      )}
+    </div>
+    {pro ? (
+      <div class="field"><label for={`${uid}-freq`}>Fréquence envisagée</label>
+        <select id={`${uid}-freq`} name="frequence"><option value="">À définir ensemble</option><option>Intervention ponctuelle</option><option>Passages réguliers</option><option>Préparation avant livraison ou restitution</option></select></div>
+    ) : (
+      <div class="field"><label for={`${uid}-veh`}>Véhicule (marque, modèle, type)</label><input id={`${uid}-veh`} name="vehicule" type="text" placeholder="Ex. : SUV familial, citadine, utilitaire…" /></div>
+    )}
+    <div class="field"><label for={`${uid}-msg`}>Votre besoin</label><textarea id={`${uid}-msg`} name="message" placeholder={pro ? 'Types de véhicules, lieu de stationnement, contraintes d’accès, rythme souhaité…' : 'État du véhicule, poils d’animaux, odeurs, date souhaitée, lieu de stationnement…'}></textarea></div>
+    <div class="hp" aria-hidden="true"><label>Ne pas remplir<input type="text" name="site_web" tabindex="-1" autocomplete="off" /></label></div>
+    <div class="consent"><input id={`${uid}-ok`} name="consentement" type="checkbox" value="oui" data-req /><label for={`${uid}-ok`}>J’accepte que Clean2Go utilise ces informations pour répondre à ma demande. Elles ne sont pas utilisées à d’autres fins. <a href="/politique-de-confidentialite/">En savoir plus</a>.</label><span class="err" role="alert"></span></div>
+    <div class="form__ko" role="alert">L’envoi n’a pas abouti. Réessayez, ou appelez-nous au <a href={`tel:${SITE.phoneTel}`}>{SITE.phone}</a>, ou écrivez à <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</div>
+    <button class="btn btn--red" type="submit">{pro ? 'Envoyer ma demande professionnelle' : 'Envoyer ma demande'} <Icon name="arrow" /></button>
+    <p class="form__note">Les champs marqués d’une * sont nécessaires. Nous vous répondons par téléphone ou par e-mail.</p>
+  </form>
+  <div class="form__ok" role="status" tabindex="-1"><h3>Votre demande est bien partie.</h3><p>Merci. Nous la lisons et revenons vers vous avec une proposition adaptée. Pour une demande urgente, appelez-nous au <a href={`tel:${SITE.phoneTel}`}>{SITE.phone}</a>.</p></div>
+</div>

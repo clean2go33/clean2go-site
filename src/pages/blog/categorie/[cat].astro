@@ -1,0 +1,25 @@
+---
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import PhotoSlot from '@/components/PhotoSlot.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { getPosts, postPath, BLOG_CATEGORIES } from '@/lib/content';
+import { breadcrumbs } from '@/lib/schema';
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return Object.keys(BLOG_CATEGORIES).filter((k) => posts.some((p) => p.data.category === k)).map((cat) => ({ params: { cat }, props: { cat, posts: posts.filter((p) => p.data.category === cat) } }));
+}
+const { cat, posts } = Astro.props;
+const c = BLOG_CATEGORIES[cat];
+const crumbs = [{ label: 'Conseils', href: '/blog/' }, { label: c.label }];
+---
+<Base title={`${c.label} : conseils | Clean2Go`} description={`${c.blurb} Les guides pratiques Clean2Go sur ce thème.`} schema={[breadcrumbs(crumbs, `/blog/categorie/${cat}/`)]}>
+  <Hero eyebrow="Conseils" h1={c.label} lead={c.blurb} crumbs={crumbs} cta={null} />
+  <Section>
+    <div class="grid grid--3">
+      {posts.map((p) => <a class="post" href={postPath(p.id)}><PhotoSlot ratio="wide" seed={p.data.photoSeed} caption={p.data.photo} /><div class="post__b"><span class="tag">{c.label}</span><h3>{p.data.h1}</h3><p>{p.data.excerpt}</p></div></a>)}
+    </div>
+  </Section>
+  <CtaBand />
+</Base>

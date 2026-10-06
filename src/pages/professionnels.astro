@@ -1,0 +1,80 @@
+---
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import Icon from '@/components/Icon.astro';
+import PhotoSlot from '@/components/PhotoSlot.astro';
+import Steps from '@/components/Steps.astro';
+import Faq from '@/components/Faq.astro';
+import QuoteForm from '@/components/QuoteForm.astro';
+import Button from '@/components/Button.astro';
+import { FAQ_GROUPS } from '@/data/faq';
+import { breadcrumbs, faqPage } from '@/lib/schema';
+import { SITE } from '@/config/site';
+const crumbs = [{ label: 'Professionnels' }];
+const faq = FAQ_GROUPS.find((g) => g.id === 'pro')!.items;
+const segments = [
+  { icon: 'car', t: 'Concessions et marchands VO/VN', d: 'Un véhicule propre se présente mieux et se vend plus facilement. Nous intervenons sur votre parking pour préparer les véhicules avant exposition, livraison ou essai, sans les déplacer.' },
+  { icon: 'key', t: 'Loueurs de véhicules', d: 'Entre deux locations, l’intérieur doit être remis en état vite et proprement. Nous passons sur site, véhicule après véhicule, selon votre rythme de rotation.' },
+  { icon: 'truck', t: 'Flottes et entreprises', d: 'Véhicules de service, de direction ou de livraison : une propreté régulière valorise votre image et le confort des conducteurs. Nous planifions les passages avec vous.' },
+  { icon: 'spark', t: 'Garages et ateliers', d: 'Restituer un véhicule propre après une intervention fait partie du service. Nous prenons le nettoyage en charge pendant que vos équipes restent concentrées sur la mécanique.' },
+  { icon: 'building', t: 'Collectivités et associations', d: 'Véhicules partagés, minibus, véhicules de service : un entretien sanitaire sans immobiliser le parc plus longtemps que nécessaire.' },
+  { icon: 'boat', t: 'Autres supports', d: 'Nautisme, aviation légère, environnements industriels : étudiés sur demande, selon la nature du support et les accès.' },
+];
+---
+<Base title="Nettoyage vapeur de véhicules pour professionnels | Clean2Go" description="Concessions, garages, loueurs, flottes, entreprises : Clean2Go nettoie vos véhicules à la vapeur directement sur site, à Bordeaux Métropole et sur le Bassin d’Arcachon." schema={[breadcrumbs(crumbs, '/professionnels/'), faqPage(faq)]}>
+  <Hero eyebrow="Professionnels" h1="La propreté de vos véhicules, organisée sur site" lead="Concessions, marchands, loueurs, garages, entreprises : nous venons sur votre parking, nous nettoyons à la vapeur, et vos véhicules restent disponibles. Passages ponctuels ou réguliers, sur devis." crumbs={crumbs} cta={{ label: 'Demander un devis professionnel', href: '#demande-pro' }} secondary={{ label: `Appeler ${SITE.phone}`, href: `tel:${SITE.phoneTel}` }}>
+    <PhotoSlot slot="media" seed={5} eager caption="Rangée de véhicules sur le parking d’une concession ou d’une entreprise, opérateur Clean2Go travaillant sur l’un d’eux, lumière du matin, cadrage horizontal" />
+  </Hero>
+
+  <Section eyebrow="Ce que nous apportons" title="Moins de contraintes pour vous, un résultat constant">
+    <div class="grid grid--4">
+      <div class="stat"><b>Sur site</b><span>Nous venons à vos véhicules : aucun trajet, aucune immobilisation inutile.</span></div>
+      <div class="stat"><b>Organisation</b><span>Passages planifiés avec vous, selon vos créneaux et vos contraintes d’accès.</span></div>
+      <div class="stat"><b>Régularité</b><span>Même méthode, même niveau d’exigence, de la première à la dernière intervention.</span></div>
+      <div class="stat"><b>Volumes</b><span>Un véhicule ou plusieurs à la suite : la proposition s’adapte à la taille de votre parc.</span></div>
+    </div>
+  </Section>
+
+  <Section variant="mist" eyebrow="À qui nous nous adressons" title="Six situations, un même savoir-faire">
+    <div class="grid grid--3">
+      {segments.map((s) => <div class="card"><span class="card__ico"><Icon name={s.icon} /></span><h3>{s.t}</h3><p>{s.d}</p></div>)}
+    </div>
+  </Section>
+
+  <Section variant="dark" eyebrow="Pourquoi la vapeur en contexte professionnel" title="Un procédé adapté à l’usage intensif">
+    <div class="split">
+      <div>
+        <p class="lead">Un véhicule professionnel est utilisé par plusieurs personnes, souvent chaque jour. La vapeur haute température traite les surfaces en profondeur, avec très peu d’eau : les véhicules ne sont pas détrempés, et peuvent reprendre la route rapidement.</p>
+        <ul class="checks">
+          <li><Icon name="check" /><span><b>Nettoyage et désinfection en profondeur</b> des sièges, volants, commandes et plastiques très manipulés.</span></li>
+          <li><Icon name="check" /><span><b>Odeurs traitées à la source</b> : tabac, nourriture, humidité.</span></li>
+          <li><Icon name="check" /><span><b>Matières préservées</b> : tissus, cuirs, plastiques, sans agresser les surfaces.</span></li>
+        </ul>
+      </div>
+      <PhotoSlot ratio="wide" seed={8} caption="Intérieur d’un véhicule utilitaire ou de flotte après nettoyage : volant, console et sièges propres, lumière naturelle" />
+    </div>
+  </Section>
+
+  <Section eyebrow="Comment nous travaillons" title="De la première demande au passage régulier">
+    <Steps items={[
+      { title: 'Vous décrivez votre parc', text: 'Types de véhicules, nombre, lieu, contraintes d’accès, fréquence envisagée.' },
+      { title: 'Nous établissons une proposition', text: 'Un devis adapté à vos volumes, ponctuel ou récurrent.' },
+      { title: 'Nous planifions les passages', text: 'Jours, créneaux et interlocuteur convenus ensemble.' },
+      { title: 'Nous intervenons sur site', text: 'Véhicule après véhicule, avec un compte rendu si vous le souhaitez.' },
+    ]} />
+  </Section>
+
+  <Section variant="mist" eyebrow="Questions de professionnels" title="Ce que les entreprises nous demandent"><Faq items={faq} open={0} /></Section>
+
+  <Section variant="dark" id="demande-pro" eyebrow="Demande professionnelle" title="Parlons de votre parc">
+    <div class="split split--top">
+      <div>
+        <p class="lead">Quelques informations suffisent pour établir une première proposition. Nous vous recontactons par téléphone ou par e-mail.</p>
+        <ul class="checks" style="margin-top:24px"><li><Icon name="check" /><span>Interlocuteur unique</span></li><li><Icon name="check" /><span>Passages ponctuels ou réguliers</span></li><li><Icon name="check" /><span>Intervention sur votre site, à Bordeaux Métropole et sur le Bassin d’Arcachon</span></li></ul>
+        <p>Vous préférez en parler ? <a href={`tel:${SITE.phoneTel}`} style="color:#fff;font-weight:600">{SITE.phone}</a></p>
+      </div>
+      <QuoteForm variant="pro" id="pro" />
+    </div>
+  </Section>
+</Base>

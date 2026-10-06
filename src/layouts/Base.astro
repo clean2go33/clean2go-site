@@ -1,0 +1,38 @@
+---
+import '@fontsource-variable/sora';
+import '@fontsource-variable/inter';
+import '@/styles/tokens.css';
+import '@/styles/main.css';
+import Seo from '@/components/Seo.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import MobileBar from '@/components/MobileBar.astro';
+import ConsentBanner from '@/components/ConsentBanner.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import { graph, localBusiness, website } from '@/lib/schema';
+import { SITE } from '@/config/site';
+interface Props { title: string; description: string; noindex?: boolean; schema?: Record<string, unknown>[]; image?: string; type?: 'website' | 'article'; published?: Date; updated?: Date; bare?: boolean }
+const { title, description, noindex, schema = [], image, type, published, updated, bare = false } = Astro.props;
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <Seo {title} {description} {noindex} {image} {type} {published} {updated} />
+    <meta name="theme-color" content="#0F1317" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+    <JsonLd data={graph(localBusiness(), website(), ...schema)} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Aller au contenu</a>
+    {!bare && <Header />}
+    <main id="main"><slot /></main>
+    {!bare && <Footer />}
+    {!bare && <MobileBar />}
+    <ConsentBanner />
+    <script>import '@/scripts/site';</script>
+  </body>
+</html>

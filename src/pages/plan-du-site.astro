@@ -1,0 +1,24 @@
+---
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import { getServices, getCities, getPillars, getPosts, servicePath, cityPath, postPath } from '@/lib/content';
+import { ZONES, LEGAL_LINKS } from '@/config/site';
+import { breadcrumbs } from '@/lib/schema';
+const crumbs = [{ label: 'Plan du site' }];
+const services = await getServices();
+const posts = await getPosts();
+const groups = await Promise.all(ZONES.map(async (z) => ({ ...z, cities: await getCities(z.key) })));
+---
+<Base title="Plan du site | Clean2Go" description="Toutes les pages du site Clean2Go : prestations, tarifs, zones d’intervention, communes, conseils et informations légales." schema={[breadcrumbs(crumbs, '/plan-du-site/')]}>
+  <Hero eyebrow="Plan du site" h1="Toutes les pages Clean2Go" crumbs={crumbs} cta={null} />
+  <Section>
+    <div class="grid grid--3">
+      <div class="box"><h3>Principal</h3><ul><li><a href="/">Accueil</a></li><li><a href="/tarifs/">Tarifs</a></li><li><a href="/professionnels/">Professionnels</a></li><li><a href="/a-propos/">À propos</a></li><li><a href="/faq/">Questions fréquentes</a></li><li><a href="/contact/">Contact et réservation</a></li></ul></div>
+      <div class="box"><h3>Prestations</h3><ul><li><a href="/prestations/">Toutes les prestations</a></li>{services.map((s) => <li><a href={servicePath(s.id)}>{s.data.name}</a></li>)}</ul></div>
+      <div class="box"><h3>Conseils</h3><ul><li><a href="/blog/">Tous les articles</a></li>{posts.map((p) => <li><a href={postPath(p.id)}>{p.data.h1}</a></li>)}</ul></div>
+      {groups.map((z) => <div class="box"><h3>{z.label}</h3><ul><li><a href={z.href}><b>Page {z.label}</b></a></li>{z.cities.map((c) => <li><a href={cityPath(c.id)}>{c.data.name}</a></li>)}</ul></div>)}
+      <div class="box"><h3>Informations légales</h3><ul>{LEGAL_LINKS.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul></div>
+    </div>
+  </Section>
+</Base>

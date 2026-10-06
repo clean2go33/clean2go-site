@@ -1,0 +1,33 @@
+---
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import Icon from '@/components/Icon.astro';
+import PhotoSlot from '@/components/PhotoSlot.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import Faq from '@/components/Faq.astro';
+import { getServices, servicePath } from '@/lib/content';
+import { breadcrumbs, faqPage } from '@/lib/schema';
+const services = await getServices();
+const crumbs = [{ label: 'Prestations' }];
+const faq = [
+  { q: 'Quelle prestation choisir ?', a: 'Si l’intérieur est votre priorité (sièges, odeurs, poils, enfants), le [nettoyage intérieur](/prestations/nettoyage-interieur-voiture/) suffit. Si la carrosserie et les jantes vous préoccupent, choisissez l’[extérieur](/prestations/nettoyage-exterieur-voiture/). Avant une restitution, une revente ou après un long hiver, la formule [intérieur + extérieur](/prestations/nettoyage-vapeur-complet/) évite de revenir deux fois. En cas de doute, décrivez votre véhicule dans le formulaire : nous vous orientons.' },
+  { q: 'Les prestations sont-elles les mêmes pour les professionnels ?', a: 'Le procédé est identique, mais l’organisation change : passages sur site, plusieurs véhicules à la suite, rythme régulier. Tout est détaillé sur la page [Professionnels](/professionnels/).' },
+];
+---
+<Base title="Prestations de nettoyage auto à la vapeur | Clean2Go" description="Nettoyage intérieur, extérieur ou complet de votre véhicule à la vapeur, à domicile ou sur site : découvrez les prestations Clean2Go et choisissez la bonne." schema={[breadcrumbs(crumbs, '/prestations/'), faqPage(faq)]}>
+  <Hero eyebrow="Prestations" h1="Le bon nettoyage pour votre véhicule" lead="Intérieur, extérieur ou les deux : chaque prestation est réalisée à la vapeur, chez vous ou sur votre lieu de travail. Voici comment choisir." crumbs={crumbs}>
+    <PhotoSlot slot="media" seed={2} eager caption="Vue d’ensemble d’un véhicule en cours de nettoyage vapeur dans un parking résidentiel, opérateur à l’œuvre côté portière, cadrage horizontal" />
+  </Hero>
+  <Section eyebrow="Nos prestations" title="Cinq façons d’intervenir" lead="Les trois premières couvrent l’essentiel des demandes. Les deux dernières répondent aux situations particulières.">
+    <div class="grid grid--3">
+      {services.map((s) => (
+        <a class="card" href={servicePath(s.id)}><span class="card__ico"><Icon name={s.data.icon} /></span><h3>{s.data.name}</h3><p>{s.data.lead}</p><span class="textlink">Découvrir <Icon name="arrow" /></span></a>
+      ))}
+    </div>
+  </Section>
+  <Section variant="mist" eyebrow="Pour choisir" title="Comment s’y retrouver">
+    <Faq items={faq} open={0} />
+  </Section>
+  <CtaBand />
+</Base>

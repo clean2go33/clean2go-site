@@ -1,0 +1,21 @@
+---
+import Button from './Button.astro';
+import Icon from './Icon.astro';
+import { ZONES } from '@/config/site';
+import { getCities, cityPath } from '@/lib/content';
+const groups = await Promise.all(ZONES.map(async (z) => ({ ...z, cities: await getCities(z.key) })));
+---
+<div class="zones" data-zones>
+  <div class="zones__tabs" role="tablist" aria-label="Zones d’intervention">
+    {groups.map((z, i) => (
+      <button class="zones__tab" role="tab" type="button" id={`zt-${z.key}`} aria-controls={`zp-${z.key}`} aria-selected={i === 0 ? 'true' : 'false'}>{z.label}<small>{z.sub}</small></button>
+    ))}
+  </div>
+  {groups.map((z, i) => (
+    <div class="zones__panel" role="tabpanel" id={`zp-${z.key}`} aria-labelledby={`zt-${z.key}`} hidden={i !== 0}>
+      <div class="zones__main"><p>{z.blurb}</p><Button href={z.href} variant="dark" size="sm">Page {z.label}</Button></div>
+      <ul class="citygrid">{z.cities.map((c) => <li><a href={cityPath(c.id)}>{c.data.name}<Icon name="arrow" /></a></li>)}</ul>
+    </div>
+  ))}
+  <div class="zones__foot"><p>Votre commune n’apparaît pas ? Contactez-nous : nous étudions chaque demande.</p><Button href="/contact/?commune=Autre#devis" size="sm">Demander si nous intervenons chez vous</Button></div>
+</div>

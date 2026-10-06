@@ -1,0 +1,25 @@
+---
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import Faq from '@/components/Faq.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { FAQ_GROUPS, allFaq } from '@/data/faq';
+import { breadcrumbs, faqPage } from '@/lib/schema';
+const crumbs = [{ label: 'Questions fréquentes' }];
+---
+<Base title="Questions fréquentes sur le nettoyage auto vapeur | Clean2Go" description="Eau, électricité, durée, véhicules, poils, odeurs, paiement, zones : toutes les réponses sur le nettoyage automobile à la vapeur Clean2Go." schema={[breadcrumbs(crumbs, '/faq/'), faqPage(allFaq())]}>
+  <Hero eyebrow="FAQ" h1="Vos questions, nos réponses" lead="Le déroulement d’une intervention, ce dont nous avons besoin sur place, les cas particuliers, le paiement et les zones : tout est ici." crumbs={crumbs} />
+  <section class="sec"><div class="wrap layout">
+    <div>
+      {FAQ_GROUPS.map((g) => (
+        <div class="faqgroup" id={g.id}><h2>{g.title}</h2><Faq items={g.items} /></div>
+      ))}
+    </div>
+    <aside class="aside" aria-label="Rubriques">
+      <div class="box"><h3>Rubriques</h3><ul>{FAQ_GROUPS.map((g) => <li><a href={`#${g.id}`}>{g.title}</a></li>)}</ul></div>
+      <div class="box box--dark"><h3>Une autre question ?</h3><p>Écrivez-nous ou appelez-nous : nous répondons en détail.</p><div class="btns" style="margin-top:14px"><a class="btn btn--red" href="/contact/">Nous contacter</a></div></div>
+    </aside>
+  </div></section>
+  <CtaBand />
+</Base>

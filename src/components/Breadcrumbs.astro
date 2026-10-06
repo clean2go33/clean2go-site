@@ -1,0 +1,10 @@
+---
+interface Props { items: { label: string; href?: string }[]; light?: boolean }
+const { items, light = false } = Astro.props;
+---
+<nav class={`crumbs ${light ? 'crumbs--light' : ''}`} aria-label="Fil d’Ariane">
+  <ol>
+    <li><a href="/">Accueil</a></li>
+    {items.map((it) => (it.href ? <li><a href={it.href}>{it.label}</a></li> : <li aria-current="page">{it.label}</li>))}
+  </ol>
+</nav>

@@ -1,0 +1,34 @@
+---
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import PriceTable from '@/components/PriceTable.astro';
+import Faq from '@/components/Faq.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import PhotoSlot from '@/components/PhotoSlot.astro';
+import Icon from '@/components/Icon.astro';
+import { breadcrumbs, faqPage } from '@/lib/schema';
+const crumbs = [{ label: 'Tarifs' }];
+const faq = [
+  { q: 'Comment le prix est-il établi ?', a: 'Il dépend de la prestation choisie (intérieur, extérieur ou les deux), de la taille du véhicule et de son état. Le devis vous donne le montant avant l’intervention : il n’y a pas de mauvaise surprise le jour J.' },
+  { q: 'Qu’est-ce qui peut s’ajouter au tarif de base ?', a: 'Uniquement ce que l’état du véhicule justifie : poils d’animaux en grande quantité, salissures très importantes, traitement d’odeurs. Ces suppléments sont annoncés dans le devis, jamais ajoutés après coup.' },
+  { q: 'Comment payer ?', a: '[[À CONFIRMER : moyens de paiement acceptés (carte, espèces, virement, chèque), moment du paiement (avant, après l’intervention), acompte éventuel]]' },
+  { q: 'Les tarifs professionnels sont-ils différents ?', a: 'Pour plusieurs véhicules ou des passages réguliers, nous établissons une proposition adaptée à votre parc. Voir la page [Professionnels](/professionnels/).' },
+  { q: 'Le déplacement est-il compris ?', a: '[[À CONFIRMER : déplacement inclus dans le tarif, ou frais selon la zone]]' },
+];
+---
+<Base title="Tarifs du nettoyage auto à la vapeur | Clean2Go" description="Tarifs Clean2Go : nettoyage intérieur, extérieur ou complet à la vapeur, suppléments éventuels et fonctionnement du devis. Intervention à domicile ou sur site." schema={[breadcrumbs(crumbs, '/tarifs/'), faqPage(faq)]}>
+  <Hero eyebrow="Tarifs" h1="Des tarifs lisibles, un devis avant chaque intervention" lead="Vous savez ce que vous payez avant que nous intervenions. Voici les formules, les suppléments éventuels et la façon dont le prix est établi." crumbs={crumbs} cta={{ label: 'Obtenir mon devis', href: '/contact/#devis' }}>
+    <PhotoSlot slot="media" seed={3} eager caption="Détail d’un habitacle propre et net après intervention (sièges, tapis, console), lumière douce, sans marque ni plaque visible" />
+  </Hero>
+  <Section eyebrow="Les formules" title="Trois formules, selon votre besoin"><PriceTable /></Section>
+  <Section variant="mist" eyebrow="Ce que le prix comprend" title="Un prix, une prestation complète">
+    <div class="grid grid--3">
+      <div class="card"><span class="card__ico"><Icon name="steam" /></span><h3>Le matériel</h3><p>Le matériel vapeur et les consommables nécessaires à la prestation sont à notre charge. [[À CONFIRMER : liste exacte des produits et matériel inclus]]</p></div>
+      <div class="card"><span class="card__ico"><Icon name="pin" /></span><h3>Le déplacement</h3><p>Nous nous déplaçons à votre domicile ou sur votre site, à Bordeaux Métropole et sur le Bassin d’Arcachon. [[À CONFIRMER : frais de déplacement éventuels]]</p></div>
+      <div class="card"><span class="card__ico"><Icon name="file" /></span><h3>Le devis</h3><p>Un devis clair avant l’intervention : prestation, véhicule, éventuels suppléments. Vous validez, nous intervenons.</p></div>
+    </div>
+  </Section>
+  <Section eyebrow="Questions sur les prix" title="Tout savoir avant de demander un devis"><Faq items={faq} open={0} /></Section>
+  <CtaBand />
+</Base>

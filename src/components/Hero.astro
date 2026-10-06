@@ -1,0 +1,44 @@
+---
+import Breadcrumbs from './Breadcrumbs.astro';
+import Button from './Button.astro';
+import Icon from './Icon.astro';
+import { SITE } from '@/config/site';
+interface Props {
+  eyebrow?: string;
+  /** Peut contenir <em>…</em> pour l'accent rouge. */
+  h1: string;
+  lead?: string;
+  crumbs?: { label: string; href?: string }[];
+  variant?: 'home' | 'page';
+  cta?: { label: string; href: string } | null;
+  secondary?: { label: string; href: string } | null;
+  trust?: { icon: string; label: string }[];
+  meta?: string;
+}
+const { eyebrow, h1, lead, crumbs, variant = 'page', cta = { label: 'Demander un devis', href: '/contact/#devis' }, secondary, trust = [], meta } = Astro.props;
+const hasMedia = Astro.slots.has('media');
+---
+<section class={`hero ${variant === 'page' ? 'hero--page' : ''}`}>
+  <div class="wrap">
+    <div class={`hero__in ${hasMedia ? '' : 'hero__in--solo'}`}>
+      <div>
+        {crumbs && <Breadcrumbs items={crumbs} />}
+        {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+        <h1 set:html={h1} />
+        {lead && <p class="lead">{lead}</p>}
+        {meta && <p class="meta">{meta}</p>}
+        <slot name="actions">
+          {cta && (
+            <div class="btns">
+              <Button href={cta.href}>{cta.label}</Button>
+              {secondary === null ? null : secondary ? <Button href={secondary.href} variant="light" arrow={false}>{secondary.label}</Button> : <Button href={`tel:${SITE.phoneTel}`} variant="light" arrow={false} icon="phone">{SITE.phone}</Button>}
+            </div>
+          )}
+        </slot>
+        {trust.length > 0 && <ul class="trust">{trust.map((t) => <li><Icon name={t.icon} />{t.label}</li>)}</ul>}
+      </div>
+      {hasMedia && <div class="hero__media"><slot name="media" /></div>}
+    </div>
+  </div>
+  <svg class="steam" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><path d="M80 400c70-90-50-140 20-230s-30-120 30-170"/><path d="M200 400c70-110-50-160 20-250s-30-110 30-150"/><path d="M320 400c50-80-40-130 10-200"/></svg>
+</section>

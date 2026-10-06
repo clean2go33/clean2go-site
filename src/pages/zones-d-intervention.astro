@@ -1,0 +1,37 @@
+---
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import ZonesSelector from '@/components/ZonesSelector.astro';
+import PhotoSlot from '@/components/PhotoSlot.astro';
+import Faq from '@/components/Faq.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import Icon from '@/components/Icon.astro';
+import { ZONES } from '@/config/site';
+import { getCities, cityPath } from '@/lib/content';
+import { breadcrumbs, faqPage } from '@/lib/schema';
+const crumbs = [{ label: 'Zones d’intervention' }];
+const faq = [
+  { q: 'Dans quelles zones intervenez-vous ?', a: 'Nous intervenons à Bordeaux Métropole et sur le Bassin d’Arcachon. Chaque zone a sa page et chaque commune principale a la sienne, avec les informations pratiques qui la concernent.' },
+  { q: 'Ma commune n’est pas listée : puis-je quand même demander une intervention ?', a: 'Oui. La liste présente les communes que nous desservons le plus naturellement, mais nous étudions toute demande en Gironde. Précisez votre commune dans le [formulaire](/contact/?commune=Autre#devis) : nous vous disons si nous pouvons intervenir et dans quelles conditions. [[À CONFIRMER : zone maximale d’intervention en Gironde et éventuels frais de déplacement]]' },
+  { q: 'Le déplacement est-il facturé ?', a: '[[À CONFIRMER : politique de frais de déplacement par zone (inclus, forfait, selon distance ?)]]' },
+];
+const groups = await Promise.all(ZONES.map(async (z) => ({ ...z, cities: await getCities(z.key) })));
+---
+<Base title="Zones d’intervention : Bordeaux Métropole et Bassin d’Arcachon | Clean2Go" description="Clean2Go se déplace à Bordeaux Métropole et sur le Bassin d’Arcachon : retrouvez votre commune, sa page dédiée et demandez votre devis." schema={[breadcrumbs(crumbs, '/zones-d-intervention/'), faqPage(faq)]}>
+  <Hero eyebrow="Zones d’intervention" h1="Nous venons à vous, de Bordeaux au Bassin" lead="Clean2Go est un service mobile : nous nous déplaçons à votre domicile ou sur votre site. Retrouvez votre commune pour savoir comment se passe l’intervention chez vous." crumbs={crumbs}>
+    <PhotoSlot slot="media" seed={7} eager caption="Carte stylisée ou vue aérienne de la Gironde avec les deux zones (Métropole, Bassin) — ou photo de l’utilitaire Clean2Go garé devant un immeuble bordelais" />
+  </Hero>
+  <Section variant="mist" eyebrow="Choisissez votre commune" title="Vingt communes, deux grandes zones">
+    <ZonesSelector />
+  </Section>
+  <Section eyebrow="Le détail par zone" title="Deux territoires, deux réalités">
+    <div class="grid grid--2">
+      {groups.map((z) => (
+        <a class="card" href={z.href}><h3>{z.label}</h3><p>{z.blurb}</p><p class="form__note">{z.cities.map((c) => c.data.name).join(' · ')}</p><span class="textlink">Voir la page {z.label} <Icon name="arrow" /></span></a>
+      ))}
+    </div>
+  </Section>
+  <Section variant="white" eyebrow="Questions fréquentes" title="Zones et déplacements"><Faq items={faq} open={0} /></Section>
+  <CtaBand title="Votre commune n’apparaît pas ?" text="Dites-nous où se trouve votre véhicule : nous vous répondons rapidement pour savoir si nous pouvons intervenir." label="Nous contacter" href="/contact/?commune=Autre#devis" />
+</Base>

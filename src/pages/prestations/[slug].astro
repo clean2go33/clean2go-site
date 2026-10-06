@@ -1,0 +1,51 @@
+---
+import { render } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import PhotoSlot from '@/components/PhotoSlot.astro';
+import Faq from '@/components/Faq.astro';
+import Icon from '@/components/Icon.astro';
+import Button from '@/components/Button.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { getServices, servicePath } from '@/lib/content';
+import { mdInline } from '@/lib/mdlite';
+import { service as serviceSchema, breadcrumbs, faqPage } from '@/lib/schema';
+
+export async function getStaticPaths() {
+  const all = await getServices();
+  return all.map((entry) => ({ params: { slug: entry.id }, props: { entry, all } }));
+}
+const { entry, all } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const crumbs = [{ label: 'Prestations', href: '/prestations/' }, { label: d.name }];
+const others = all.filter((s) => s.id !== entry.id);
+---
+<Base title={d.title} description={d.description} schema={[breadcrumbs(crumbs, servicePath(entry.id)), serviceSchema({ name: d.h1, type: d.serviceType, description: d.description, path: servicePath(entry.id) }), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
+  <Hero eyebrow={d.name} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={{ label: 'Demander un devis', href: `/contact/?prestation=${encodeURIComponent(d.formValue)}#devis` }} secondary={{ label: 'Voir les tarifs', href: '/tarifs/' }}>
+    <PhotoSlot slot="media" seed={d.photoSeed} eager caption={d.photo} />
+  </Hero>
+
+  {d.inclus.length > 0 && (
+    <Section variant="white" eyebrow="Ce que comprend la prestation" title="Ce qui est traité, concrètement">
+      <ul class="checks cols-2">{d.inclus.map((i) => <li><Icon name="check" /><span set:html={mdInline(i)} /></li>)}</ul>
+    </Section>
+  )}
+
+  <section class="sec reveal"><div class="wrap layout">
+    <div class="prose"><Content /></div>
+    <aside class="aside" aria-label="Informations complémentaires">
+      <div class="box box--dark"><h3>Demander un devis</h3><p>Dites-nous quel véhicule vous souhaitez faire nettoyer et où il se trouve.</p><div class="btns" style="margin-top:14px"><Button href={`/contact/?prestation=${encodeURIComponent(d.formValue)}#devis`}>Demander un devis</Button></div></div>
+      <div class="box"><h3>Autres prestations</h3><ul>{others.map((s) => <li><a href={servicePath(s.id)}>{s.data.name}</a></li>)}<li><a href="/tarifs/">Tarifs</a></li></ul></div>
+      <div class="box"><h3>Où intervenons-nous ?</h3><ul><li><a href="/nettoyage-auto-bordeaux-metropole/">Bordeaux Métropole</a></li><li><a href="/nettoyage-auto-bassin-arcachon/">Bassin d’Arcachon</a></li><li><a href="/zones-d-intervention/">Toutes les communes</a></li></ul></div>
+    </aside>
+  </div></section>
+
+  {d.faq.length > 0 && (
+    <Section variant="mist" eyebrow="Questions fréquentes" title={`Vos questions sur le ${d.name.toLowerCase()}`}>
+      <Faq items={d.faq} />
+    </Section>
+  )}
+  <CtaBand href={`/contact/?prestation=${encodeURIComponent(d.formValue)}#devis`} />
+</Base>

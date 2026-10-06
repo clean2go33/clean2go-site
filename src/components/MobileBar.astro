@@ -1,0 +1,5 @@
+---
+import Icon from './Icon.astro';
+import { SITE, NAV } from '@/config/site';
+---
+<div class="mbar"><a class="mbar__tel" href={`tel:${SITE.phoneTel}`}><Icon name="phone" /> Appeler</a><a class="mbar__dev" href={NAV.cta.href}>{NAV.cta.label}</a></div>

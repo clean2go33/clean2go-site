@@ -1,0 +1,17 @@
+---
+interface Props { variant?: '' | 'dark' | 'mist' | 'white' | 'tight'; id?: string; eyebrow?: string; title?: string; lead?: string; center?: boolean; reveal?: boolean }
+const { variant = '', id, eyebrow, title, lead, center = false, reveal = true } = Astro.props;
+const cls = { '': 'sec', dark: 'sec sec--dark', mist: 'sec sec--mist', white: 'sec sec--white', tight: 'sec sec--tight' }[variant];
+---
+<section class={`${cls} ${reveal ? 'reveal' : ''}`} id={id}>
+  <div class="wrap">
+    {(eyebrow || title) && (
+      <div class={`sec__head ${center ? 'sec__head--center' : ''}`}>
+        {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+        {title && <h2>{title}</h2>}
+        {lead && <p class="lead">{lead}</p>}
+      </div>
+    )}
+    <slot />
+  </div>
+</section>

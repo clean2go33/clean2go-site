@@ -1,0 +1,21 @@
+/* ==========================================================================
+   DESIGN SYSTEM CLEAN2GO — tokens
+   Toute valeur visuelle du site vient d'ici. Ne pas coder de valeur arbitraire dans les pages.
+   ========================================================================== */
+:root{
+  --ink:#0F1317; --ink-2:#182028; --ink-3:#232d37;
+  --paper:#F7F5F2; --white:#fff; --mist:#DDE2E6; --mist-2:#EDF0F2;
+  --red:#E8453F; --red-d:#C9332D; --red-l:#FCE9E8;
+  --muted:#58626B; --muted-d:#A9B3BB;
+  --line:rgba(15,19,23,.12); --line-d:rgba(255,255,255,.14);
+  --r:14px; --r-lg:22px; --shadow:0 1px 2px rgba(15,19,23,.06),0 8px 28px rgba(15,19,23,.07);
+  --wrap:1180px; --gut:clamp(18px,4vw,36px);
+  --f-head:"Sora Variable","Sora",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-body:"Inter Variable","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --hdr:76px;
+  /* échelle typographique fluide */
+  --fs-h1:clamp(2.1rem,5.2vw,3.7rem);--fs-h1-page:clamp(1.95rem,4.4vw,3.15rem);--fs-h2:clamp(1.65rem,3.4vw,2.4rem);--fs-h3:1.2rem;--fs-lead:clamp(1.05rem,1.6vw,1.22rem);--fs-body:1.0625rem;--fs-small:.875rem;
+  /* mouvements */
+  --ease:cubic-bezier(.2,.7,.2,1);--t-fast:.15s;--t-base:.25s;
+  /* breakpoints (documentation) : 1180 laptop, 1020 tablette/burger, 720 mobile, 420 petit mobile */
+}

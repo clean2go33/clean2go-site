@@ -1,0 +1,20 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Faq from '@/components/Faq.astro';
+import { breadcrumbs, faqPage } from '@/lib/schema';
+export async function getStaticPaths() {
+  const all = await getCollection('pages');
+  return all.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const crumbs = [{ label: d.h1 }];
+const fr = (x: Date) => x.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title={d.title} description={d.description} noindex={d.noindex} schema={[breadcrumbs(crumbs, `/${entry.id}/`), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
+  <Hero eyebrow={d.kind === 'legal' ? 'Informations légales' : undefined} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={null} meta={d.updated ? `Dernière mise à jour : ${fr(d.updated)}` : undefined} />
+  <section class="sec"><div class="wrap"><div class={`prose ${d.kind === 'legal' ? 'prose--legal' : ''}`}><Content />{d.faq.length > 0 && <Faq items={d.faq} />}</div></div></section>
+</Base>

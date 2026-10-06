@@ -1,0 +1,8 @@
+---
+import { ICONS } from '@/lib/icons';
+interface Props { name: string; class?: string }
+const { name, class: cls = '' } = Astro.props;
+const body = ICONS[name];
+if (!body) throw new Error(`Icône inconnue : "${name}" (voir src/lib/icons.ts)`);
+---
+<svg class={`i ${cls}`} viewBox="0 0 24 24" aria-hidden="true" focusable="false" set:html={body} />

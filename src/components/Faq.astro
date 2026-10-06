@@ -1,0 +1,14 @@
+---
+import { mdLite } from '@/lib/mdlite';
+interface Props { items: { q: string; a: string }[]; open?: number }
+const { items, open = -1 } = Astro.props;
+const idOf = (q: string) => 'q-' + q.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').slice(0, 48).replace(/^-|-$/g, '');
+---
+<div class="faq">
+  {items.map((it, i) => (
+    <details id={idOf(it.q)} open={i === open}>
+      <summary>{it.q}</summary>
+      <div class="faq__a" set:html={mdLite(it.a)} />
+    </details>
+  ))}
+</div>

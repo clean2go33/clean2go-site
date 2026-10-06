@@ -1,0 +1,47 @@
+---
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import Icon from '@/components/Icon.astro';
+import PhotoSlot from '@/components/PhotoSlot.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { breadcrumbs } from '@/lib/schema';
+import { LEGAL } from '@/config/site';
+const crumbs = [{ label: 'À propos' }];
+---
+<Base title="À propos de Clean2Go, nettoyage auto vapeur | Bordeaux" description="Clean2Go est un service mobile de nettoyage automobile à la vapeur, basé sur Bordeaux Métropole et le Bassin d’Arcachon. Notre méthode, nos engagements, nos zones." schema={[breadcrumbs(crumbs, '/a-propos/')]}>
+  <Hero eyebrow="À propos" h1="Un service mobile, une méthode : la vapeur" lead="Clean2Go nettoie et assainit les véhicules à domicile et sur site, avec une vapeur haute température et très peu d’eau. Voici comment nous travaillons, et pourquoi." crumbs={crumbs}>
+    <PhotoSlot slot="media" seed={9} eager ratio="tall" caption="Portrait du fondateur de Clean2Go à côté du matériel vapeur ou de l’utilitaire, vue de trois-quarts, lumière naturelle, regard caméra" />
+  </Hero>
+
+  <Section eyebrow="Notre méthode" title="Pourquoi nous avons choisi la vapeur">
+    <div class="split">
+      <div class="prose">
+        <p>Un habitacle accumule plus qu’on ne le croit : poussière dans les tissus, résidus dans les rails de sièges, odeurs absorbées par les moquettes, bactéries sur les surfaces que l’on touche tous les jours. Un chiffon et un produit ménager en retirent la surface. La vapeur va plus loin.</p>
+        <p>À haute température, la vapeur ramollit les salissures et les décolle, atteint les recoins et traite les surfaces en profondeur. Comme elle utilise très peu d’eau, les tissus et les moquettes ne sont pas détrempés. C’est un procédé précis, qui préserve les matières, et qui convient aussi bien à une voiture de famille qu’à un véhicule d’entreprise.</p>
+        <p>Nous avons construit Clean2Go autour de ce seul procédé, et autour d’une idée simple : le service doit venir à vous, pas l’inverse.</p>
+      </div>
+      <PhotoSlot ratio="wide" seed={10} caption="Détail de la buse vapeur au contact d’un tissu de siège, vapeur nette, lumière rasante, mise au point sur la buse" />
+    </div>
+  </Section>
+
+  <Section variant="mist" eyebrow="Nos engagements" title="Ce que vous pouvez attendre de nous">
+    <div class="grid grid--3">
+      <div class="card"><span class="card__ico"><Icon name="pin" /></span><h3>Nous venons à vous</h3><p>À domicile, sur votre lieu de travail ou sur votre site professionnel. Vous n’avez pas à déplacer votre véhicule.</p></div>
+      <div class="card"><span class="card__ico"><Icon name="droplet" /></span><h3>Peu d’eau, matières préservées</h3><p>Un nettoyage à la vapeur qui ne détrempe pas les surfaces et respecte les tissus, les cuirs et les plastiques.</p></div>
+      <div class="card"><span class="card__ico"><Icon name="file" /></span><h3>Un devis avant d’intervenir</h3><p>Vous connaissez la prestation, le prix et les éventuels suppléments avant que nous commencions.</p></div>
+    </div>
+  </Section>
+
+  <Section eyebrow="Qui est derrière Clean2Go" title="L’entreprise">
+    <div class="split split--top">
+      <div class="prose">
+        <p>Clean2Go est le nom commercial de {LEGAL.legalName}, société par actions simplifiée immatriculée à Bordeaux en 2021. L’activité s’exerce à Bordeaux Métropole, sur le Bassin d’Arcachon et plus largement en Gironde.</p>
+        <p>[[À CONFIRMER : présentation du fondateur (prénom, parcours, ce qui l’a conduit à la vapeur), histoire de Clean2Go, éventuelle équipe]]</p>
+        <p>Les informations légales complètes figurent dans les <a href="/mentions-legales/">mentions légales</a>.</p>
+      </div>
+      <div class="box"><h3>Repères</h3><ul><li><a href="/prestations/">Nos prestations</a></li><li><a href="/zones-d-intervention/">Nos zones d’intervention</a></li><li><a href="/professionnels/">Offre professionnelle</a></li><li><a href="/blog/">Conseils d’entretien</a></li></ul></div>
+    </div>
+  </Section>
+  <CtaBand />
+</Base>

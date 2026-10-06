@@ -1,0 +1,48 @@
+---
+import { render } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
+import PhotoSlot from '@/components/PhotoSlot.astro';
+import Faq from '@/components/Faq.astro';
+import Button from '@/components/Button.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { getPosts, getServices, getCities, postPath, servicePath, cityPath, BLOG_CATEGORIES } from '@/lib/content';
+import { breadcrumbs, article, faqPage } from '@/lib/schema';
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((entry) => ({ params: { slug: entry.id }, props: { entry, posts } }));
+}
+const { entry, posts } = Astro.props;
+const d = entry.data;
+const { Content, headings } = await render(entry);
+const toc = headings.filter((h) => h.depth === 2);
+const services = await getServices();
+const cities = await getCities();
+const svc = services.find((s) => s.id === d.service);
+const cts = d.cities.map((id) => cities.find((c) => c.id === id)).filter(Boolean) as typeof cities;
+const more = posts.filter((p) => p.id !== entry.id && (p.data.category === d.category)).slice(0, 2).concat(posts.filter((p) => p.id !== entry.id && p.data.category !== d.category)).slice(0, 3);
+const cat = BLOG_CATEGORIES[d.category];
+const crumbs = [{ label: 'Conseils', href: '/blog/' }, { label: cat.label, href: `/blog/categorie/${d.category}/` }, { label: d.h1 }];
+const fr = (x: Date) => x.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title={d.title} description={d.description} type="article" published={d.date} updated={d.updated ?? d.date} schema={[breadcrumbs(crumbs, postPath(entry.id)), article({ title: d.h1, description: d.description, path: postPath(entry.id), published: d.date, updated: d.updated, author: d.author }), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
+  <Hero eyebrow={cat.label} h1={d.h1} lead={d.excerpt} crumbs={crumbs} cta={null} meta={`Par ${d.author} · ${d.readingTime} min de lecture · mis à jour le ${fr(d.updated ?? d.date)}`}>
+    <PhotoSlot slot="media" ratio="wide" seed={d.photoSeed} eager caption={d.photo} />
+  </Hero>
+  <section class="sec"><div class="wrap layout">
+    <article class="prose"><Content /></article>
+    <aside class="aside" aria-label="Informations complémentaires">
+      {toc.length >= 3 && <div class="box toc"><h3>Dans cet article</h3><ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol></div>}
+      <div class="box"><h3>Pour aller plus loin</h3><ul>{svc && <li><a href={servicePath(svc.id)}>{svc.data.name}</a></li>}{cts.map((c) => <li><a href={cityPath(c.id)}>Nettoyage auto à {c.data.name}</a></li>)}<li><a href="/tarifs/">Les tarifs</a></li><li><a href="/faq/">Questions fréquentes</a></li></ul></div>
+      <div class="box box--dark"><h3>Besoin d’un coup de main ?</h3><p>Nous nettoyons votre véhicule à la vapeur, chez vous ou sur votre lieu de travail.</p><div class="btns" style="margin-top:14px"><Button href="/contact/#devis">Demander un devis</Button></div></div>
+    </aside>
+  </div></section>
+  {d.faq.length > 0 && <Section variant="mist" eyebrow="Questions fréquentes" title="À propos de cet article"><Faq items={d.faq} /></Section>}
+  {more.length > 0 && (
+    <Section eyebrow="À lire aussi" title="Dans la même veine">
+      <div class="grid grid--3">{more.map((p) => <a class="post" href={postPath(p.id)}><PhotoSlot ratio="wide" seed={p.data.photoSeed} caption={p.data.photo} /><div class="post__b"><span class="tag">{BLOG_CATEGORIES[p.data.category].label}</span><h3>{p.data.h1}</h3><p>{p.data.excerpt}</p></div></a>)}</div>
+    </Section>
+  )}
+  <CtaBand />
+</Base>

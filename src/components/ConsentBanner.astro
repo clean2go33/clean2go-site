@@ -1,0 +1,9 @@
+---
+import { SITE } from '@/config/site';
+---
+{SITE.gaId && (
+  <div class="consent-banner" id="consent" role="dialog" aria-labelledby="consent-t" aria-live="polite" data-ga={SITE.gaId}>
+    <p id="consent-t"><strong>Mesure d’audience.</strong> Avec votre accord, nous mesurons la fréquentation du site pour l’améliorer. Aucun cookie de mesure n’est déposé sans votre choix. <a href="/politique-de-cookies/" style="color:#fff">En savoir plus</a>.</p>
+    <div class="btns"><button class="btn btn--red btn--sm" type="button" data-consent="yes">Accepter</button><button class="btn btn--light btn--sm" type="button" data-consent="no">Refuser</button></div>
+  </div>
+)}
