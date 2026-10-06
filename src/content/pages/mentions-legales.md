@@ -46,9 +46,6 @@ Les données collectées via les formulaires sont traitées conformément à not
 
 Les informations relatives aux cookies figurent dans notre [politique de cookies](/politique-de-cookies/).
 
-## Médiation de la consommation
-
-Médiateur de la consommation : **CM2C** (Centre de la Médiation de la Consommation de Conciliateurs de Justice), 49 rue de Ponthieu, 75008 Paris, [www.cm2c.net](https://www.cm2c.net). Le consommateur peut le saisir en ligne sur [cm2c.net/declarer-un-litige.php](https://www.cm2c.net/declarer-un-litige.php), après avoir d’abord tenté de résoudre le litige directement auprès de Clean2Go par une réclamation écrite. La médiation est gratuite pour le consommateur.
 
 ## Droit applicable
 

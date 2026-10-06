@@ -65,14 +65,10 @@ Les consommateurs bénéficient des garanties légales prévues par le Code de l
 
 Les données collectées servent à traiter les demandes. Voir la [politique de confidentialité](/politique-de-confidentialite/).
 
-## 14. Médiation de la consommation
-
-Conformément au Code de la consommation, le consommateur peut recourir gratuitement à un médiateur. Médiateur de la consommation : **CM2C** (Centre de la Médiation de la Consommation de Conciliateurs de Justice), 49 rue de Ponthieu, 75008 Paris, [www.cm2c.net](https://www.cm2c.net). Le consommateur peut le saisir en ligne sur [cm2c.net/declarer-un-litige.php](https://www.cm2c.net/declarer-un-litige.php), après avoir d’abord tenté de résoudre le litige directement auprès de Clean2Go par une réclamation écrite. La médiation est gratuite pour le consommateur.
-
-## 15. Droit applicable et litiges
+## 14. Droit applicable et litiges
 
 Les CGV sont soumises au droit français. En cas de litige, une solution amiable est recherchée avant toute action. Pour les clients professionnels, tout litige relève du tribunal de commerce de Bordeaux, siège de NEW WAVE. Pour les consommateurs, les règles légales de compétence s’appliquent.
 
-## 16. Contact
+## 15. Contact
 
 Clean2Go : contact@clean2go.fr, 06 03 94 87 78.

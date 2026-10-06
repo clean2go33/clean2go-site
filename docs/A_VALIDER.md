@@ -20,5 +20,5 @@ Chaque `PhotoSlot` a une légende décrivant la photo attendue (`PUBLIC_DRAFT=1 
 
 La liste exacte des mentions à confirmer s'obtient avec `npm run validate`.
 
-## Avant publication : médiateur
-Le site indique le CM2C comme médiateur de la consommation. **L'adhésion de NEW WAVE doit être effective** (inscription professionnelle sur https://www.cm2c.net/inscription-professionnel.php) avant la mise en ligne ; sinon, remplacer par le médiateur auquel l'entreprise adhère.
+## Médiateur de la consommation
+Retiré du site à la demande de Naomie (pas d'adhésion pour le moment). Obligation légale pour la vente aux consommateurs : à régulariser (ex. CM2C, inscription professionnelle sur cm2c.net) puis à réintégrer dans les CGV (article « Médiation ») et les mentions légales.
