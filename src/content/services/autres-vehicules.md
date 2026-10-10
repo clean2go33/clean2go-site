@@ -1,5 +1,5 @@
 ---
-title: "Nettoyage vapeur bateaux, avions légers, sites industriels | Clean2Go"
+title: "Nettoyage vapeur bateau, avion léger, industrie | Clean2Go"
 description: "Nautisme, aviation légère, environnements industriels : Clean2Go étudie sur demande le nettoyage vapeur d’autres supports que l’automobile, en Gironde."
 name: Autres véhicules, sur demande
 short: Nautisme, aviation légère, sites industriels

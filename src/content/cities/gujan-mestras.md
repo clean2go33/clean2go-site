@@ -3,7 +3,7 @@ kind: city
 zone: bassin
 name: Gujan-Mestras
 title: "Nettoyage voiture à Gujan-Mestras : vapeur, ports | Clean2Go"
-description: "Nettoyage de voiture et de véhicule utilitaire à la vapeur à Gujan-Mestras : ports ostréicoles, commerçants et habitants à l’année. Odeurs marines traitées sur place."
+description: "Nettoyage voiture et utilitaire à la vapeur à Gujan-Mestras : ports ostréicoles, commerçants, habitants. Odeurs marines traitées sur place."
 h1: Nettoyage de voiture à Gujan-Mestras, côté ports
 lead: Autour des ports ostréicoles, les véhicules servent au travail autant qu’à la famille. Nous les nettoyons à la vapeur, sur place, et nous traitons les odeurs à la source.
 angle: Ports ostréicoles, véhicules du quotidien

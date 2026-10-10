@@ -2,7 +2,7 @@
 kind: city
 zone: bassin
 name: Lanton
-title: "Nettoyage voiture à Lanton : vapeur à Cassy et Taussat | Clean2Go"
+title: "Nettoyage voiture à Lanton : vapeur, Cassy, Taussat | Clean2Go"
 description: "Nettoyage de voiture à la vapeur à Lanton, Cassy et Taussat : résidents, locations saisonnières, familles. Intervention sur place, sur rendez-vous."
 h1: Nettoyage de voiture à Lanton, de Cassy à Taussat
 lead: "Plages, cabanes, locations de vacances : à Lanton, les voitures voient du sable et du monde. Nous les remettons à neuf à la vapeur, chez vous."

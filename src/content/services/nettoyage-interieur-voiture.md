@@ -1,6 +1,6 @@
 ---
 title: "Nettoyage intérieur voiture à la vapeur | Clean2Go"
-description: "Nettoyage intérieur de votre voiture à la vapeur, à domicile ou sur site : sièges, tapis, moquettes, plastiques et zones difficiles d’accès, avec très peu d’eau."
+description: "Nettoyage intérieur de votre voiture à la vapeur, à domicile ou sur site : sièges, tapis, moquettes, plastiques et zones difficiles d’accès."
 name: Nettoyage intérieur
 short: Sièges, tapis, moquettes, plastiques
 h1: Nettoyage intérieur de voiture à la vapeur, chez vous

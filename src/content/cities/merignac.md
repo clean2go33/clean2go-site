@@ -2,7 +2,7 @@
 kind: city
 zone: metropole
 name: Mérignac
-title: "Nettoyage voiture à Mérignac, à domicile et en entreprise | Clean2Go"
+title: "Nettoyage voiture à Mérignac : domicile, entreprise | Clean2Go"
 description: "Nettoyage de voiture à la vapeur à Mérignac : particuliers, voyageurs de retour de l’aéroport et entreprises des zones d’activités. À domicile ou sur site."
 h1: Nettoyage voiture à Mérignac, de l’aéroport aux zones d’activités
 lead: Entre l’aéroport, les pôles d’emploi et les quartiers résidentiels, les voitures de Mérignac ont des usages très variés. Nous les nettoyons à la vapeur, chez vous ou sur votre site.

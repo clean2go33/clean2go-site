@@ -1,6 +1,6 @@
 ---
 title: "Nettoyage vapeur voiture intérieur et extérieur | Clean2Go"
-description: "La formule complète Clean2Go : nettoyage vapeur de l’intérieur et de l’extérieur de votre voiture en une seule intervention, à domicile ou sur site, avec très peu d’eau."
+description: "Formule complète Clean2Go : nettoyage vapeur de l’intérieur et de l’extérieur de votre voiture en une intervention, à domicile ou sur site."
 name: Intérieur + extérieur
 short: La remise en état complète, en une intervention
 h1: "Nettoyage vapeur complet : intérieur et extérieur en une intervention"

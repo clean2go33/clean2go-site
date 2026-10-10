@@ -3,7 +3,7 @@ kind: city
 zone: metropole
 name: Cenon
 title: "Nettoyage voiture à Cenon : vapeur, rive droite | Clean2Go"
-description: "Nettoyage de voiture à la vapeur à Cenon, sur la rive droite : résidences, coteaux, quartiers des Hauts de Garonne. Intervention à domicile, avec très peu d’eau."
+description: "Nettoyage de voiture à la vapeur à Cenon, sur la rive droite : résidences, coteaux, quartiers des Hauts de Garonne. Intervention à domicile."
 h1: Nettoyage de voiture à Cenon, sur la rive droite
 lead: "Résidences, coteaux, rues en pente : à Cenon, nous nettoyons votre voiture à la vapeur directement à votre adresse, sans que vous ayez à traverser la Garonne."
 angle: Rive droite, résidences et coteaux

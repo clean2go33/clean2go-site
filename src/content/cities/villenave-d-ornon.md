@@ -3,7 +3,7 @@ kind: city
 zone: metropole
 name: Villenave-d’Ornon
 title: "Nettoyage voiture à Villenave-d’Ornon, à domicile | Clean2Go"
-description: "Nettoyage de voiture familiale à la vapeur à Villenave-d’Ornon : bourg, Pont-de-la-Maye, Courréjean. Poils, miettes et odeurs traités chez vous, avec très peu d’eau."
+description: "Nettoyage de voiture familiale à la vapeur à Villenave-d’Ornon : bourg, Pont-de-la-Maye, Courréjean. Poils, miettes et odeurs traités chez vous."
 h1: Nettoyage de voiture familiale à Villenave-d’Ornon
 lead: "Pavillons, résidences, trajets quotidiens vers la rocade : à Villenave-d’Ornon, nous venons à votre voiture de famille et nous la remettons en état à la vapeur, dans votre allée."
 angle: Voiture de famille, trajets quotidiens

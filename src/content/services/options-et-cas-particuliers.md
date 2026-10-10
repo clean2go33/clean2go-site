@@ -1,6 +1,6 @@
 ---
 title: "Poils d’animaux, odeurs, véhicule très sale | Clean2Go"
-description: "Poils d’animaux, mauvaises odeurs, véhicule très sale : les traitements spécifiques Clean2Go à la vapeur, ce qu’ils changent et comment ils sont annoncés dans le devis."
+description: "Poils d’animaux, mauvaises odeurs, véhicule très sale : les traitements spécifiques Clean2Go à la vapeur et leur prise en compte dans le devis."
 name: Options et cas particuliers
 short: Poils d’animaux, odeurs, véhicule très sale
 h1: "Poils, odeurs, saleté importante : les cas particuliers"

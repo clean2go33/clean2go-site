@@ -2,8 +2,8 @@
 kind: city
 zone: metropole
 name: Talence
-title: "Nettoyage voiture à Talence : vapeur, résidences, étudiants | Clean2Go"
-description: "Nettoyage de voiture à la vapeur à Talence : parkings de résidence, étudiants, copropriétés. Intervention sur place, avec très peu d’eau, sans déplacer le véhicule."
+title: "Nettoyage voiture à Talence : vapeur, résidences | Clean2Go"
+description: "Nettoyage de voiture à la vapeur à Talence : parkings de résidence, étudiants, copropriétés. Intervention sur place, sans déplacer le véhicule."
 h1: Nettoyage de voiture à Talence, en résidence comme sur le campus
 lead: "Parkings de copropriété, résidences étudiantes, rues animées : à Talence, nous nettoyons votre voiture à la vapeur à l’endroit où elle est garée, sans qu’elle bouge."
 angle: Résidences, copropriétés, étudiants

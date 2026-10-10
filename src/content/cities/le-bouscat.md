@@ -3,7 +3,7 @@ kind: city
 zone: metropole
 name: Le Bouscat
 title: "Nettoyage voiture au Bouscat : vapeur à domicile | Clean2Go"
-description: "Nettoyage de voiture à la vapeur au Bouscat : quartiers résidentiels, résidences et entreprises. Un nettoyage en profondeur, chez vous, sans déplacer votre véhicule."
+description: "Nettoyage de voiture à la vapeur au Bouscat : quartiers résidentiels, résidences et entreprises. Nettoyage en profondeur chez vous, sans déplacer le véhicule."
 h1: Nettoyage de voiture au Bouscat, sans quitter votre rue
 lead: "Maisons, résidences, parkings d’entreprise : au Bouscat, nous venons à votre véhicule et nous le nettoyons à la vapeur, avec très peu d’eau et sans bruit de chantier."
 angle: Quartiers résidentiels, véhicules soignés

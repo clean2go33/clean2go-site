@@ -18,7 +18,7 @@ const faq = [
 ];
 const groups = await Promise.all(ZONES.map(async (z) => ({ ...z, cities: await getCities(z.key) })));
 ---
-<Base title="Zones d’intervention : Bordeaux Métropole et Bassin d’Arcachon | Clean2Go" description="Clean2Go se déplace à Bordeaux Métropole et sur le Bassin d’Arcachon : retrouvez votre commune, sa page dédiée et demandez votre devis." schema={[breadcrumbs(crumbs, '/zones-d-intervention/'), faqPage(faq)]}>
+<Base title="Zones d’intervention : Bordeaux et Bassin d’Arcachon | Clean2Go" description="Clean2Go se déplace à Bordeaux Métropole et sur le Bassin d’Arcachon : retrouvez votre commune, sa page dédiée et demandez votre devis." schema={[breadcrumbs(crumbs, '/zones-d-intervention/'), faqPage(faq)]}>
   <Hero eyebrow="Zones d’intervention" h1="Nous venons à vous, de Bordeaux au Bassin" lead="Clean2Go est un service mobile : nous nous déplaçons à votre domicile ou sur votre site. Retrouvez votre commune pour savoir comment se passe l’intervention chez vous." crumbs={crumbs}>
     <PhotoSlot slot="media" seed={7} eager caption="Carte stylisée ou vue aérienne de la Gironde avec les deux zones (Métropole, Bassin) — ou photo de l’utilitaire Clean2Go garé devant un immeuble bordelais" />
   </Hero>

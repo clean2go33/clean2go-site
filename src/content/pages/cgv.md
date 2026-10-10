@@ -1,6 +1,6 @@
 ---
 title: "Conditions générales de vente | Clean2Go"
-description: "Conditions générales de vente des prestations de nettoyage automobile mobile Clean2Go (NEW WAVE) : commande, prix, paiement, annulation, responsabilité, médiation."
+description: "Conditions générales de vente des prestations de nettoyage automobile mobile Clean2Go (NEW WAVE) : commande, prix, paiement, annulation, responsabilité."
 h1: Conditions générales de vente
 kind: legal
 updated: 2026-10-06

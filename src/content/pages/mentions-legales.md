@@ -1,6 +1,6 @@
 ---
 title: "Mentions légales | Clean2Go"
-description: "Mentions légales du site Clean2Go : éditeur NEW WAVE, coordonnées, hébergeur, propriété intellectuelle, données personnelles et médiation de la consommation."
+description: "Mentions légales du site Clean2Go : éditeur NEW WAVE, coordonnées, hébergeur, propriété intellectuelle et données personnelles."
 h1: Mentions légales
 kind: legal
 updated: 2026-10-06

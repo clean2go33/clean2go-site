@@ -2,7 +2,7 @@
 kind: city
 zone: bassin
 name: Lège-Cap-Ferret
-title: "Nettoyage voiture à Lège-Cap-Ferret : vapeur à domicile | Clean2Go"
+title: "Nettoyage voiture à Lège-Cap-Ferret : vapeur | Clean2Go"
 description: "Nettoyage de voiture à la vapeur à Lège-Cap-Ferret : résidents, résidences secondaires, sable et sel. Intervention sur place, prise de rendez-vous préalable."
 h1: Nettoyage de voiture à Lège-Cap-Ferret, sable et sel inclus
 lead: Sur la presqu’île, le sable et le sel entrent partout. Nous nettoyons votre voiture à la vapeur, sur place, sur rendez-vous.

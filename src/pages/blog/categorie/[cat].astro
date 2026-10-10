@@ -14,7 +14,7 @@ const { cat, posts } = Astro.props;
 const c = BLOG_CATEGORIES[cat];
 const crumbs = [{ label: 'Conseils', href: '/blog/' }, { label: c.label }];
 ---
-<Base title={`${c.label} : conseils | Clean2Go`} description={`${c.blurb} Les guides pratiques Clean2Go sur ce thème.`} schema={[breadcrumbs(crumbs, `/blog/categorie/${cat}/`)]}>
+<Base title={`${c.label} : guides pratiques | Clean2Go`} description={`${c.blurb} Guides pratiques Clean2Go pour Bordeaux et le Bassin d’Arcachon.`} schema={[breadcrumbs(crumbs, `/blog/categorie/${cat}/`)]}>
   <Hero eyebrow="Conseils" h1={c.label} lead={c.blurb} crumbs={crumbs} cta={null} />
   <Section>
     <div class="grid grid--3">

@@ -3,7 +3,7 @@ kind: city
 zone: bassin
 name: Le Teich
 title: "Nettoyage voiture au Teich : vapeur à domicile | Clean2Go"
-description: "Nettoyage de voiture à la vapeur au Teich : familles, visiteurs de la réserve ornithologique, entreprises. Intervention sur place, sans eau en excès dans l’habitacle."
+description: "Nettoyage de voiture à la vapeur au Teich : familles, visiteurs de la réserve ornithologique, entreprises. Intervention sur place, sans excès d’eau."
 h1: Nettoyage de voiture au Teich, au bord du delta de la Leyre
 lead: Entre forêt, marais et A660, les voitures du Teich ramènent humidité, poussière et sable. Nous les nettoyons à la vapeur, chez vous.
 angle: Humidité, parc ornithologique, familles

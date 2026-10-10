@@ -3,7 +3,7 @@ kind: city
 zone: bassin
 name: Arcachon
 title: "Nettoyage voiture à Arcachon : vapeur à domicile | Clean2Go"
-description: "Nettoyage de voiture à la vapeur à Arcachon : Ville d’Hiver, Moulleau, Abatilles. Sel, pollen de pin et sable traités chez vous, pour résidents et résidences secondaires."
+description: "Nettoyage de voiture à la vapeur à Arcachon : Ville d’Hiver, Moulleau, Abatilles. Sel, pollen de pin et sable traités chez vous, toute l’année."
 h1: Nettoyage de voiture à Arcachon, face au sel et aux pins
 lead: "Résidents à l’année, propriétaires de résidence secondaire, locations saisonnières : à Arcachon, nous nettoyons votre voiture à la vapeur là où elle est garée."
 angle: Résidences secondaires, sel et pinède
