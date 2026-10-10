@@ -59,7 +59,6 @@ p{margin:0 0 1.1em}
 .btn:hover svg{transform:translateX(3px)}
 .btn--red{background:var(--red);color:#fff}.btn--red:hover{background:var(--red-d)}
 .btn--dark{background:var(--ink);color:#fff}.btn--dark:hover{background:var(--ink-3)}
-.btn--blue{background:#1D5FD1;color:#fff}.btn--blue:hover{background:#174BA6}
 .btn--line{border-color:var(--ink);color:var(--ink)}.btn--line:hover{background:var(--ink);color:#fff}
 .btn--light{border-color:rgba(255,255,255,.35);color:#fff}.btn--light:hover{background:#fff;color:var(--ink)}
 .btn--sm{min-height:42px;padding:0 18px;font-size:.9rem}
@@ -374,7 +373,6 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 /* Boutons dans le menu mobile : ne pas hériter du style des liens de nav */
 .nav__mob a.btn{padding:14px 20px;border-radius:12px;justify-content:center}
 .nav__mob a.btn--red{background:var(--red);color:#fff}
-.nav__mob a.btn--blue{background:#1D5FD1;color:#fff}
 .nav__mob a.btn--dark{background:var(--ink);color:#fff}
 
 /* Logo image (remplace le logotype texte) */
