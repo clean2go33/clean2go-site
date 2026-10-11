@@ -29,12 +29,12 @@ const chev = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4"
                 <div class="sub sub--wide">
                   {zoneGroups.map((z) => (
                     <div>
-                      <p class="sub__title sub__x">{z.label}</p>
-                      <a href={z.href} aria-current={cur(z.href)}><b>{z.label}</b></a>
-                      {z.cities.map((c) => <a class="sub__x" href={cityPath(c.id)} aria-current={cur(cityPath(c.id))}>{c.data.name}</a>)}
+                      <p class="sub__title">{z.label}</p>
+                      <a href={z.href} aria-current={cur(z.href)}><b>Page {z.label}</b></a>
+                      {z.cities.map((c) => <a href={cityPath(c.id)} aria-current={cur(cityPath(c.id))}>{c.data.name}</a>)}
                     </div>
                   ))}
-                  <div class="sub__x" style="grid-column:1/-1"><hr /><a href="/zones-d-intervention/">Toutes les zones d’intervention</a></div>
+                  <div style="grid-column:1/-1"><hr /><a href="/zones-d-intervention/">Toutes les zones d’intervention</a></div>
                 </div>
               )}
             </li>

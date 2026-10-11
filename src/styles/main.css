@@ -320,12 +320,17 @@ body.is-publish .confirm{display:inline}
   .nav button.nav__btn{display:none}
   .nav .nav__alt{display:flex!important}
   .nav a.btn{border-bottom:0}
-  .has-sub .sub,.has-sub .sub--wide{display:grid!important;position:static;box-shadow:none;border:0;padding:0 0 6px 10px;min-width:0;background:transparent;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 10px}
+  .hdr{background:var(--paper);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .has-sub .sub,.has-sub .sub--wide{display:grid!important;position:static;box-shadow:none;border:0;padding:0 0 8px 10px;min-width:0;background:transparent;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 10px}
+  .has-sub .sub--wide{grid-template-columns:minmax(0,1fr)}
   .sub .sub__x{display:none!important}
   .sub a,.nav .sub a{border-bottom:0;padding:9px 8px;font-size:.93rem;line-height:1.25;color:var(--muted);width:auto;white-space:normal;justify-content:flex-start}
-  .sub--wide>div{min-width:0}
   .sub a small{display:none}
-  .sub--wide a b{font-weight:500}
+  .sub--wide>div{min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 10px;margin-bottom:6px}
+  .sub--wide>div>.sub__title,.sub--wide>div>a:first-of-type,.sub--wide>div>hr{grid-column:1/-1}
+  .sub--wide .sub__title{display:none}
+  .sub--wide a b{font-weight:600;color:var(--ink)}
+  .sub hr{margin:4px 0}
   .nav__mob{display:grid!important;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
   .hero__in,.hero--page .hero__in,.split,.layout{grid-template-columns:1fr}
   .aside{position:static}
