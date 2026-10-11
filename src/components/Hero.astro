@@ -2,6 +2,8 @@
 import Breadcrumbs from './Breadcrumbs.astro';
 import Button from './Button.astro';
 import Icon from './Icon.astro';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import { SITE } from '@/config/site';
 interface Props {
   eyebrow?: string;
@@ -14,11 +16,14 @@ interface Props {
   secondary?: { label: string; href: string } | null;
   trust?: { icon: string; label: string }[];
   meta?: string;
+  /** Image de fond pleine largeur (décorative, voile sombre pour la lisibilité). */
+  bg?: { src: ImageMetadata; alt?: string };
 }
-const { eyebrow, h1, lead, crumbs, variant = 'page', cta = { label: 'Demander un devis', href: '/contact/#devis' }, secondary, trust = [], meta } = Astro.props;
+const { eyebrow, h1, lead, crumbs, variant = 'page', cta = { label: 'Demander un devis', href: '/contact/#devis' }, secondary, trust = [], meta, bg } = Astro.props;
 const hasMedia = Astro.slots.has('media');
 ---
-<section class={`hero ${variant === 'page' ? 'hero--page' : ''}`}>
+<section class={`hero ${variant === 'page' ? 'hero--page' : ''} ${bg ? 'hero--bg' : ''}`}>
+  {bg && <Image class="hero__bg" src={bg.src} alt="" widths={[800, 1280, 1920]} sizes="100vw" format="webp" loading="eager" fetchpriority="high" />}
   <div class="wrap">
     <div class={`hero__in ${hasMedia ? '' : 'hero__in--solo'}`}>
       <div>
@@ -40,5 +45,5 @@ const hasMedia = Astro.slots.has('media');
       {hasMedia && <div class="hero__media"><slot name="media" /></div>}
     </div>
   </div>
-  <svg class="steam" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><path d="M80 400c70-90-50-140 20-230s-30-120 30-170"/><path d="M200 400c70-110-50-160 20-250s-30-110 30-150"/><path d="M320 400c50-80-40-130 10-200"/></svg>
+  {!bg && <svg class="steam" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><path d="M80 400c70-90-50-140 20-230s-30-120 30-170"/><path d="M200 400c70-110-50-160 20-250s-30-110 30-150"/><path d="M320 400c50-80-40-130 10-200"/></svg>}
 </section>

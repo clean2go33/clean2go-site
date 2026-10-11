@@ -24,9 +24,7 @@ const crumbs = [{ label: 'Prestations', href: '/prestations/' }, { label: d.name
 const others = all.filter((s) => s.id !== entry.id);
 ---
 <Base title={d.title} description={d.description} schema={[breadcrumbs(crumbs, servicePath(entry.id)), serviceSchema({ name: d.h1, type: d.serviceType, description: d.description, path: servicePath(entry.id) }), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
-  <Hero eyebrow={d.name} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={{ label: 'Demander un devis', href: `/contact/?prestation=${encodeURIComponent(d.formValue)}#devis` }} secondary={{ label: 'Voir les tarifs', href: '/tarifs/' }}>
-    <PhotoSlot slot="media" seed={d.photoSeed} eager src={SERVICE_PHOTOS[entry.id]?.src} caption={SERVICE_PHOTOS[entry.id]?.alt ?? d.photo} />
-  </Hero>
+  <Hero eyebrow={d.name} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={{ label: 'Demander un devis', href: `/contact/?prestation=${encodeURIComponent(d.formValue)}#devis` }} secondary={{ label: 'Voir les tarifs', href: '/tarifs/' }} bg={SERVICE_PHOTOS[entry.id]} />
 
   {d.inclus.length > 0 && (
     <Section variant="white" eyebrow="Ce que comprend la prestation" title="Ce qui est traité, concrètement">

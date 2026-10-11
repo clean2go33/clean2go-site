@@ -31,7 +31,7 @@ for (const [url, html] of pages) {
   for (const m of html.matchAll(/<script type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)) {
     try { JSON.parse(m[1]); } catch { err(`${url} : JSON-LD invalide`); }
   }
-  for (const m of html.matchAll(/<img\b(?![^>]*\balt=)[^>]*>/g)) err(`${url} : image sans alt`);
+  for (const m of html.matchAll(/<img\b(?![^>]*\balt(?:=|[\s>]))[^>]*>/g)) err(`${url} : image sans alt`);
   const n = (html.match(/data-confirm=/g) || []).length;
   if (n) confirms.set(url, n);
   for (const m of html.matchAll(/<a\b[^>]*\shref="([^"]*)"/g)) {

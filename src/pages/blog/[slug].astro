@@ -28,9 +28,7 @@ const crumbs = [{ label: 'Conseils', href: '/blog/' }, { label: cat.label, href:
 const fr = (x: Date) => x.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 <Base title={d.title} description={d.description} type="article" published={d.date} updated={d.updated ?? d.date} schema={[breadcrumbs(crumbs, postPath(entry.id)), article({ title: d.h1, description: d.description, path: postPath(entry.id), published: d.date, updated: d.updated, author: d.author }), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
-  <Hero eyebrow={cat.label} h1={d.h1} lead={d.excerpt} crumbs={crumbs} cta={null} meta={`Par ${d.author} · ${d.readingTime} min de lecture · mis à jour le ${fr(d.updated ?? d.date)}`}>
-    <PhotoSlot slot="media" ratio="wide" seed={d.photoSeed} eager src={BLOG_PHOTOS[entry.id]?.src} caption={BLOG_PHOTOS[entry.id]?.alt ?? d.photo} />
-  </Hero>
+  <Hero eyebrow={cat.label} h1={d.h1} lead={d.excerpt} crumbs={crumbs} cta={null} meta={`Par ${d.author} · ${d.readingTime} min de lecture · mis à jour le ${fr(d.updated ?? d.date)}`} bg={BLOG_PHOTOS[entry.id]} />
   <section class="sec"><div class="wrap layout">
     <article class="prose"><Content /></article>
     <aside class="aside" aria-label="Informations complémentaires">

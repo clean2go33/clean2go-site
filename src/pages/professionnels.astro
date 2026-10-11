@@ -24,9 +24,7 @@ const segments = [
 ];
 ---
 <Base title="Nettoyage vapeur de véhicules pour professionnels | Clean2Go" description="Concessions, garages, loueurs, flottes : Clean2Go nettoie vos véhicules à la vapeur directement sur site, à Bordeaux Métropole et sur le Bassin." schema={[breadcrumbs(crumbs, '/professionnels/'), faqPage(faq)]}>
-  <Hero eyebrow="Professionnels" h1="La propreté de vos véhicules, organisée sur site" lead="Concessions, marchands, loueurs, garages, entreprises : nous venons sur votre parking, nous nettoyons à la vapeur, et vos véhicules restent disponibles. Passages ponctuels ou réguliers, sur devis." crumbs={crumbs} cta={{ label: 'Demander un devis professionnel', href: '#demande-pro' }} secondary={{ label: `Appeler ${SITE.phone}`, href: `tel:${SITE.phoneTel}` }}>
-    <PhotoSlot slot="media" seed={5} eager src={PHOTOS.berline.src} caption={PHOTOS.berline.alt} />
-  </Hero>
+  <Hero eyebrow="Professionnels" h1="La propreté de vos véhicules, organisée sur site" lead="Concessions, marchands, loueurs, garages, entreprises : nous venons sur votre parking, nous nettoyons à la vapeur, et vos véhicules restent disponibles. Passages ponctuels ou réguliers, sur devis." crumbs={crumbs} cta={{ label: 'Demander un devis professionnel', href: '#demande-pro' }} secondary={{ label: `Appeler ${SITE.phone}`, href: `tel:${SITE.phoneTel}` }} bg={PHOTOS.parking} />
 
   <Section eyebrow="Ce que nous apportons" title="Moins de contraintes pour vous, un résultat constant">
     <div class="grid grid--4">
@@ -53,7 +51,7 @@ const segments = [
           <li><Icon name="check" /><span><b>Matières préservées</b> : tissus, cuirs, plastiques, sans agresser les surfaces.</span></li>
         </ul>
       </div>
-      <PhotoSlot ratio="banner" seed={8} src={PHOTOS.parking.src} caption={PHOTOS.parking.alt} />
+      <PhotoSlot ratio="wide" seed={8} src={PHOTOS.volant.src} caption={PHOTOS.volant.alt} />
     </div>
   </Section>
 

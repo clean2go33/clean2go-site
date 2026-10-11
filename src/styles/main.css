@@ -70,6 +70,14 @@ p{margin:0 0 1.1em}
 .hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 82% 20%,rgba(232,69,63,.20),transparent 60%),radial-gradient(700px 400px at 5% 110%,rgba(221,226,230,.10),transparent 60%)}
 .hero__in{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,64px);align-items:center;padding:clamp(48px,7vw,96px) 0}
+.hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero--bg::before{z-index:1;background:linear-gradient(90deg,rgba(15,19,23,.9) 0%,rgba(15,19,23,.72) 42%,rgba(15,19,23,.38) 100%),linear-gradient(180deg,rgba(15,19,23,.35),rgba(15,19,23,0) 30%)}
+.hero--bg .hero__in{z-index:2;grid-template-columns:minmax(0,760px)}
+.hero--bg .hero__in{padding:clamp(72px,10vw,150px) 0}
+.hero--bg.hero--page .hero__in{padding:clamp(56px,8vw,110px) 0}
+.hero--bg h1,.hero--bg .lead{text-shadow:0 1px 18px rgba(15,19,23,.45)}
+.hero--bg .lead,.hero--bg .trust li,.hero--bg .meta{color:#E6EAED}
+@media (max-width:720px){.hero--bg::before{background:rgba(15,19,23,.74)}}
 .hero h1{color:#fff;margin-bottom:.45em}
 .hero h1 em{font-style:normal;color:var(--red)}
 .hero .eyebrow{color:#ff8b86}

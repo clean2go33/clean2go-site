@@ -17,9 +17,7 @@ const faq = [
 ];
 ---
 <Base title="Prestations de nettoyage auto à la vapeur | Clean2Go" description="Nettoyage intérieur, extérieur ou complet de votre véhicule à la vapeur, à domicile ou sur site : découvrez les prestations Clean2Go et choisissez la bonne." schema={[breadcrumbs(crumbs, '/prestations/'), faqPage(faq)]}>
-  <Hero eyebrow="Prestations" h1="Le bon nettoyage pour votre véhicule" lead="Intérieur, extérieur ou les deux : chaque prestation est réalisée à la vapeur, chez vous ou sur votre lieu de travail. Voici comment choisir." crumbs={crumbs}>
-    <PhotoSlot slot="media" seed={2} eager src={PHOTOS.domicile.src} caption={PHOTOS.domicile.alt} />
-  </Hero>
+  <Hero eyebrow="Prestations" h1="Le bon nettoyage pour votre véhicule" lead="Intérieur, extérieur ou les deux : chaque prestation est réalisée à la vapeur, chez vous ou sur votre lieu de travail. Voici comment choisir." crumbs={crumbs} bg={PHOTOS.domicile} />
   <Section eyebrow="Nos prestations" title="Cinq façons d’intervenir" lead="Les trois premières couvrent l’essentiel des demandes. Les deux dernières répondent aux situations particulières.">
     <div class="grid grid--3">
       {services.map((s) => (
