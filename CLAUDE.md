@@ -22,7 +22,7 @@ Quand Naomie dit « Travaille sur le site Clean2Go », c'est ce projet. Lire ce 
 - Motif : lignes de vapeur (SVG généré, `src/lib/art.ts`). Ambiance : automobile, propreté, précision. **Pas** de look tuning, noir/or, SaaS.
 - Breakpoints : 1180 / 1020 / 720 / 420. Mobile-first. Cible tactile ≥ 44 px. Focus visible. Contrastes AA.
 - Composants dans `src/components/` : réutiliser avant d'en créer.
-- Photos : composant `PhotoSlot`. Sans photo réelle → illustration de marque ; le message « PHOTO CLEAN2GO À FOURNIR » n'apparaît qu'en dev ou avec `PUBLIC_DRAFT=1`. Jamais de photo de stock présentée comme réelle.
+- Photos : composant `PhotoSlot`. Sans photo réelle → illustration de marque ; le message « PHOTO CLEAN2GO À FOURNIR » n'apparaît qu'en dev ou avec `PUBLIC_DRAFT=1`. Jamais de photo de stock présentée comme réelle. Les visuels actuels (`src/assets/photos/`, branchés via `src/data/photos.ts`) sont **générés par IA**, outillage vapeur à poignée **rouge** uniquement (ne jamais mélanger avec du jaune) : ne pas les légender comme des réalisations ou clients réels ; les remplacer par de vraies photos dès qu’elles existent.
 
 ## 4. Architecture et contenu
 - Contenu séparé du code, `src/content/` : `services/`, `cities/` (pillar + city, nom de fichier = slug, URL `/nettoyage-auto-<slug>/`), `blog/`, `pages/` (légales).

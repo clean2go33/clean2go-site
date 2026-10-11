@@ -1,4 +1,5 @@
 ---
+import { PHOTOS } from '@/data/photos';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
 import Section from '@/components/Section.astro';
@@ -19,7 +20,7 @@ const faq = [
 ---
 <Base title="Tarifs : devis nettoyage auto à la vapeur | Clean2Go" description="Tarifs Clean2Go sur devis : nettoyage intérieur, extérieur ou complet à la vapeur, suppléments éventuels et fonctionnement du devis. Réponse sur demande." schema={[breadcrumbs(crumbs, '/tarifs/'), faqPage(faq)]}>
   <Hero eyebrow="Tarifs" h1="Un devis clair avant chaque intervention" lead="Nos tarifs sont communiqués sur devis, avant toute intervention. Voici les formules, les suppléments éventuels et la façon dont le prix est établi." crumbs={crumbs} cta={{ label: 'Obtenir mon devis', href: '/contact/#devis' }}>
-    <PhotoSlot slot="media" seed={3} eager caption="Détail d’un habitacle propre et net après intervention (sièges, tapis, console), lumière douce, sans marque ni plaque visible" />
+    <PhotoSlot slot="media" seed={3} eager src={PHOTOS.cuir.src} caption={PHOTOS.cuir.alt} />
   </Hero>
   <Section eyebrow="Les formules" title="Trois formules, selon votre besoin"><PriceTable /></Section>
   <Section variant="mist" eyebrow="Ce que le prix comprend" title="Un prix, une prestation complète">

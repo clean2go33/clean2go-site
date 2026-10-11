@@ -1,4 +1,5 @@
 ---
+import { PHOTOS } from '@/data/photos';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
 import Section from '@/components/Section.astro';
@@ -24,7 +25,7 @@ const segments = [
 ---
 <Base title="Nettoyage vapeur de véhicules pour professionnels | Clean2Go" description="Concessions, garages, loueurs, flottes : Clean2Go nettoie vos véhicules à la vapeur directement sur site, à Bordeaux Métropole et sur le Bassin." schema={[breadcrumbs(crumbs, '/professionnels/'), faqPage(faq)]}>
   <Hero eyebrow="Professionnels" h1="La propreté de vos véhicules, organisée sur site" lead="Concessions, marchands, loueurs, garages, entreprises : nous venons sur votre parking, nous nettoyons à la vapeur, et vos véhicules restent disponibles. Passages ponctuels ou réguliers, sur devis." crumbs={crumbs} cta={{ label: 'Demander un devis professionnel', href: '#demande-pro' }} secondary={{ label: `Appeler ${SITE.phone}`, href: `tel:${SITE.phoneTel}` }}>
-    <PhotoSlot slot="media" seed={5} eager caption="Rangée de véhicules sur le parking d’une concession ou d’une entreprise, opérateur Clean2Go travaillant sur l’un d’eux, lumière du matin, cadrage horizontal" />
+    <PhotoSlot slot="media" seed={5} eager src={PHOTOS.berline.src} caption={PHOTOS.berline.alt} />
   </Hero>
 
   <Section eyebrow="Ce que nous apportons" title="Moins de contraintes pour vous, un résultat constant">
@@ -52,7 +53,7 @@ const segments = [
           <li><Icon name="check" /><span><b>Matières préservées</b> : tissus, cuirs, plastiques, sans agresser les surfaces.</span></li>
         </ul>
       </div>
-      <PhotoSlot ratio="wide" seed={8} caption="Intérieur d’un véhicule utilitaire ou de flotte après nettoyage : volant, console et sièges propres, lumière naturelle" />
+      <PhotoSlot ratio="banner" seed={8} src={PHOTOS.parking.src} caption={PHOTOS.parking.alt} />
     </div>
   </Section>
 

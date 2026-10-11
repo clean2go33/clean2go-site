@@ -1,4 +1,5 @@
 ---
+import { PHOTOS } from '@/data/photos';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
 import Section from '@/components/Section.astro';
@@ -21,7 +22,7 @@ const crumbs = [{ label: 'À propos' }];
         <p>À haute température, la vapeur ramollit les salissures et les décolle, atteint les recoins et traite les surfaces en profondeur. Comme elle utilise très peu d’eau, les tissus et les moquettes ne sont pas détrempés. C’est un procédé précis, qui préserve les matières, et qui convient aussi bien à une voiture de famille qu’à un véhicule d’entreprise.</p>
         <p>Nous avons construit Clean2Go autour de ce seul procédé, et autour d’une idée simple : le service doit venir à vous, pas l’inverse.</p>
       </div>
-      <PhotoSlot ratio="wide" seed={10} caption="Détail de la buse vapeur au contact d’un tissu de siège, vapeur nette, lumière rasante, mise au point sur la buse" />
+      <PhotoSlot ratio="wide" seed={10} src={PHOTOS.tapis.src} caption={PHOTOS.tapis.alt} />
     </div>
   </Section>
 

@@ -87,7 +87,7 @@ p{margin:0 0 1.1em}
 
 /* ---------- Photo placeholders ---------- */
 .ph{position:relative;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(135deg,var(--ink-3),var(--ink-2));border:1px solid var(--line-d);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--muted-d)}
-.ph--wide{aspect-ratio:16/9}.ph--tall{aspect-ratio:4/5}.ph--sq{aspect-ratio:1/1}
+.ph--wide{aspect-ratio:16/9}.ph--tall{aspect-ratio:4/5}.ph--sq{aspect-ratio:1/1}.ph--banner{aspect-ratio:21/9}
 .ph svg.ph__art{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
 .ph__tag{position:relative;text-align:center;padding:18px;font:600 .8rem/1.4 var(--f-head);letter-spacing:.06em;text-transform:uppercase}
 .ph__tag small{display:block;font:400 .82rem/1.45 var(--f-body);text-transform:none;letter-spacing:0;margin-top:6px;max-width:34ch;margin-inline:auto;color:var(--muted-d)}

@@ -1,4 +1,5 @@
 ---
+import { BLOG_PHOTOS } from '@/data/photos';
 import { render } from 'astro:content';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
@@ -28,7 +29,7 @@ const fr = (x: Date) => x.toLocaleDateString('fr-FR', { day: 'numeric', month: '
 ---
 <Base title={d.title} description={d.description} type="article" published={d.date} updated={d.updated ?? d.date} schema={[breadcrumbs(crumbs, postPath(entry.id)), article({ title: d.h1, description: d.description, path: postPath(entry.id), published: d.date, updated: d.updated, author: d.author }), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
   <Hero eyebrow={cat.label} h1={d.h1} lead={d.excerpt} crumbs={crumbs} cta={null} meta={`Par ${d.author} · ${d.readingTime} min de lecture · mis à jour le ${fr(d.updated ?? d.date)}`}>
-    <PhotoSlot slot="media" ratio="wide" seed={d.photoSeed} eager caption={d.photo} />
+    <PhotoSlot slot="media" ratio="wide" seed={d.photoSeed} eager src={BLOG_PHOTOS[entry.id]?.src} caption={BLOG_PHOTOS[entry.id]?.alt ?? d.photo} />
   </Hero>
   <section class="sec"><div class="wrap layout">
     <article class="prose"><Content /></article>
@@ -41,7 +42,7 @@ const fr = (x: Date) => x.toLocaleDateString('fr-FR', { day: 'numeric', month: '
   {d.faq.length > 0 && <Section variant="mist" eyebrow="Questions fréquentes" title="À propos de cet article"><Faq items={d.faq} /></Section>}
   {more.length > 0 && (
     <Section eyebrow="À lire aussi" title="Dans la même veine">
-      <div class="grid grid--3">{more.map((p) => <a class="post" href={postPath(p.id)}><PhotoSlot ratio="wide" seed={p.data.photoSeed} caption={p.data.photo} /><div class="post__b"><span class="tag">{BLOG_CATEGORIES[p.data.category].label}</span><h3>{p.data.h1}</h3><p>{p.data.excerpt}</p></div></a>)}</div>
+      <div class="grid grid--3">{more.map((p) => <a class="post" href={postPath(p.id)}><PhotoSlot ratio="wide" seed={p.data.photoSeed} src={BLOG_PHOTOS[p.id]?.src} caption={BLOG_PHOTOS[p.id]?.alt ?? p.data.photo} /><div class="post__b"><span class="tag">{BLOG_CATEGORIES[p.data.category].label}</span><h3>{p.data.h1}</h3><p>{p.data.excerpt}</p></div></a>)}</div>
     </Section>
   )}
   <CtaBand />

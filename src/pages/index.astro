@@ -1,4 +1,5 @@
 ---
+import { PHOTOS, BLOG_PHOTOS } from '@/data/photos';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
 import Section from '@/components/Section.astro';
@@ -28,7 +29,7 @@ const faq = [
   schema={[faqPage(faq)]}
 >
   <Hero variant="home" eyebrow="Nettoyage automobile à la vapeur" h1="Votre véhicule, remis à neuf à la <em>vapeur</em>." lead="Nous nettoyons et assainissons l’intérieur et l’extérieur de votre voiture avec une vapeur haute température et très peu d’eau. Chez vous ou sur votre lieu de travail, à Bordeaux Métropole et sur le Bassin d’Arcachon." cta={{ label: 'Réserver', href: '/contact/#reservation' }} secondary={{ label: 'Voir les tarifs', href: '/tarifs/' }} trust={[{ icon: 'pin', label: 'À domicile et sur site' }, { icon: 'droplet', label: 'Très peu d’eau' }, { icon: 'shield', label: 'Particuliers et professionnels' }]}>
-    <PhotoSlot slot="media" ratio="tall" seed={4} eager caption="Plan rapproché d’un siège de SUV traité à la vapeur : jet de vapeur visible, mains gantées de l’opérateur, lumière naturelle de fin de journée, cadrage vertical" />
+    <PhotoSlot slot="media" ratio="tall" seed={4} eager src={PHOTOS.tissu.src} caption={PHOTOS.tissu.alt} />
   </Hero>
 
   <Section eyebrow="Notre proposition" title="Trois façons de remettre votre véhicule en état" lead="Chaque intervention est préparée selon votre véhicule et ce que vous en attendez. Vous choisissez une prestation, nous nous occupons du reste.">
@@ -52,7 +53,7 @@ const faq = [
         </ul>
         <div class="btns"><Button href="/prestations/nettoyage-vapeur-complet/">Comprendre le nettoyage vapeur</Button></div>
       </div>
-      <PhotoSlot ratio="wide" seed={6} caption="Gros plan de la buse vapeur sur une grille d’aération ou un rail de siège, éclairage latéral, vapeur nette, fond sombre" />
+      <PhotoSlot ratio="wide" seed={6} src={PHOTOS.aeration.src} caption={PHOTOS.aeration.alt} />
     </div>
   </Section>
 
@@ -97,7 +98,7 @@ const faq = [
     <Section eyebrow="Conseils" title="Entretien et hygiène du véhicule, expliqués simplement">
       <div class="grid grid--3">
         {posts.map((p) => (
-          <a class="post" href={postPath(p.id)}><PhotoSlot ratio="wide" seed={p.data.photoSeed} caption={p.data.photo} /><div class="post__b"><span class="tag">{BLOG_CATEGORIES[p.data.category].label}</span><h3>{p.data.h1}</h3><p>{p.data.excerpt}</p></div></a>
+          <a class="post" href={postPath(p.id)}><PhotoSlot ratio="wide" seed={p.data.photoSeed} src={BLOG_PHOTOS[p.id]?.src} caption={BLOG_PHOTOS[p.id]?.alt ?? p.data.photo} /><div class="post__b"><span class="tag">{BLOG_CATEGORIES[p.data.category].label}</span><h3>{p.data.h1}</h3><p>{p.data.excerpt}</p></div></a>
         ))}
       </div>
       <p style="margin-top:26px"><a class="textlink" href="/blog/">Voir tous les conseils <Icon name="arrow" /></a></p>
