@@ -78,7 +78,12 @@ p{margin:0 0 1.1em}
 .hero--bg.hero--page .hero__in{padding:clamp(56px,8vw,110px) 0}
 .hero--bg h1,.hero--bg .lead{text-shadow:0 1px 18px rgba(15,19,23,.45)}
 .hero--bg .lead,.hero--bg .trust li,.hero--bg .meta{color:#E6EAED}
-@media (max-width:720px){.hero--bg::before{background:rgba(15,19,23,.74)}}
+@media (max-width:720px){
+  .hero--bg{--himg:clamp(270px,78vw,400px)}
+  .hero__bg{bottom:auto;height:var(--himg);object-position:center 35%}
+  .hero--bg::before{bottom:auto;height:var(--himg);background:linear-gradient(180deg,rgba(15,19,23,.45) 0,rgba(15,19,23,.05) 28%,rgba(15,19,23,.2) 62%,var(--ink) 100%)}
+  .hero--bg .hero__in,.hero--bg.hero--page .hero__in{padding:calc(var(--himg) - 64px) 0 40px}
+}
 .hero h1{color:#fff;margin-bottom:.45em}
 .hero h1 em{font-style:normal;color:var(--red)}
 .hero .eyebrow{color:#ff8b86}
