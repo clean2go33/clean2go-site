@@ -5,8 +5,6 @@ h1: Politique de confidentialité
 kind: legal
 updated: 2026-10-06
 ---
-> **Texte à faire valider avant publication.** Les points signalés « [INFORMATION À CONFIRMER] » doivent être complétés selon le fonctionnement réel de l’entreprise.
-
 ## 1. Responsable du traitement
 
 **NEW WAVE**, nom commercial **Clean2Go**. Coordonnées : voir les [mentions légales](/mentions-legales/). Contact : contact@clean2go.fr.

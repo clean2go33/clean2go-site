@@ -5,8 +5,6 @@ h1: Conditions générales de vente
 kind: legal
 updated: 2026-10-06
 ---
-> **Projet de CGV à faire valider par un juriste avant publication.** Les passages signalés « [INFORMATION À CONFIRMER] » dépendent de décisions commerciales ou de vérifications juridiques non encore faites.
-
 ## 1. Objet et champ d’application
 
 Les présentes conditions générales de vente (CGV) régissent les prestations de nettoyage de véhicules réalisées à domicile ou sur site par **NEW WAVE**, exerçant sous le nom commercial **Clean2Go** (voir les [mentions légales](/mentions-legales/)), auprès de clients particuliers (consommateurs) et professionnels. Toute commande implique l’acceptation des CGV.
