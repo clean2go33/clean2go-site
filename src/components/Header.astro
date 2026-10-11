@@ -16,7 +16,7 @@ const chev = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4"
         {NAV.main.map((item) =>
           'menu' in item ? (
             <li class="has-sub" data-open="false">
-              <button class="nav__btn" type="button" aria-expanded="false" aria-haspopup="true">{item.label}<Fragment set:html={chev} /></button>
+              <button class="nav__btn" type="button" aria-expanded="false" aria-haspopup="true" aria-label={`Afficher le sous-menu ${item.label}`}><span class="nav__lbl">{item.label}</span><Fragment set:html={chev} /></button>
               <a class="nav__alt" href={item.menu === 'services' ? '/prestations/' : '/zones-d-intervention/'} aria-current={cur(item.menu === 'services' ? '/prestations/' : '/zones-d-intervention/')}>{item.label}</a>
               {item.menu === 'services' ? (
                 <div class="sub">
