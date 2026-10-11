@@ -1,0 +1,22 @@
+---
+---
+<button class="totop" type="button" aria-label="Remonter en haut de la page" hidden>
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7" /></svg>
+</button>
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.totop');
+  if (btn) {
+    const toggle = () => {
+      const show = window.scrollY > 600;
+      if (show && btn.hidden) { btn.hidden = false; requestAnimationFrame(() => btn.classList.add('is-on')); }
+      else if (!show && !btn.hidden) { btn.classList.remove('is-on'); btn.hidden = true; }
+    };
+    window.addEventListener('scroll', toggle, { passive: true });
+    toggle();
+    btn.addEventListener('click', () => {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      (document.querySelector('.skip') as HTMLElement | null)?.focus({ preventScroll: true });
+    });
+  }
+</script>

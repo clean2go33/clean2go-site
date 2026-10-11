@@ -7,6 +7,7 @@ import Seo from '@/components/Seo.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import MobileBar from '@/components/MobileBar.astro';
+import ToTop from '@/components/ToTop.astro';
 import ConsentBanner from '@/components/ConsentBanner.astro';
 import JsonLd from '@/components/JsonLd.astro';
 import { graph, localBusiness, website } from '@/lib/schema';
@@ -32,6 +33,7 @@ const { title, description, noindex, schema = [], image, type, published, update
     <main id="main"><slot /></main>
     {!bare && <Footer />}
     {!bare && <MobileBar />}
+    {!bare && <ToTop />}
     <ConsentBanner />
     <script>import '@/scripts/site';</script>
   </body>
