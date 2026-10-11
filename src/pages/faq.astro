@@ -1,4 +1,5 @@
 ---
+import { PAGE_PHOTOS } from '@/data/photos';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
 import Section from '@/components/Section.astro';
@@ -9,7 +10,7 @@ import { breadcrumbs, faqPage } from '@/lib/schema';
 const crumbs = [{ label: 'Questions fréquentes' }];
 ---
 <Base title="Questions fréquentes sur le nettoyage auto vapeur | Clean2Go" description="Eau, électricité, durée, véhicules, poils, odeurs, paiement, zones : toutes les réponses sur le nettoyage automobile à la vapeur Clean2Go." schema={[breadcrumbs(crumbs, '/faq/'), faqPage(allFaq())]}>
-  <Hero eyebrow="FAQ" h1="Vos questions, nos réponses" lead="Le déroulement d’une intervention, ce dont nous avons besoin sur place, les cas particuliers, le paiement et les zones : tout est ici." crumbs={crumbs} />
+  <Hero eyebrow="FAQ" h1="Vos questions, nos réponses" lead="Le déroulement d’une intervention, ce dont nous avons besoin sur place, les cas particuliers, le paiement et les zones : tout est ici." crumbs={crumbs}  bg={PAGE_PHOTOS.faq} />
   <section class="sec"><div class="wrap layout">
     <div>
       {FAQ_GROUPS.map((g) => (

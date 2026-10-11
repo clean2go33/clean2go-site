@@ -54,3 +54,49 @@ export const BLOG_PHOTOS: Record<string, Photo> = {
   'pollen-pins-voiture-printemps-gironde': PHOTOS.domicile,
   'humidite-voiture-hiver-moisissures-buee': PHOTOS.volant,
 };
+
+/** Villes de la Métropole : visuels avec Bordeaux. Villes du Bassin : gros plans neutres (pas de vue de Bordeaux). */
+export const CITY_PHOTOS: Record<string, Photo> = {
+  'bordeaux-metropole': PHOTOS.parking,
+  'bordeaux': PHOTOS.berline,
+  'merignac': PHOTOS.volant,
+  'pessac': PHOTOS.domicile,
+  'talence': PHOTOS.tapis,
+  'begles': PHOTOS.retro,
+  'villenave-d-ornon': PHOTOS.rails,
+  'le-bouscat': PHOTOS.aeration,
+  'cenon': PHOTOS.jante,
+  'gradignan': PHOTOS.domicile,
+  'saint-medard-en-jalles': PHOTOS.parking,
+  'bassin-arcachon': PHOTOS.jante,
+  'arcachon': PHOTOS.retro,
+  'la-teste-de-buch': PHOTOS.rails,
+  'gujan-mestras': PHOTOS.volant,
+  'andernos-les-bains': PHOTOS.aeration,
+  'lanton': PHOTOS.tapis,
+  'lege-cap-ferret': PHOTOS.tapis,
+  'ares': PHOTOS.retro,
+  'audenge': PHOTOS.rails,
+  'biganos': PHOTOS.volant,
+  'le-teich': PHOTOS.aeration,
+};
+
+export const CATEGORY_PHOTOS: Record<string, Photo> = {
+  entretien: PHOTOS.jante,
+  interieur: PHOTOS.volant,
+  local: PHOTOS.domicile,
+  professionnels: PHOTOS.parking,
+  'restitution-vente': PHOTOS.retro,
+  vapeur: PHOTOS.aeration,
+  exterieur: PHOTOS.retro,
+};
+
+export const PAGE_PHOTOS = {
+  'a-propos': PHOTOS.aeration,
+  zones: PHOTOS.parking,
+  contact: PHOTOS.berline,
+  faq: PHOTOS.volant,
+  plan: PHOTOS.retro,
+  legal: PHOTOS.retro,
+  blog: PHOTOS.domicile,
+} satisfies Record<string, Photo>;

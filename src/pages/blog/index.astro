@@ -1,5 +1,5 @@
 ---
-import { BLOG_PHOTOS } from '@/data/photos';
+import { BLOG_PHOTOS, PAGE_PHOTOS } from '@/data/photos';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
 import Section from '@/components/Section.astro';
@@ -12,7 +12,7 @@ const crumbs = [{ label: 'Conseils' }];
 const used = Object.entries(BLOG_CATEGORIES).filter(([k]) => posts.some((p) => p.data.category === k));
 ---
 <Base title="Conseils d’entretien et nettoyage auto | Clean2Go" description="Sièges, poils d’animaux, odeurs, vapeur, restitution LOA : les conseils pratiques de Clean2Go pour garder un véhicule sain, à Bordeaux et sur le Bassin." schema={[breadcrumbs(crumbs, '/blog/')]}>
-  <Hero eyebrow="Conseils" h1="Entretenir un véhicule sain, concrètement" lead="Des guides pratiques pour nettoyer l’intérieur, comprendre la vapeur, préparer une restitution ou une revente. Sans jargon." crumbs={crumbs} cta={null} />
+  <Hero eyebrow="Conseils" h1="Entretenir un véhicule sain, concrètement" lead="Des guides pratiques pour nettoyer l’intérieur, comprendre la vapeur, préparer une restitution ou une revente. Sans jargon." crumbs={crumbs} cta={null}  bg={PAGE_PHOTOS.blog} />
   <Section>
     <ul class="chips" style="margin-bottom:34px">
       <li><span class="chip chip--on">Tous les articles</span></li>

@@ -1,4 +1,5 @@
 ---
+import { PAGE_PHOTOS } from '@/data/photos';
 import { getCollection, render } from 'astro:content';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
@@ -15,6 +16,6 @@ const crumbs = [{ label: d.h1 }];
 const fr = (x: Date) => x.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 <Base title={d.title} description={d.description} noindex={d.noindex} schema={[breadcrumbs(crumbs, `/${entry.id}/`), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
-  <Hero eyebrow={d.kind === 'legal' ? 'Informations légales' : undefined} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={null} meta={d.updated ? `Dernière mise à jour : ${fr(d.updated)}` : undefined} />
+  <Hero eyebrow={d.kind === 'legal' ? 'Informations légales' : undefined} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={null} meta={d.updated ? `Dernière mise à jour : ${fr(d.updated)}` : undefined}  bg={PAGE_PHOTOS.legal} />
   <section class="sec"><div class="wrap"><div class={`prose ${d.kind === 'legal' ? 'prose--legal' : ''}`}><Content />{d.faq.length > 0 && <Faq items={d.faq} />}</div></div></section>
 </Base>

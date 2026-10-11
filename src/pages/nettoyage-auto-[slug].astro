@@ -1,4 +1,5 @@
 ---
+import { CITY_PHOTOS } from '@/data/photos';
 import { render, getEntry } from 'astro:content';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
@@ -31,9 +32,7 @@ const chosenServices = (d.services.length ? d.services : services.map((s) => s.i
 const area = isPillar ? [zone.label] : [d.name, zone.label];
 ---
 <Base title={d.title} description={d.description} schema={[breadcrumbs(crumbs, path), serviceSchema({ name: d.h1, type: 'Nettoyage automobile à la vapeur', description: d.description, path, area }), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
-  <Hero eyebrow={d.angle} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={{ label: isPillar ? 'Demander un devis' : `Devis à ${d.name}`, href: `/contact/?commune=${encodeURIComponent(isPillar ? '' : d.name)}#devis` }}>
-    <PhotoSlot slot="media" seed={d.photoSeed} eager caption={d.photo} />
-  </Hero>
+  <Hero eyebrow={d.angle} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={{ label: isPillar ? 'Demander un devis' : `Devis à ${d.name}`, href: `/contact/?commune=${encodeURIComponent(isPillar ? '' : d.name)}#devis` }} bg={CITY_PHOTOS[entry.id]} />
 
   {isPillar && (
     <Section variant="white" eyebrow="Communes desservies" title={`Choisissez votre commune, ${zone.label}`}>

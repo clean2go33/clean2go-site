@@ -1,5 +1,5 @@
 ---
-import { PHOTOS } from '@/data/photos';
+import { PAGE_PHOTOS, PHOTOS } from '@/data/photos';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
 import Section from '@/components/Section.astro';
@@ -11,9 +11,7 @@ import { LEGAL } from '@/config/site';
 const crumbs = [{ label: 'À propos' }];
 ---
 <Base title="À propos de Clean2Go, nettoyage auto vapeur | Bordeaux" description="Clean2Go, service mobile de nettoyage automobile à la vapeur sur Bordeaux Métropole et le Bassin d’Arcachon : notre méthode, nos engagements, nos zones." schema={[breadcrumbs(crumbs, '/a-propos/')]}>
-  <Hero eyebrow="À propos" h1="Un service mobile, une méthode : la vapeur" lead="Clean2Go nettoie et assainit les véhicules à domicile et sur site, avec une vapeur haute température et très peu d’eau. Voici comment nous travaillons, et pourquoi." crumbs={crumbs}>
-    <PhotoSlot slot="media" seed={9} eager ratio="tall" caption="Portrait du fondateur de Clean2Go à côté du matériel vapeur ou de l’utilitaire, vue de trois-quarts, lumière naturelle, regard caméra" />
-  </Hero>
+  <Hero eyebrow="À propos" h1="Un service mobile, une méthode : la vapeur" lead="Clean2Go nettoie et assainit les véhicules à domicile et sur site, avec une vapeur haute température et très peu d’eau. Voici comment nous travaillons, et pourquoi." crumbs={crumbs} bg={PAGE_PHOTOS['a-propos']} />
 
   <Section eyebrow="Notre méthode" title="Pourquoi nous avons choisi la vapeur">
     <div class="split">
