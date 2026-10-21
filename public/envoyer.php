@@ -10,6 +10,13 @@ function fin($ok, $code = 200) {
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') fin(false, 405);
 // Anti-spam : champ piège
 if (!empty($_POST['site_web'])) fin(true);
+// Anti-spam : un humain met plus de 3 s à remplir le formulaire (champ envoyé par le script du site)
+if (isset($_POST['duree_ms']) && (int)$_POST['duree_ms'] < 3000) fin(true);
+// Anti-spam : limite par adresse IP (5 envois par heure), sans conserver l'adresse en clair
+$cle = sys_get_temp_dir() . '/c2g_' . hash('sha256', ($_SERVER['REMOTE_ADDR'] ?? '') . '|c2g');
+$essais = [];
+if (is_file($cle)) { $essais = array_filter(array_map('intval', explode(',', (string)@file_get_contents($cle))), function ($t) { return $t > time() - 3600; }); }
+if (count($essais) >= 5) fin(false, 429);
 // Limitation simple : 1 envoi / 30 s par session
 session_start();
 if (isset($_SESSION['dernier']) && time() - $_SESSION['dernier'] < 30) fin(false, 429);
@@ -31,6 +38,8 @@ $nbv = nettoie($_POST['nb_vehicules'] ?? '', 40);
 $freq = nettoie($_POST['frequence'] ?? '', 80);
 $message = nettoie_long($_POST['message'] ?? '');
 $consent = ($_POST['consentement'] ?? '') === 'oui';
+// Anti-spam : un message qui contient plusieurs liens est rejeté silencieusement
+if (preg_match_all('~https?://|www\.~i', $message . ' ' . $nom . ' ' . $vehicule . ' ' . $societe) > 1) fin(true);
 if ($nom === '' || $tel === '' || $commune === '' || !$consent || !filter_var($email, FILTER_VALIDATE_EMAIL)) fin(false, 422);
 
 $to = 'contact@clean2go.fr';
@@ -41,5 +50,5 @@ $corps = "Nouvelle demande depuis le site Clean2Go\n\n"
 // L'expéditeur est une adresse du domaine (meilleure délivrabilité) ; la réponse part vers le client.
 $headers = "From: Site Clean2Go <contact@clean2go.fr>\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8\r\nX-Mailer: PHP\r\n";
 $ok = mail($to, $sujet, $corps, $headers);
-if ($ok) $_SESSION['dernier'] = time();
+if ($ok) { $_SESSION['dernier'] = time(); $essais[] = time(); @file_put_contents($cle, implode(',', $essais), LOCK_EX); }
 fin($ok, $ok ? 200 : 500);

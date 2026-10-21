@@ -41,4 +41,4 @@ const extraPrice = (p: number | string | null) => (p === null ? null : typeof p 
     <div class="card"><h3>{s.name}</h3><p>{s.summary}</p><p><strong>{extraPrice(s.price) ?? (SITE.tarifsFallback === 'devis' ? 'Précisé dans le devis' : '')}</strong>{extraPrice(s.price) === null && SITE.tarifsFallback !== 'devis' && <span class="confirm" data-confirm={`Tarif du supplément « ${s.name} »`}>[INFORMATION À CONFIRMER]</span>}</p></div>
   ))}
 </div>
-<div class="btns"><Button href="/contact/#devis">Obtenir mon devis</Button></div>
+<div class="btns"><Button href="/contact/#devis">Réserver</Button></div>

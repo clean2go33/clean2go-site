@@ -34,7 +34,7 @@ const fr = (x: Date) => x.toLocaleDateString('fr-FR', { day: 'numeric', month: '
     <aside class="aside" aria-label="Informations complémentaires">
       {toc.length >= 3 && <div class="box toc"><h3>Dans cet article</h3><ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol></div>}
       <div class="box"><h3>Pour aller plus loin</h3><ul>{svc && <li><a href={servicePath(svc.id)}>{svc.data.name}</a></li>}{cts.map((c) => <li><a href={cityPath(c.id)}>Nettoyage auto à {c.data.name}</a></li>)}<li><a href="/tarifs/">Les tarifs</a></li><li><a href="/faq/">Questions fréquentes</a></li></ul></div>
-      <div class="box box--dark"><h3>Besoin d’un coup de main ?</h3><p>Nous nettoyons votre véhicule à la vapeur, chez vous ou sur votre lieu de travail.</p><div class="btns" style="margin-top:14px"><Button href="/contact/#devis">Demander un devis</Button></div></div>
+      <div class="box box--dark"><h3>Besoin d’un coup de main ?</h3><p>Nous nettoyons votre véhicule à la vapeur, chez vous ou sur votre lieu de travail.</p><div class="btns" style="margin-top:14px"><Button href="/contact/#devis">Réserver</Button></div></div>
     </aside>
   </div></section>
   {d.faq.length > 0 && <Section variant="mist" eyebrow="Questions fréquentes" title="À propos de cet article"><Faq items={d.faq} /></Section>}

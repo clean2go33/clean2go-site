@@ -82,6 +82,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
 
 /* ---------- Formulaires ---------- */
 d.querySelectorAll<HTMLFormElement>('form[data-form]').forEach((form) => {
+  const loadedAt = Date.now(); // anti-spam : durée de remplissage envoyée au serveur
   const ok = form.parentElement!.querySelector<HTMLElement>('.form__ok');
   const ko = form.querySelector<HTMLElement>('.form__ko');
   const setErr = (el: HTMLInputElement, msg: string) => {
@@ -118,7 +119,9 @@ d.querySelectorAll<HTMLFormElement>('form[data-form]').forEach((form) => {
     const label = btn.innerHTML;
     btn.disabled = true; btn.textContent = 'Envoi en cours…';
     try {
-      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      const data = new FormData(form);
+      data.set('duree_ms', String(Date.now() - loadedAt));
+      const res = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
       const json = await res.json().catch(() => ({ ok: res.ok }));
       if (!res.ok || json.ok === false) throw new Error('ko');
       form.style.display = 'none';

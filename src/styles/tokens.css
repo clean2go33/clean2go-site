@@ -6,6 +6,8 @@
   --ink:#0F1317; --ink-2:#182028; --ink-3:#232d37;
   --paper:#F7F5F2; --white:#fff; --mist:#DDE2E6; --mist-2:#EDF0F2;
   --red:#E8453F; --red-d:#C9332D; --red-l:#FCE9E8;
+  /* Contrastes AA : fond de bouton (texte blanc ≥ 5:1) et texte rouge sur fond clair (≥ 4.5:1 sur crème et mist) */
+  --red-btn:#CC372F; --red-btn-h:#B92D28; --red-text:#B92D28;
   --muted:#58626B; --muted-d:#A9B3BB;
   --line:rgba(15,19,23,.12); --line-d:rgba(255,255,255,.14);
   --r:14px; --r-lg:22px; --shadow:0 1px 2px rgba(15,19,23,.06),0 8px 28px rgba(15,19,23,.07);

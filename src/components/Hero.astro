@@ -19,7 +19,7 @@ interface Props {
   /** Image de fond pleine largeur (décorative, voile sombre pour la lisibilité). */
   bg?: { src: ImageMetadata; alt?: string };
 }
-const { eyebrow, h1, lead, crumbs, variant = 'page', cta = { label: 'Demander un devis', href: '/contact/#devis' }, secondary, trust = [], meta, bg } = Astro.props;
+const { eyebrow, h1, lead, crumbs, variant = 'page', cta = { label: 'Réserver', href: '/contact/#devis' }, secondary, trust = [], meta, bg } = Astro.props;
 const hasMedia = Astro.slots.has('media');
 ---
 <section class={`hero ${variant === 'page' ? 'hero--page' : ''} ${bg ? 'hero--bg' : ''}`}>

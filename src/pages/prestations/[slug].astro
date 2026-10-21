@@ -24,7 +24,7 @@ const crumbs = [{ label: 'Prestations', href: '/prestations/' }, { label: d.name
 const others = all.filter((s) => s.id !== entry.id);
 ---
 <Base title={d.title} description={d.description} schema={[breadcrumbs(crumbs, servicePath(entry.id)), serviceSchema({ name: d.h1, type: d.serviceType, description: d.description, path: servicePath(entry.id) }), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
-  <Hero eyebrow={d.name} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={{ label: 'Demander un devis', href: `/contact/?prestation=${encodeURIComponent(d.formValue)}#devis` }} secondary={{ label: 'Voir les tarifs', href: '/tarifs/' }} bg={SERVICE_PHOTOS[entry.id]} />
+  <Hero eyebrow={d.name} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={{ label: 'Réserver', href: `/contact/?prestation=${encodeURIComponent(d.formValue)}#devis` }} secondary={{ label: 'Voir les tarifs', href: '/tarifs/' }} bg={SERVICE_PHOTOS[entry.id]} />
 
   {d.inclus.length > 0 && (
     <Section variant="white" eyebrow="Ce que comprend la prestation" title="Ce qui est traité, concrètement">
@@ -35,7 +35,7 @@ const others = all.filter((s) => s.id !== entry.id);
   <section class="sec reveal"><div class="wrap layout">
     <div class="prose"><Content /></div>
     <aside class="aside" aria-label="Informations complémentaires">
-      <div class="box box--dark"><h3>Demander un devis</h3><p>Dites-nous quel véhicule vous souhaitez faire nettoyer et où il se trouve.</p><div class="btns" style="margin-top:14px"><Button href={`/contact/?prestation=${encodeURIComponent(d.formValue)}#devis`}>Demander un devis</Button></div></div>
+      <div class="box box--dark"><h3>Demander un devis</h3><p>Dites-nous quel véhicule vous souhaitez faire nettoyer et où il se trouve.</p><div class="btns" style="margin-top:14px"><Button href={`/contact/?prestation=${encodeURIComponent(d.formValue)}#devis`}>Réserver</Button></div></div>
       <div class="box"><h3>Autres prestations</h3><ul>{others.map((s) => <li><a href={servicePath(s.id)}>{s.data.name}</a></li>)}<li><a href="/tarifs/">Tarifs</a></li></ul></div>
       <div class="box"><h3>Où intervenons-nous ?</h3><ul><li><a href="/nettoyage-auto-bordeaux-metropole/">Bordeaux Métropole</a></li><li><a href="/nettoyage-auto-bassin-arcachon/">Bassin d’Arcachon</a></li><li><a href="/zones-d-intervention/">Toutes les communes</a></li></ul></div>
     </aside>

@@ -22,3 +22,11 @@ La liste exacte des mentions à confirmer s'obtient avec `npm run validate`.
 
 ## Médiateur de la consommation
 Retiré du site à la demande de Naomie (pas d'adhésion pour le moment). Obligation légale pour la vente aux consommateurs : à régulariser (ex. CM2C, inscription professionnelle sur cm2c.net) puis à réintégrer dans les CGV (article « Médiation ») et les mentions légales.
+
+## Mesure d'audience et bandeau cookies (à activer)
+- Le bandeau de consentement et la mesure d'audience (Google Analytics 4) sont codés et testés : rien n'est chargé avant « Accepter », « Refuser » est aussi visible que « Accepter », le choix est mémorisé.
+- Ils s'activent dès que `PUBLIC_GA_ID` (identifiant de mesure GA4, de la forme `G-XXXXXXXXXX`) est renseigné au moment du build. **Sans identifiant, aucun bandeau n'est affiché** (aucun traceur à encadrer).
+- À faire par Naomie : créer la propriété GA4 (compte Google), me transmettre l'identifiant. Mettre ensuite à jour `politique-de-cookies.md` (mesure d'audience active) avant publication.
+
+## Pages légales
+- CGU ajoutées (`src/content/pages/cgu.md`). Comme les CGV, la politique de confidentialité et les mentions : à faire relire par un juriste avant la mise en ligne définitive.

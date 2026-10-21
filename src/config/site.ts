@@ -77,5 +77,6 @@ export const LEGAL_LINKS = [
   { label: 'Mentions légales', href: '/mentions-legales/' },
   { label: 'Conditions générales de vente', href: '/cgv/' },
   { label: 'Politique de confidentialité', href: '/politique-de-confidentialite/' },
+  { label: 'Conditions d’utilisation', href: '/cgu/' },
   { label: 'Cookies', href: '/politique-de-cookies/' },
 ] as const;

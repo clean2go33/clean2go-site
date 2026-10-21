@@ -2,7 +2,7 @@
 import Button from './Button.astro';
 import { SITE } from '@/config/site';
 interface Props { title?: string; text?: string; label?: string; href?: string; secondary?: boolean }
-const { title = 'Prêt à retrouver un véhicule sain ?', text = 'Décrivez-nous votre véhicule et votre commune : nous vous répondons avec une proposition claire, sans engagement.', label = 'Demander un devis', href = '/contact/#devis', secondary = true } = Astro.props;
+const { title = 'Prêt à retrouver un véhicule sain ?', text = 'Décrivez-nous votre véhicule et votre commune : nous vous répondons avec une proposition claire, sans engagement.', label = 'Réserver', href = '/contact/#devis', secondary = true } = Astro.props;
 ---
 <section class="sec sec--tight reveal"><div class="wrap">
   <div class="band">
