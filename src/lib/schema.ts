@@ -38,9 +38,10 @@ export const faqPage = (items: { q: string; a: string }[]) => ({
   mainEntity: items.map((i) => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: plain(i.a) } })),
 });
 
-export const service = (o: { name: string; type: string; description: string; path: string; area?: string[] }) => ({
+export const service = (o: { name: string; type: string; description: string; path: string; area?: string[]; offer?: { low: number; high: number } }) => ({
   '@type': 'Service', name: o.name, serviceType: o.type, description: o.description, url: abs(o.path), provider: { '@id': ORG_ID },
   areaServed: (o.area ?? ZONES.map((z) => z.label)).map((n) => ({ '@type': n.match(/Métropole|Bassin/) ? 'AdministrativeArea' : 'City', name: n })),
+  ...(o.offer ? { offers: { '@type': 'AggregateOffer', priceCurrency: 'EUR', lowPrice: o.offer.low, highPrice: o.offer.high, offerCount: 3 } } : {}),
 });
 
 export const article = (o: { title: string; description: string; path: string; published: Date; updated?: Date; author: string; image?: string }) => ({

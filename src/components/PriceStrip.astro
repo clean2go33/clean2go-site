@@ -1,0 +1,18 @@
+---
+/** Bandeau de prix d'une prestation (prix issus de src/data/tarifs.ts). */
+import { categories, formules, eur } from '@/data/tarifs';
+import Button from './Button.astro';
+interface Props { formuleId: string }
+const f = formules.find((x) => x.id === Astro.props.formuleId)!;
+---
+<section class="sec sec--tight reveal"><div class="wrap">
+  <div class="pstrip">
+    <div class="pstrip__head"><span class="eyebrow">Tarifs TTC · déplacement inclus</span><h2>{f.name}</h2></div>
+    <ul class="pstrip__list">
+      {categories.map((c) => (
+        <li><span class="pstrip__cat">{c.label}</span><b>{eur(f.price[c.id] as number)}</b><small>{c.short}</small></li>
+      ))}
+    </ul>
+    <div class="pstrip__foot"><Button href="/tarifs/" variant="line" arrow={false}>Tous les tarifs</Button></div>
+  </div>
+</div></section>

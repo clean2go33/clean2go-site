@@ -14,7 +14,7 @@ faq:
   - q: Peut-on retirer 100 % des poils ?
     a: "Rarement. On peut en retirer l’essentiel ; quelques poils très incrustés peuvent subsister. Un professionnel évalue la situation avant d’intervenir."
   - q: Y a-t-il un supplément pour les poils d’animaux ?
-    a: "Il est annoncé dans le devis avant l’intervention : voir la page [tarifs](/tarifs/)."
+    a: "Un supplément de 30 € TTC s’applique en cas de poils d’animaux en grande quantité (ou de sable en quantité excessive), annoncé avant l’intervention : voir la page [tarifs](/tarifs/)."
 ---
 ## Pourquoi les poils s’incrustent
 

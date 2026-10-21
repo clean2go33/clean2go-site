@@ -11,22 +11,25 @@ import Icon from '@/components/Icon.astro';
 import { breadcrumbs, faqPage } from '@/lib/schema';
 const crumbs = [{ label: 'Tarifs' }];
 const faq = [
-  { q: 'Comment le prix est-il établi ?', a: 'Il dépend de la prestation choisie (intérieur, extérieur ou les deux), de la taille du véhicule et de son état. Le devis vous donne le montant avant l’intervention : il n’y a pas de mauvaise surprise le jour J.' },
-  { q: 'Qu’est-ce qui peut s’ajouter au tarif de base ?', a: 'Uniquement ce que l’état du véhicule justifie : poils d’animaux en grande quantité, salissures très importantes, traitement d’odeurs. Ces suppléments sont annoncés dans le devis, jamais ajoutés après coup.' },
+  { q: 'Les prix affichés sont-ils TTC ?', a: 'Oui. Tous les tarifs sont indiqués TTC, déplacement inclus : le montant affiché est le montant à payer, hors supplément éventuel.' },
+  { q: 'Comment connaître la catégorie de mon véhicule ?', a: 'Catégorie A : petites citadines. Catégorie B : petits SUV, compactes, breaks et petites berlines. Catégorie C : grands SUV, monospaces familiaux. Si vous hésitez, indiquez le modèle dans le formulaire : nous vous confirmons la catégorie.' },
+  { q: 'Dans quels cas le supplément de 30 € s’applique-t-il ?', a: 'Lorsque le véhicule présente du sable en quantité excessive et/ou des poils d’animaux en grande quantité. Le supplément est de 30 € TTC, en une seule fois, même si les deux se cumulent.' },
+  { q: 'Que comprend le traitement à l’ozone ?', a: 'C’est une prestation complémentaire de désodorisation, à 60 € TTC. Elle dure de 1 h à 1 h 30. Il est préférable que le filtre d’habitacle ait été changé avant le traitement.' },
+  { q: 'Et le nettoyage extérieur seul ?', a: 'Il est proposé sur devis : décrivez votre véhicule dans le [formulaire](/contact/#reservation) et nous vous répondons avec un montant.' },
   { q: 'Comment payer ?', a: 'Nous acceptons le paiement par chèque, espèces ou virement, à la fin de la prestation, une fois le résultat constaté ensemble.' },
-  { q: 'Les tarifs professionnels sont-ils différents ?', a: 'Pour plusieurs véhicules ou des passages réguliers, nous établissons une proposition adaptée à votre parc. Voir la page [Professionnels](/professionnels/).' },
-  { q: 'Le déplacement est-il compris ?', a: 'Les éventuels frais de déplacement, selon votre adresse, sont indiqués dans le devis.' },
+  { q: 'Mon véhicule n’entre pas dans ces catégories, ou j’ai plusieurs véhicules ?', a: 'Utilitaire, camping-car, moto, bateau, ou parc de véhicules : nous établissons un devis adapté. Voir la page [Professionnels](/professionnels/) pour les flottes.' },
 ];
 ---
-<Base title="Tarifs : devis nettoyage auto à la vapeur | Clean2Go" description="Tarifs Clean2Go sur devis : nettoyage intérieur, extérieur ou complet à la vapeur, suppléments éventuels et fonctionnement du devis. Réponse sur demande." schema={[breadcrumbs(crumbs, '/tarifs/'), faqPage(faq)]}>
-  <Hero eyebrow="Tarifs" h1="Un devis clair avant chaque intervention" lead="Nos tarifs sont communiqués sur devis, avant toute intervention. Voici les formules, les suppléments éventuels et la façon dont le prix est établi." crumbs={crumbs} cta={{ label: 'Réserver', href: '/contact/#devis' }} bg={PHOTOS.tapis} />
-  <Section eyebrow="Les formules" title="Trois formules, selon votre besoin"><PriceTable /></Section>
+<Base title="Tarifs nettoyage auto vapeur dès 100 € TTC | Clean2Go" description="Nettoyage vapeur intérieur dès 100 € TTC, intérieur + extérieur dès 140 € TTC, déplacement inclus. Bordeaux Métropole et Bassin d’Arcachon." schema={[breadcrumbs(crumbs, '/tarifs/'), faqPage(faq)]}>
+  <Hero eyebrow="Tarifs" h1="Des tarifs clairs, déplacement inclus" lead="Choisissez la catégorie de votre véhicule : le prix TTC s’affiche, sans mauvaise surprise le jour de l’intervention." crumbs={crumbs} cta={{ label: 'Réserver', href: '/contact/#reservation' }} bg={PHOTOS.tapis} />
+  <Section eyebrow="Les formules" title="Votre véhicule, votre prix"><PriceTable /></Section>
   <Section variant="mist" eyebrow="Ce que le prix comprend" title="Un prix, une prestation complète">
     <div class="grid grid--3">
       <div class="card"><span class="card__ico"><Icon name="steam" /></span><h3>Le matériel</h3><p>Le matériel vapeur et les consommables nécessaires à la prestation sont à notre charge.</p></div>
-      <div class="card"><span class="card__ico"><Icon name="pin" /></span><h3>Le déplacement</h3><p>Nous nous déplaçons à votre domicile ou sur votre site, à Bordeaux Métropole et sur le Bassin d’Arcachon. Les frais de déplacement sont inclus dans le devis.</p></div>
-      <div class="card"><span class="card__ico"><Icon name="file" /></span><h3>Le devis</h3><p>Un devis clair avant l’intervention : prestation, véhicule, éventuels suppléments. Vous validez, nous intervenons.</p></div>
+      <div class="card"><span class="card__ico"><Icon name="pin" /></span><h3>Le déplacement</h3><p>Nous venons chez vous ou sur votre site, à Bordeaux Métropole et sur le Bassin d’Arcachon. Le déplacement est inclus dans le prix.</p></div>
+      <div class="card"><span class="card__ico"><Icon name="file" /></span><h3>Le prix TTC</h3><p>Le montant affiché est le montant à payer. Seul le supplément de 30 € TTC peut s’y ajouter, lorsque l’état du véhicule le justifie.</p></div>
     </div>
+    <p class="form__note" style="margin-top:18px">Autres véhicules (utilitaire, camping-car, moto, bateau), nettoyage extérieur seul et flottes professionnelles : <a href="/contact/#reservation">devis sur demande</a>.</p>
   </Section>
   <Section eyebrow="Questions sur les prix" title="Tout savoir avant de demander un devis"><Faq items={faq} open={0} /></Section>
   <CtaBand />

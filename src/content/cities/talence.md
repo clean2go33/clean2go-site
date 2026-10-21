@@ -20,7 +20,7 @@ faq:
   - q: "Je revends ma voiture à un particulier à Talence : le nettoyage vaut-il le coup ?"
     a: "Un habitacle net et sans odeur change la perception d’un véhicule et facilite la discussion sur le prix. Voir notre guide [préparer sa voiture avant une vente](/blog/preparer-voiture-avant-vente/)."
   - q: Les étudiants peuvent-ils faire une demande ?
-    a: "Bien sûr. Décrivez votre véhicule et votre besoin dans le [formulaire](/contact/?commune=Talence#devis) : le devis précisera le prix avant toute intervention."
+    a: "Bien sûr. Décrivez votre véhicule et votre besoin dans le [formulaire](/contact/?commune=Talence#devis) : nous vous confirmons le prix avant toute intervention."
 ---
 ## Le stationnement fait le service
 

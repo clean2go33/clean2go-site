@@ -16,7 +16,7 @@ services: [nettoyage-interieur-voiture, nettoyage-exterieur-voiture, nettoyage-v
 blog: [entretenir-voiture-bassin-arcachon-sel-sable-resine, eliminer-mauvaises-odeurs-voiture]
 faq:
   - q: Vous déplacez-vous jusqu’au Cap Ferret ?
-    a: "Oui, sur demande. Les frais de déplacement sont inclus dans le devis. Indiquez votre adresse et nous vous confirmons."
+    a: "Oui, sur demande. Le déplacement est inclus dans le prix. Indiquez votre adresse et nous vous confirmons."
   - q: Intervenez-vous chez les propriétaires de résidences secondaires ?
     a: "Oui, sur rendez-vous. Vous êtes présent à l’arrivée pour l’état des lieux et la remise des clés, puis à la fin pour constater la prestation et régler ; entre les deux, vous n’avez pas besoin de rester."
   - q: Comment réduire le sable dans la voiture entre deux passages ?

@@ -16,7 +16,7 @@ services: [nettoyage-vapeur-complet, nettoyage-exterieur-voiture, nettoyage-inte
 blog: [nettoyer-vehicules-flotte-entreprise, pollen-pins-voiture-printemps-gironde]
 faq:
   - q: "La commune est étendue : êtes-vous joignable dans tous les quartiers ?"
-    a: "Oui, nous étudions toute demande sur la commune. Précisez votre quartier ou votre adresse : nous prévoyons le créneau en conséquence. Les frais de déplacement sont inclus dans le devis."
+    a: "Oui, nous étudions toute demande sur la commune. Précisez votre quartier ou votre adresse : nous prévoyons le créneau en conséquence. Le déplacement est inclus dans le prix."
   - q: Nettoyez-vous les véhicules de sites industriels ou d’entreprises ?
     a: "Oui, sur votre parking ou votre site, avec une organisation adaptée aux accès et aux consignes de sécurité. Voir la page [Professionnels](/professionnels/)."
   - q: "Mon véhicule est souvent sur des chemins forestiers : l’extérieur est-il traitable ?"

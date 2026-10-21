@@ -1,44 +1,70 @@
 ---
-import { categories, formules, supplements, hasPrices } from '@/data/tarifs';
-import { SITE } from '@/config/site';
+/**
+ * Grille tarifaire : sélecteur de catégorie (radios + :has, sans JS), cartes de formules,
+ * options, puis matrice de comparaison. Les prix viennent UNIQUEMENT de src/data/tarifs.ts.
+ */
+import { categories, formules, supplement, ozone, eur } from '@/data/tarifs';
 import Button from './Button.astro';
-const eur = (n: number) => `${n.toLocaleString('fr-FR')} €`;
-const priced = hasPrices();
-const extraPrice = (p: number | string | null) => (p === null ? null : typeof p === 'number' ? eur(p) : p);
+import Icon from './Icon.astro';
+const uid = 'pc';
+const ordered = ['interieur', 'complet', 'exterieur'].map((id) => formules.find((f) => f.id === id)!);
 ---
-{priced ? (
-  <>
-    <table class="ptable">
-      <thead><tr><th scope="col">Formule</th>{categories.map((c) => <th scope="col">{c.label}</th>)}</tr></thead>
-      <tbody>
-        {formules.map((f) => (
-          <tr>
-            <th scope="row"><a href={f.href} style="text-decoration:none">{f.name}</a><small>{f.summary}</small></th>
-            {categories.map((c) => <td data-l={c.label}>{f.price[c.id] != null ? eur(f.price[c.id] as number) : <>Sur devis</>}</td>)}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-    {categories.some((c) => c.examples) && <p class="form__note" style="margin-top:14px">{categories.map((c) => `${c.label} : ${c.examples}`).join(' · ')}</p>}
-  </>
-) : (
-  <div class="grid grid--3">
-    {formules.map((f) => (
-      <a class="card" href={f.href}>
-        <h3>{f.name}</h3><p>{f.summary}</p>
-        {SITE.tarifsFallback === 'devis'
-          ? <p><strong>Tarif communiqué sur devis</strong>, selon le véhicule et son état.</p>
-          : <p><span class="confirm" data-confirm={`Tarifs « ${f.name} » par catégorie de véhicule`}>[INFORMATION À CONFIRMER]</span></p>}
-        <span class="textlink">Voir la prestation</span>
-      </a>
-    ))}
+<div class="pricing" data-pricing>
+  <fieldset class="pcat">
+    <legend>Quelle est la catégorie de votre véhicule ?</legend>
+    <div class="pcat__opts">
+      {categories.map((c) => (
+        <>
+          <input type="radio" name={`${uid}-cat`} id={`${uid}-${c.id}`} value={c.id} checked={c.id === 'B'} class="pcat__in" />
+          <label for={`${uid}-${c.id}`} class="pcat__lbl"><b>{c.label}</b><span>{c.examples}</span></label>
+        </>
+      ))}
+    </div>
+  </fieldset>
+
+  <div class="pcards">
+    {ordered.map((f) => {
+      const hasP = Object.values(f.price).some((p) => p !== null);
+      return (
+        <article class={`pcard ${f.id === 'complet' ? 'pcard--star' : ''} ${hasP ? '' : 'pcard--quote'}`}>
+          {f.id === 'complet' && <span class="pcard__tag">La plus complète</span>}
+          <h3>{f.name}</h3>
+          <p class="pcard__sum">{f.summary}</p>
+          <p class="pcard__price" aria-live="polite">
+            {hasP ? categories.map((c) => (
+              <span data-cat={c.id}><span class="pcard__amt">{eur(f.price[c.id] as number)}</span><span class="pcard__ttc">TTC · déplacement inclus</span></span>
+            )) : (
+              <span><span class="pcard__amt pcard__amt--quote">Sur devis</span><span class="pcard__ttc">Selon le véhicule et son état</span></span>
+            )}
+          </p>
+          <a class="textlink" href={f.href}>Voir la prestation</a>
+        </article>
+      );
+    })}
   </div>
-)}
-<h3 style="margin-top:2.2em">Suppléments éventuels</h3>
-<p class="form__note" style="margin-bottom:16px">Appliqués uniquement lorsque l’état du véhicule le justifie, et annoncés dans le devis avant l’intervention.</p>
-<div class="grid grid--3">
-  {supplements.map((s) => (
-    <div class="card"><h3>{s.name}</h3><p>{s.summary}</p><p><strong>{extraPrice(s.price) ?? (SITE.tarifsFallback === 'devis' ? 'Précisé dans le devis' : '')}</strong>{extraPrice(s.price) === null && SITE.tarifsFallback !== 'devis' && <span class="confirm" data-confirm={`Tarif du supplément « ${s.name} »`}>[INFORMATION À CONFIRMER]</span>}</p></div>
-  ))}
+  <p class="pricing__note"><Icon name="check" /> Tarifs TTC, déplacement inclus, sur Bordeaux Métropole et le Bassin d’Arcachon.</p>
 </div>
-<div class="btns"><Button href="/contact/#devis">Réserver</Button></div>
+
+<h3 class="pricing__h">Comparer les catégories</h3>
+<div class="ptable-wrap">
+<table class="ptable">
+  <caption class="sr-only">Tarifs TTC par formule et par catégorie de véhicule</caption>
+  <thead><tr><th scope="col">Formule</th>{categories.map((c) => <th scope="col">{c.label}</th>)}</tr></thead>
+  <tbody>
+    {ordered.map((f) => (
+      <tr>
+        <th scope="row"><a href={f.href} style="text-decoration:none">{f.name}</a></th>
+        {categories.map((c) => <td data-l={`${c.label} · ${c.short}`}>{f.price[c.id] != null ? <strong>{eur(f.price[c.id] as number)}</strong> : <>Sur devis</>}</td>)}
+      </tr>
+    ))}
+  </tbody>
+</table>
+</div>
+<p class="form__note" style="margin-top:14px">{categories.map((c) => `${c.label} : ${c.examples.toLowerCase()}`).join(' · ')}. Un doute sur la catégorie de votre véhicule ? Indiquez-nous le modèle, nous vous confirmons.</p>
+
+<h3 class="pricing__h">Options et prestation complémentaire</h3>
+<div class="grid grid--2">
+  <div class="card poption"><span class="card__ico"><Icon name="paw" /></span><span class="poption__badge">{supplement.badge}</span><h3>{supplement.name}</h3><p>{supplement.summary}</p><p class="poption__note">{supplement.note}</p></div>
+  <div class="card poption"><span class="card__ico"><Icon name="wind" /></span><span class="poption__badge">{ozone.badge}</span><h3>{ozone.name}</h3><p>{ozone.summary} Durée : {ozone.duration}.</p><p class="poption__note">{ozone.note}</p></div>
+</div>
+<div class="btns"><Button href="/contact/#reservation">Réserver</Button></div>

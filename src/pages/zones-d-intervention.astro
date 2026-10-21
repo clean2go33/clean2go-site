@@ -15,7 +15,7 @@ const crumbs = [{ label: 'Zones d’intervention' }];
 const faq = [
   { q: 'Dans quelles zones intervenez-vous ?', a: 'Nous intervenons à Bordeaux Métropole et sur le Bassin d’Arcachon. Chaque zone a sa page et chaque commune principale a la sienne, avec les informations pratiques qui la concernent.' },
   { q: 'Ma commune n’est pas listée : puis-je quand même demander une intervention ?', a: 'Oui. La liste présente les communes que nous desservons le plus naturellement, mais nous étudions toute demande en Gironde. Précisez votre commune dans le [formulaire](/contact/?commune=Autre#devis) : nous vous disons si nous pouvons intervenir et dans quelles conditions.' },
-  { q: 'Le déplacement est-il facturé ?', a: 'Non : les frais de déplacement sont inclus dans le devis.' },
+  { q: 'Le déplacement est-il facturé ?', a: 'Non : le déplacement est inclus dans le prix.' },
 ];
 const groups = await Promise.all(ZONES.map(async (z) => ({ ...z, cities: await getCities(z.key) })));
 ---

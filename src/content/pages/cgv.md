@@ -15,7 +15,7 @@ Les prestations sont décrites sur la page [Prestations](/prestations/) : nettoy
 
 ## 3. Zone d’intervention
 
-Clean2Go intervient dans les communes listées sur la page [Zones d’intervention](/zones-d-intervention/). Pour une commune non listée, une demande peut être adressée via la page [contact](/contact/). Les frais de déplacement sont inclus dans le devis.
+Clean2Go intervient dans les communes listées sur la page [Zones d’intervention](/zones-d-intervention/). Pour une commune non listée, une demande peut être adressée via la page [contact](/contact/). Les frais de déplacement sont inclus dans le prix.
 
 ## 4. Commande et rendez-vous
 
@@ -27,7 +27,7 @@ Le client met le véhicule à disposition à l’adresse convenue, dans un lieu 
 
 ## 6. Prix
 
-Les prix sont indiqués en euros. NEW WAVE est assujettie à la TVA : le devis précise si les montants sont exprimés HT ou TTC. Ils figurent sur la page [Tarifs](/tarifs/) ou dans le devis. Des suppléments peuvent s’appliquer pour des cas particuliers (poils d’animaux, salissures importantes, odeurs), annoncés avant l’intervention. Les frais de déplacement sont inclus dans le devis.
+Les prix sont indiqués en euros. NEW WAVE est assujettie à la TVA : les prix des prestations de nettoyage figurant sur la page [Tarifs](/tarifs/) s’entendent toutes taxes comprises (TTC), déplacement inclus. Un supplément de 30 € TTC s’applique en cas de sable en quantité excessive et/ou de poils d’animaux ; la désodorisation par traitement à l’ozone est une prestation complémentaire facturée 60 € TTC. Les prestations non affichées (nettoyage extérieur seul, autres véhicules, flottes professionnelles) font l’objet d’un devis. Le prix applicable est confirmé avant l’intervention. Les frais de déplacement sont inclus dans le prix.
 
 ## 7. Paiement
 

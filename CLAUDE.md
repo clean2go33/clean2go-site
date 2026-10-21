@@ -12,7 +12,7 @@ Quand Naomie dit « Travaille sur le site Clean2Go », c'est ce projet. Lire ce 
 ## 2. Règles d'or (non négociables)
 1. **Ne jamais inventer** : tarifs, délais, garanties, certifications, avis, clients, statistiques, coordonnées, zones, produits, assurances.
 2. Toute information non fournie → jeton `[[À CONFIRMER : texte]]` (rendu « [INFORMATION À CONFIRMER] »). `STRICT_CONFIRM=1 npm run validate` bloque la publication s'il en reste.
-3. **Aucun tarif modifié sans accord explicite de Naomie.** Les tarifs vivent dans `src/data/tarifs.ts` (vides tant qu'ils ne sont pas fournis ; repli « sur devis »).
+3. **Aucun tarif modifié sans accord explicite de Naomie.** Les tarifs (TTC, déplacement inclus) vivent UNIQUEMENT dans `src/data/tarifs.ts` (affichés depuis le 21/10/2026 : catégories A/B/C, supplément 30 €, ozone 60 €). Nettoyage extérieur seul, autres véhicules et flottes : « sur devis ». Textes éditoriaux (faq.ts, cgv, services) à vérifier si un prix change.
 4. Ne rien publier, ne pas toucher au DNS / domaine / clean2go.fr sans demande explicite. Aucun identifiant ou mot de passe dans le code.
 5. Pas de suppression de fichiers sans demande.
 

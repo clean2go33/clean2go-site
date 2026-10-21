@@ -23,7 +23,7 @@ faq:
   - q: La vapeur abîme-t-elle la peinture ?
     a: "Employée avec le bon geste et à la bonne distance, la vapeur nettoie sans agresser une peinture en bon état. Une peinture déjà écaillée ou un vernis fragilisé demandent de la prudence : signalez-le dans votre demande, nous adaptons l’intervention."
   - q: Faites-vous aussi du lustrage ou de la protection de carrosserie ?
-    a: "Dites-nous ce que vous souhaitez dans votre demande : le devis précise ce que nous pouvons réaliser."
+    a: "Dites-nous ce que vous souhaitez dans votre demande : nous précisons ce que nous pouvons réaliser et le prix, établi sur devis pour le nettoyage extérieur seul."
   - q: Que se passe-t-il s’il pleut le jour prévu ?
     a: "Nous intervenons toute l’année, quelle que soit la saison."
 related: [nettoyage-vapeur-complet, nettoyage-interieur-voiture]
@@ -50,4 +50,4 @@ Il nettoie, il ne corrige pas : une rayure, un impact, un vernis passé ou une t
 
 ## Pour aller plus loin
 
-Pour un véhicule à remettre en état de bout en bout, la formule [intérieur + extérieur](/prestations/nettoyage-vapeur-complet/) évite de revenir deux fois. Le détail des prix est sur la page [Tarifs](/tarifs/), et vous pouvez vérifier que nous venons chez vous dans nos [zones d’intervention](/zones-d-intervention/).
+Pour un véhicule à remettre en état de bout en bout, la formule [intérieur + extérieur](/prestations/nettoyage-vapeur-complet/) évite de revenir deux fois. Le nettoyage extérieur seul est proposé sur devis ; les prix des autres formules sont sur la page [Tarifs](/tarifs/), et vous pouvez vérifier que nous venons chez vous dans nos [zones d’intervention](/zones-d-intervention/).

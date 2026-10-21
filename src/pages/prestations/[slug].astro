@@ -11,6 +11,8 @@ import Button from '@/components/Button.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import { getServices, servicePath } from '@/lib/content';
 import { mdInline } from '@/lib/mdlite';
+import PriceStrip from '@/components/PriceStrip.astro';
+import { formuleByService, rangeOf } from '@/data/tarifs';
 import { service as serviceSchema, breadcrumbs, faqPage } from '@/lib/schema';
 
 export async function getStaticPaths() {
@@ -21,9 +23,11 @@ const { entry, all } = Astro.props;
 const d = entry.data;
 const { Content } = await render(entry);
 const crumbs = [{ label: 'Prestations', href: '/prestations/' }, { label: d.name }];
+const formule = formuleByService(entry.id);
+const range = formule ? rangeOf(formule.id) : null;
 const others = all.filter((s) => s.id !== entry.id);
 ---
-<Base title={d.title} description={d.description} schema={[breadcrumbs(crumbs, servicePath(entry.id)), serviceSchema({ name: d.h1, type: d.serviceType, description: d.description, path: servicePath(entry.id) }), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
+<Base title={d.title} description={d.description} schema={[breadcrumbs(crumbs, servicePath(entry.id)), serviceSchema({ name: d.h1, type: d.serviceType, description: d.description, path: servicePath(entry.id), ...(range ? { offer: range } : {}) }), ...(d.faq.length ? [faqPage(d.faq)] : [])]}>
   <Hero eyebrow={d.name} h1={d.h1} lead={d.lead} crumbs={crumbs} cta={{ label: 'Réserver', href: `/contact/?prestation=${encodeURIComponent(d.formValue)}#devis` }} secondary={{ label: 'Voir les tarifs', href: '/tarifs/' }} bg={SERVICE_PHOTOS[entry.id]} />
 
   {d.inclus.length > 0 && (
@@ -31,6 +35,8 @@ const others = all.filter((s) => s.id !== entry.id);
       <ul class="checks cols-2">{d.inclus.map((i) => <li><Icon name="check" /><span set:html={mdInline(i)} /></li>)}</ul>
     </Section>
   )}
+
+  {formule && range && <PriceStrip formuleId={formule.id} />}
 
   <section class="sec reveal"><div class="wrap layout">
     <div class="prose"><Content /></div>

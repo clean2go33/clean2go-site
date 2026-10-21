@@ -8,6 +8,7 @@ const services = await getServices();
 const groups = await Promise.all(ZONES.map(async (z) => ({ label: z.label, cities: await getCities(z.key) })));
 const pro = variant === 'pro';
 const uid = `${variant}-${id}`;
+import { categories } from '@/data/tarifs';
 ---
 <div class="formcard" id={id}>
   {title && <h2 style="font-size:1.5rem">{title}</h2>}
@@ -44,6 +45,10 @@ const uid = `${variant}-${id}`;
       <div class="field"><label for={`${uid}-freq`}>Fréquence envisagée</label>
         <select id={`${uid}-freq`} name="frequence"><option value="">À définir ensemble</option><option>Intervention ponctuelle</option><option>Passages réguliers</option><option>Préparation avant livraison ou restitution</option></select></div>
     ) : (
+      <>
+        <div class="field"><label for={`${uid}-cat`}>Catégorie du véhicule</label>
+          <select id={`${uid}-cat`} name="categorie"><option value="">Je ne sais pas</option>{categories.map((c) => <option value={c.id}>{c.label} : {c.examples.toLowerCase()}</option>)}<option value="Autre">Autre véhicule (utilitaire, camping-car, moto, bateau…)</option></select></div>
+      </>
       <div class="field"><label for={`${uid}-veh`}>Véhicule (marque, modèle, type)</label><input id={`${uid}-veh`} name="vehicule" type="text" placeholder="Ex. : SUV familial, citadine, utilitaire…" /></div>
     )}
     <div class="field"><label for={`${uid}-msg`}>Votre besoin</label><textarea id={`${uid}-msg`} name="message" placeholder={pro ? 'Types de véhicules, lieu de stationnement, contraintes d’accès, rythme souhaité…' : 'État du véhicule, poils d’animaux, odeurs, date souhaitée, lieu de stationnement…'}></textarea></div>

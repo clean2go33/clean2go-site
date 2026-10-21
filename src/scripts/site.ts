@@ -136,7 +136,7 @@ d.querySelectorAll<HTMLFormElement>('form[data-form]').forEach((form) => {
 /* ---------- Pré-sélection depuis l'URL (?commune=…&prestation=…) ---------- */
 try {
   const q = new URLSearchParams(location.search);
-  (['commune', 'prestation'] as const).forEach((k) => {
+  (['commune', 'prestation', 'categorie'] as const).forEach((k) => {
     const v = q.get(k); if (!v) return;
     d.querySelectorAll<HTMLSelectElement>(`select[name="${k}"]`).forEach((s) => {
       const i = Array.from(s.options).findIndex((o) => o.value === v);

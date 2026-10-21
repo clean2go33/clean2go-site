@@ -87,7 +87,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: 'Le devis est-il gratuit ?',
-        a: `Le devis vous est transmis avant toute intervention : vous savez ce que vous payez avant de vous engager. Tous nos tarifs sont communiqués sur devis. Pour comprendre comment le prix est établi, voir la page [Tarifs](/tarifs/).`,
+        a: `Le devis vous est transmis avant toute intervention : vous savez ce que vous payez avant de vous engager. Les prix sont affichés TTC, déplacement inclus, sur la page [Tarifs](/tarifs/) : nettoyage intérieur de 100 à 130 €, intérieur + extérieur de 140 à 180 € selon la catégorie du véhicule. Le devis confirme le montant avant l’intervention.`,
       },
     ],
   },
@@ -97,11 +97,11 @@ export const FAQ_GROUPS: FaqGroup[] = [
     items: [
       {
         q: 'Que se passe-t-il pour un véhicule très sale ?',
-        a: `Un véhicule très sale demande plus de temps, parfois plusieurs passages de vapeur sur une même zone. C’est pourquoi l’état du véhicule fait partie du devis : décrivez-le franchement (voire envoyez-nous une photo si vous le souhaitez) et nous vous annonçons le prix et la durée avant l’intervention. Le supplément éventuel est précisé dans le devis, jamais ajouté après coup. Voir [options et cas particuliers](/prestations/options-et-cas-particuliers/#tres-sale).`,
+        a: `Un véhicule très sale demande plus de temps, parfois plusieurs passages de vapeur sur une même zone. Décrivez l’état du véhicule franchement (voire envoyez-nous une photo si vous le souhaitez) : nous vous annonçons la durée avant l’intervention. Un supplément de 30 € TTC s’applique en cas de sable en quantité excessive et/ou de poils d’animaux, annoncé avant l’intervention et jamais ajouté après coup. Voir [options et cas particuliers](/prestations/options-et-cas-particuliers/#tres-sale).`,
       },
       {
         q: 'Prenez-vous en charge les poils d’animaux ?',
-        a: `Oui. Les poils s’incrustent dans les tissus et les moquettes, où ils s’accrochent aux fibres. Un travail méthodique, associé à la vapeur qui détend les fibres, permet de les décoller. Selon la quantité, un supplément peut s’appliquer : il est annoncé dans le devis. Détails sur la page [poils d’animaux](/prestations/options-et-cas-particuliers/#poils) et dans notre guide [retirer les poils d’animaux d’une voiture](/blog/retirer-poils-animaux-voiture/).`,
+        a: `Oui. Les poils s’incrustent dans les tissus et les moquettes, où ils s’accrochent aux fibres. Un travail méthodique, associé à la vapeur qui détend les fibres, permet de les décoller. En grande quantité, un supplément de 30 € TTC s’applique ; il est annoncé avant l’intervention. Détails sur la page [poils d’animaux](/prestations/options-et-cas-particuliers/#poils) et dans notre guide [retirer les poils d’animaux d’une voiture](/blog/retirer-poils-animaux-voiture/).`,
       },
       {
         q: 'Peut-on éliminer les mauvaises odeurs ?',
@@ -127,7 +127,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: 'Intervenez-vous sur le Bassin d’Arcachon ?',
-        a: `Oui : Arcachon, La Teste-de-Buch, Gujan-Mestras, Andernos-les-Bains, Biganos, Le Teich, Audenge, Lanton, Arès et Lège-Cap-Ferret ont chacune leur page. Pour les communes éloignées ou la presqu’île, le créneau se fixe un peu en amont. Les frais de déplacement sont inclus dans le devis.`,
+        a: `Oui : Arcachon, La Teste-de-Buch, Gujan-Mestras, Andernos-les-Bains, Biganos, Le Teich, Audenge, Lanton, Arès et Lège-Cap-Ferret ont chacune leur page. Pour les communes éloignées ou la presqu’île, le créneau se fixe un peu en amont. Le déplacement est inclus dans le prix.`,
       },
       {
         q: 'Ma ville n’est pas listée : puis-je quand même faire une demande ?',

@@ -11,6 +11,7 @@ import ZonesSelector from '@/components/ZonesSelector.astro';
 import Faq from '@/components/Faq.astro';
 import QuoteForm from '@/components/QuoteForm.astro';
 import { getServices, getPosts, servicePath, postPath, BLOG_CATEGORIES } from '@/lib/content';
+import { categories, formules, eur, rangeOf } from '@/data/tarifs';
 import { faqPage } from '@/lib/schema';
 import { SITE } from '@/config/site';
 
@@ -55,14 +56,23 @@ const faq = [
     </div>
   </Section>
 
+  <Section variant="mist" eyebrow="Tarifs" title="Des prix affichés, déplacement inclus" lead="Le prix TTC dépend de la catégorie de votre véhicule. Pas de mauvaise surprise le jour de l’intervention.">
+    <div class="grid grid--2">
+      {['interieur', 'complet'].map((id) => { const f = formules.find((x) => x.id === id)!; const r = rangeOf(f.id)!; return (
+        <a class="card" href="/tarifs/"><h3>{f.name}</h3><p>{f.summary}</p><p class="hprice"><span>dès</span> <b>{eur(r.low)}</b> <span>TTC</span></p><p class="form__note">{categories.map((c) => `${c.label} ${eur(f.price[c.id] as number)}`).join(' · ')}</p><span class="textlink">Voir tous les tarifs</span></a>
+      ); })}
+    </div>
+    <div class="btns"><Button href="/tarifs/">Voir les tarifs</Button><Button href="/contact/#reservation" variant="line" arrow={false}>Réserver</Button></div>
+  </Section>
+
   <Section eyebrow="Comment ça se passe" title="Quatre étapes, sans complication">
     <Steps items={[
       { title: 'Vous décrivez votre besoin', text: 'Par le formulaire ou par téléphone : votre véhicule, votre commune, ce que vous attendez.' },
-      { title: 'Nous vous répondons avec un devis', text: 'Une proposition claire, adaptée à votre véhicule et à la prestation souhaitée.' },
+      { title: 'Nous confirmons le prix', text: 'Le tarif TTC dépend de la catégorie de votre véhicule : nous le confirmons avant de fixer le créneau.' },
       { title: 'Nous convenons du lieu et du créneau', text: 'À domicile ou sur site : nous fixons ensemble le moment et l’endroit de l’intervention.' },
       { title: 'Nous intervenons chez vous', text: 'Le nettoyage à la vapeur est réalisé sur place, avec un matériel adapté.' },
     ]} />
-    <div class="btns"><Button href="/contact/#reservation">Réserver</Button><Button href="/tarifs/" variant="line" arrow={false}>Voir les tarifs</Button></div>
+    <div class="btns"><Button href="/contact/#reservation">Réserver</Button></div>
   </Section>
 
   <Section variant="mist" eyebrow="Zones d’intervention" title="Nous venons à vous, autour de Bordeaux et du Bassin" lead="Choisissez votre zone pour retrouver votre commune et la page qui lui est consacrée.">
