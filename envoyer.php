@@ -32,6 +32,7 @@ $email = nettoie($_POST['email'] ?? '', 160);
 $commune = nettoie($_POST['commune'] ?? '', 80);
 $presta = nettoie($_POST['prestation'] ?? '', 120);
 $vehicule = nettoie($_POST['vehicule'] ?? '', 160);
+$categorie = nettoie($_POST['categorie'] ?? '', 60);
 $societe = nettoie($_POST['societe'] ?? '', 160);
 $activite = nettoie($_POST['activite'] ?? '', 160);
 $nbv = nettoie($_POST['nb_vehicules'] ?? '', 40);
@@ -46,7 +47,7 @@ $to = 'contact@clean2go.fr';
 $sujet = '=?UTF-8?B?' . base64_encode('Demande de devis Clean2Go — ' . $commune) . '?=';
 $corps = "Nouvelle demande depuis le site Clean2Go\n\n"
        . "Nom : $nom\nTéléphone : $tel\nE-mail : $email\nCommune : $commune\n"
-       . "Prestation : " . ($presta ?: 'non précisée') . "\nVéhicule : " . ($vehicule ?: 'non précisé') . "\n" . ($societe !== '' ? "Société : $societe\nActivité : $activite\nNb véhicules : $nbv\nFréquence : $freq\n" : '') . "\nMessage :\n" . ($message ?: '(aucun)') . "\n";
+       . "Prestation : " . ($presta ?: 'non précisée') . "\nVéhicule : " . ($vehicule ?: 'non précisé') . "\n" . ($categorie !== '' ? "Catégorie : $categorie\n" : '') . ($societe !== '' ? "Société : $societe\nActivité : $activite\nNb véhicules : $nbv\nFréquence : $freq\n" : '') . "\nMessage :\n" . ($message ?: '(aucun)') . "\n";
 // L'expéditeur est une adresse du domaine (meilleure délivrabilité) ; la réponse part vers le client.
 $headers = "From: Site Clean2Go <contact@clean2go.fr>\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8\r\nX-Mailer: PHP\r\n";
 $ok = mail($to, $sujet, $corps, $headers);
