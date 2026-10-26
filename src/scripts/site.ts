@@ -166,13 +166,3 @@ if (banner) {
   }));
 }
 d.querySelectorAll<HTMLElement>('[data-consent-reset]').forEach((b) => b.addEventListener('click', () => { try { localStorage.removeItem(KEY); } catch { /* ignore */ } location.reload(); }));
-
-/* ---------- Scène d'accueil (utilitaire) : déclenchée à l'entrée dans l'écran ---------- */
-(() => {
-  const scene = d.querySelector<HTMLElement>('[data-scene]');
-  if (!scene || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  if (!('IntersectionObserver' in window)) return;
-  scene.classList.add('is-armed');
-  const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { scene.classList.add('is-go'); io.disconnect(); } }, { threshold: 0.3 });
-  io.observe(scene);
-})();
