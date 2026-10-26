@@ -477,3 +477,65 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .hprice{margin:6px 0 0!important;color:var(--ink)!important;display:flex;align-items:baseline;gap:8px}
 .hprice b{font:700 2.4rem/1 var(--f-head);letter-spacing:-.02em}
 .hprice span{color:var(--muted);font-size:.95rem}
+
+/* ---------- Scène d'accueil : l'utilitaire se gare ---------- */
+.scene{position:relative;background:var(--ink);color:#fff;overflow:hidden;border-top:1px solid var(--line-d)}
+.scene__in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,4vw,56px);align-items:end;padding-top:clamp(48px,6vw,88px)}
+.scene__txt{padding-bottom:clamp(28px,4vw,56px);align-self:center}
+.scene .eyebrow{color:#ff8b86}
+.scene__title{color:#fff;font-size:clamp(2.4rem,5.6vw,4.4rem);line-height:1.02;letter-spacing:-.025em;margin:.2em 0 .35em}
+.scene__title em{font-style:normal;color:var(--red)}
+.scene__title .w{display:inline-block}
+.scene__lead{color:var(--muted-d);max-width:44ch;margin:0 0 18px}
+.scene__chips{list-style:none;margin:0 0 22px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.scene__chips li{border:1px solid var(--line-d);border-radius:99px;padding:7px 14px;font-size:.88rem;color:#E6EAED}
+.scene__stage{position:relative;display:flex;justify-content:flex-end;align-items:flex-end;min-height:clamp(150px,18vw,230px);margin-bottom:-6px}
+.van{position:relative;width:min(100%,590px);will-change:transform}
+.van svg{display:block;width:100%;height:auto;overflow:visible}
+.wisps{position:absolute;right:16%;bottom:84%;width:30%;height:auto;fill:none;stroke:rgba(255,255,255,.5);stroke-width:3;stroke-linecap:round;pointer-events:none}
+.road{position:relative;height:44px;background:#1A2229;border-top:2px solid #2B363F}
+.road::before{content:"";position:absolute;left:0;right:0;top:50%;height:3px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.28) 0 38px,transparent 38px 84px)}
+.skid{position:absolute;left:0;top:8px;height:5px;width:0;background:#0A0D10;border-radius:0 3px 3px 0;opacity:0}
+.smoke{position:absolute;bottom:2%;width:15%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.55),rgba(255,255,255,0) 68%);opacity:0;filter:blur(3px);pointer-events:none}
+.smoke--a{left:6%}.smoke--b{left:-2%;width:12%}.smoke--c{left:68%}.smoke--d{left:60%;width:12%}
+
+/* Mouvement : seulement armé par le script (sinon l'état final est affiché) */
+.scene.is-armed:not(.is-go) .van{transform:translateX(-115vw)}
+.scene.is-armed:not(.is-go) .w,.scene.is-armed:not(.is-go) .scene__lead,.scene.is-armed:not(.is-go) .scene__chips,.scene.is-armed:not(.is-go) .scene__cta,.scene.is-armed:not(.is-go) .eyebrow{opacity:0}
+.scene.is-go .van{animation:van-in 2.3s cubic-bezier(.2,.7,.3,1) .35s both}
+@keyframes van-in{
+  0%{transform:translateX(-115vw) skewX(-12deg)}
+  58%{transform:translateX(4%) skewX(-7deg) rotate(0);animation-timing-function:ease-out}
+  70%{transform:translateX(5%) skewX(5deg) rotate(2.4deg)}
+  84%{transform:translateX(-1.5%) skewX(-2deg) rotate(-.9deg)}
+  100%{transform:none}
+}
+.scene.is-go .spin{animation:wheel-spin 1.5s cubic-bezier(.2,.6,.3,1) .35s both;transform-box:fill-box;transform-origin:center}
+@keyframes wheel-spin{from{transform:rotate(-1500deg)}to{transform:rotate(0)}}
+.scene.is-go .smoke{animation:smoke 1.2s ease-out 1.65s both}
+.scene.is-go .smoke--b,.scene.is-go .smoke--d{animation-delay:1.75s}
+@keyframes smoke{0%{opacity:0;transform:translate(0,0) scale(.4)}25%{opacity:.8}100%{opacity:0;transform:translate(-90%,-40%) scale(2.2)}}
+.scene.is-go .skid{animation:skid 1.1s ease-out 1.5s both}
+@keyframes skid{0%{width:0;opacity:0}15%{opacity:1}100%{width:calc(100% - 62%);opacity:.7}}
+.scene.is-go .eyebrow{animation:rise .6s ease-out .1s both}
+.scene.is-go .w1{animation:rise .7s ease-out .2s both}
+.scene.is-go .w2{animation:rise .7s ease-out .4s both}
+.scene.is-go .scene__lead{animation:rise .7s ease-out 2s both}
+.scene.is-go .scene__chips{animation:rise .7s ease-out 2.15s both}
+.scene.is-go .scene__cta{animation:rise .7s ease-out 2.3s both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+/* Vapeur : apparaît une fois garé, puis flotte doucement */
+.wisp{stroke-dasharray:240;stroke-dashoffset:0}
+.scene.is-armed:not(.is-go) .wisp{stroke-dashoffset:240}
+.scene.is-go .wisp{animation:wisp-draw 1.6s ease-out 2.2s both,wisp-float 5s ease-in-out 3.8s infinite}
+.scene.is-go .wisp2{animation-delay:2.4s,4s}.scene.is-go .wisp3{animation-delay:2.6s,4.2s}
+@keyframes wisp-draw{from{stroke-dashoffset:240;opacity:0}30%{opacity:1}to{stroke-dashoffset:0;opacity:.8}}
+@keyframes wisp-float{0%,100%{transform:translateY(0);opacity:.8}50%{transform:translateY(-8px);opacity:.45}}
+@media (max-width:720px){
+  .scene__in{grid-template-columns:1fr;gap:0;padding-top:44px}
+  .scene__txt{padding-bottom:12px}
+  .scene__stage{justify-content:center;min-height:0;padding-top:70px}
+  .van{width:min(100%,430px)}
+  .skid{display:none}
+}
+@media (prefers-reduced-motion:reduce){.scene *{animation:none!important}.scene .van{transform:none!important}}
